@@ -1,46 +1,223 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BizNii — Apps for real business needs</title>
-  <meta name="description" content="BizNii creates simple, practical apps designed around real business needs and everyday workflows." />
-  <meta name="theme-color" content="#FF6630" />
-  <link rel="icon" type="image/svg+xml" href="favicon.png" />
-  <link rel="alternate icon" type="image/png" href="favicon.png" />
-  <link rel="apple-touch-icon" href="favicon.png" />
+  <meta name="description" content="BizNii creates simple, practical apps designed around real business needs and everyday workflows.">
+  <meta name="theme-color" content="#FF6630">
+
+  <link rel="icon" type="image/png" href="favicon.png?v=3">
+  <link rel="shortcut icon" type="image/png" href="favicon.png?v=3">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=3">
+
   <style>
-    :root{--orange:#FF6630;--orange-dark:#e95322;--ink:#25282d;--muted:#6d7178;--soft:#f7f7f8;--line:#e8e8ea;--white:#fff;--max:1120px;--shadow:0 18px 50px rgba(30,33,37,.08)}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.55} a{color:inherit;text-decoration:none}
+    :root{
+      --orange:#FF6630;
+      --orange-dark:#E95624;
+      --ink:#25282D;
+      --muted:#6D7178;
+      --soft:#F7F7F8;
+      --line:#E8E8EA;
+      --white:#FFFFFF;
+      --max:1120px;
+      --shadow:0 18px 50px rgba(30,33,37,.08);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--ink);
+      background:var(--white);
+      line-height:1.55;
+    }
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
     .wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto}
-    header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(232,232,234,.8)}
-    .nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center}
-    .brand-logo{display:block;width:142px;height:auto}.hero-brand-logo{display:block;width:min(100%,390px);height:auto}
-    nav{display:flex;align-items:center;gap:26px;font-size:.95rem;color:#4d5157}nav a:hover{color:var(--orange)}
-    .button{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--orange);color:#fff;padding:13px 19px;border-radius:12px;font-weight:750;box-shadow:0 8px 20px rgba(255,102,48,.2);transition:.2s}.button:hover{transform:translateY(-1px);background:var(--orange-dark)}.button.secondary{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:none}
-    .hero{padding:92px 0 74px;overflow:hidden;background:radial-gradient(circle at 80% 20%,rgba(255,102,48,.10),transparent 34%),linear-gradient(180deg,#fff,#fffaf8)}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:64px}
-    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border-radius:999px;background:#fff0ea;color:#b94018;font-weight:700;font-size:.86rem;margin-bottom:22px}.dot{width:8px;height:8px;border-radius:50%;background:var(--orange)}
-    h1{font-size:clamp(3rem,7vw,5.7rem);line-height:.98;letter-spacing:-.06em;margin:0 0 24px;max-width:760px}h1 span{color:var(--orange)}.lead{font-size:1.18rem;color:var(--muted);max-width:650px;margin:0 0 30px}.actions{display:flex;flex-wrap:wrap;gap:12px}
-    .hero-card{background:#fff;border:1px solid var(--line);border-radius:28px;padding:34px;box-shadow:var(--shadow)}.hero-logo{min-height:290px;border-radius:22px;background:linear-gradient(135deg,#fff5f1,#fff);display:flex;align-items:center;justify-content:center;border:1px solid #ffe0d5;padding:40px}
-    .mini{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}.mini div{background:var(--soft);border-radius:14px;padding:14px;text-align:center;font-weight:700;font-size:.88rem}
-    section{padding:82px 0}.section-head{max-width:700px;margin-bottom:34px}.kicker{color:var(--orange);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:.78rem}h2{font-size:clamp(2rem,4vw,3.3rem);line-height:1.08;letter-spacing:-.035em;margin:8px 0 12px}.section-head p{color:var(--muted);font-size:1.05rem;margin:0}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{border:1px solid var(--line);border-radius:20px;padding:26px;background:#fff;min-height:220px}.icon{width:46px;height:46px;border-radius:13px;background:#fff0ea;color:var(--orange);display:grid;place-items:center;font-size:1.2rem;font-weight:900;margin-bottom:22px}.card h3{margin:0 0 9px;font-size:1.16rem}.card p{margin:0;color:var(--muted)}
-    .about{background:var(--ink);color:#fff}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}.about p{color:#c8cbd0}.meaning{display:grid;gap:12px}.meaning div{display:flex;gap:15px;padding:18px 20px;border:1px solid rgba(255,255,255,.11);border-radius:16px;background:rgba(255,255,255,.04)}.meaning b{color:var(--orange);min-width:55px}
-    .apps-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.app{border:1px solid var(--line);border-radius:22px;padding:26px;display:flex;gap:18px;align-items:flex-start;background:#fff}.app-icon{width:58px;height:58px;flex:0 0 58px;border-radius:16px;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:900}.app h3{margin:0 0 5px}.app p{margin:0;color:var(--muted)}.coming{display:inline-flex;margin-top:10px;font-size:.76rem;font-weight:800;color:#a84725;background:#fff0ea;padding:5px 8px;border-radius:999px}
-    .cta{padding:44px;border-radius:26px;background:linear-gradient(135deg,#ff6630,#ff7f50);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:30px}.cta h2{margin:0 0 8px;font-size:clamp(1.8rem,4vw,3rem)}.cta p{margin:0;color:rgba(255,255,255,.88)}.cta .button{background:#fff;color:var(--ink);box-shadow:none;white-space:nowrap}
-    footer{border-top:1px solid var(--line);padding:38px 0;color:var(--muted);font-size:.92rem}.footer-row{display:flex;justify-content:space-between;gap:24px;align-items:center;flex-wrap:wrap}.footer-links{display:flex;gap:20px;flex-wrap:wrap}
-    @media(max-width:850px){nav{display:none}.hero{padding-top:64px}.hero-grid,.about-grid{grid-template-columns:1fr;gap:38px}.hero-card{max-width:620px}.cards{grid-template-columns:1fr}.apps-grid{grid-template-columns:1fr}.cta{align-items:flex-start;flex-direction:column}.mini{grid-template-columns:1fr}}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:30;
+      background:rgba(255,255,255,.94);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(232,232,234,.9);
+    }
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;min-width:0}
+    .brand-logo{width:168px;height:auto}
+    nav{display:flex;align-items:center;gap:26px;font-size:.95rem;color:#4D5157}
+    nav a:hover{color:var(--orange)}
+
+    .button{
+      display:inline-flex;align-items:center;justify-content:center;
+      gap:8px;background:var(--orange);color:#fff;
+      padding:13px 19px;border-radius:12px;font-weight:750;
+      box-shadow:0 8px 20px rgba(255,102,48,.20);transition:.2s ease;
+    }
+    .button:hover{transform:translateY(-1px);background:var(--orange-dark)}
+    .button.secondary{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:none}
+
+    .hero{
+      padding:92px 0 74px;overflow:hidden;
+      background:radial-gradient(circle at 80% 20%,rgba(255,102,48,.10),transparent 34%),linear-gradient(180deg,#fff,#fffaf8);
+    }
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:64px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border-radius:999px;background:#FFF0EA;color:#B94018;font-weight:700;font-size:.86rem;margin-bottom:22px}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--orange)}
+    h1{font-size:clamp(3rem,7vw,5.7rem);line-height:.98;letter-spacing:-.06em;margin:0 0 24px;max-width:760px}
+    h1 span{color:var(--orange)}
+    .lead{font-size:1.18rem;color:var(--muted);max-width:650px;margin:0 0 30px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px}
+
+    .hero-card{background:#fff;border:1px solid var(--line);border-radius:28px;padding:34px;box-shadow:var(--shadow)}
+    .hero-logo{min-height:290px;border-radius:22px;background:linear-gradient(135deg,#FFF8F5,#fff);display:flex;align-items:center;justify-content:center;border:1px solid #FFE0D5;padding:34px}
+    .hero-logo img{width:100%;height:auto;object-fit:contain}
+    .mini{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+    .mini div{background:var(--soft);border-radius:14px;padding:14px;text-align:center;font-weight:700;font-size:.88rem}
+
+    section{padding:82px 0}
+    .section-head{max-width:700px;margin-bottom:34px}
+    .kicker{color:var(--orange);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:.78rem}
+    h2{font-size:clamp(2rem,4vw,3.3rem);line-height:1.08;letter-spacing:-.035em;margin:8px 0 12px}
+    .section-head p{color:var(--muted);font-size:1.05rem;margin:0}
+
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{border:1px solid var(--line);border-radius:20px;padding:26px;background:#fff;min-height:220px}
+    .icon{width:46px;height:46px;border-radius:13px;background:#FFF0EA;color:var(--orange);display:grid;place-items:center;font-size:1.05rem;font-weight:900;margin-bottom:22px}
+    .card h3{margin:0 0 9px;font-size:1.16rem}
+    .card p{margin:0;color:var(--muted)}
+
+    .about{background:var(--ink);color:#fff}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+    .about p{color:#C8CBD0}
+    .meaning{display:grid;gap:12px}
+    .meaning div{display:flex;gap:15px;padding:18px 20px;border:1px solid rgba(255,255,255,.11);border-radius:16px;background:rgba(255,255,255,.04)}
+    .meaning b{color:var(--orange);min-width:55px}
+
+    .apps-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .app{border:1px solid var(--line);border-radius:22px;padding:26px;display:flex;gap:18px;align-items:flex-start;background:#fff}
+    .app-icon{width:58px;height:58px;flex:0 0 58px;border-radius:16px;background:#FFF0EA;display:grid;place-items:center;padding:8px}
+    .app-icon img{width:100%;height:100%;object-fit:contain}
+    .app h3{margin:0 0 5px}.app p{margin:0;color:var(--muted)}
+    .coming{display:inline-flex;margin-top:10px;font-size:.76rem;font-weight:800;color:#A84725;background:#FFF0EA;padding:5px 8px;border-radius:999px}
+
+    .cta{padding:44px;border-radius:26px;background:linear-gradient(135deg,#FF6630,#FF7F50);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:30px}
+    .cta h2{margin:0 0 8px;font-size:clamp(1.8rem,4vw,3rem)}
+    .cta p{margin:0;color:rgba(255,255,255,.88)}
+    .cta .button{background:#fff;color:var(--ink);box-shadow:none;white-space:nowrap}
+
+    footer{border-top:1px solid var(--line);padding:38px 0;color:var(--muted);font-size:.92rem}
+    .footer-row{display:flex;justify-content:space-between;gap:24px;align-items:center;flex-wrap:wrap}
+    .footer-links{display:flex;gap:20px;flex-wrap:wrap}
+
+    @media(max-width:850px){
+      nav{display:none}.nav{height:70px}.brand-logo{width:145px}
+      .hero{padding-top:60px}.hero-grid,.about-grid{grid-template-columns:1fr;gap:38px}
+      .hero-card{max-width:620px}.cards{grid-template-columns:1fr}.apps-grid{grid-template-columns:1fr}
+      .cta{align-items:flex-start;flex-direction:column}.mini{grid-template-columns:1fr}
+    }
   </style>
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="#top" aria-label="BizNii home"><img class="brand-logo" src="biznii-logo.png" alt="BizNii" /></a><nav><a href="#about">About</a><a href="#apps">Apps</a><a href="privacy.html">Privacy</a><a href="#support">Support</a></nav><a class="button" href="mailto:support@biznii.com">Contact</a></div></header>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="BizNii home">
+      <img class="brand-logo" src="biznii-logo.png?v=3" alt="BizNii">
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#apps">Apps</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="#support">Support</a>
+    </nav>
+    <a class="button" href="mailto:support@biznii.com">Contact</a>
+  </div>
+</header>
+
 <main id="top">
-<section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow"><span class="dot"></span> Practical software, thoughtfully built</div><h1>Apps for real <span>business needs.</span></h1><p class="lead">BizNii creates focused, useful apps that simplify everyday work. No unnecessary complexity — just tools designed around the problems people actually need to solve.</p><div class="actions"><a class="button" href="#apps">Explore our apps</a><a class="button secondary" href="#about">About BizNii</a></div></div><div class="hero-card"><div class="hero-logo"><img class="hero-brand-logo" src="biznii-logo.png" alt="BizNii logo" /></div><div class="mini"><div>Business</div><div>Needs</div><div>Innovation</div></div></div></div></section>
-<section><div class="wrap"><div class="section-head"><div class="kicker">What we build</div><h2>Useful by design.</h2><p>Our focus is straightforward: identify a real need, remove friction, and build an app that makes the task easier.</p></div><div class="cards"><article class="card"><div class="icon">01</div><h3>Business tools</h3><p>Practical applications that make everyday business workflows faster, clearer and easier to manage.</p></article><article class="card"><div class="icon">02</div><h3>Productivity</h3><p>Focused tools for scheduling, communication, organization and the jobs that otherwise take too much time.</p></article><article class="card"><div class="icon">03</div><h3>Everyday solutions</h3><p>Useful apps do not need to be complicated. We build simple solutions around real-world needs.</p></article></div></div></section>
-<section class="about" id="about"><div class="wrap about-grid"><div><div class="kicker">About BizNii</div><h2>Built around needs, not features.</h2><p>BizNii is an independent app brand focused on practical software for business and everyday life. We believe the best apps are the ones that solve a clear problem without getting in the user's way.</p><p>Our products are designed with simplicity, privacy and useful functionality at the centre.</p></div><div class="meaning"><div><b>Biz</b><span>Business</span></div><div><b>N</b><span>Needs</span></div><div><b>ii</b><span>Innovation &amp; Improvement</span></div></div></div></section>
-<section id="apps"><div class="wrap"><div class="section-head"><div class="kicker">Apps</div><h2>From idea to useful tool.</h2><p>BizNii apps are being prepared for release on Google Play. This section will grow as new products become available.</p></div><div class="apps-grid"><article class="app"><div class="app-icon">B</div><div><h3>BizNii Business Apps</h3><p>Simple tools designed to support real day-to-day business workflows.</p><span class="coming">Coming to Google Play</span></div></article><article class="app"><div class="app-icon">+</div><div><h3>More apps in development</h3><p>Additional practical apps for productivity, communication and everyday needs are on the way.</p><span class="coming">In development</span></div></article></div></div></section>
-<section id="support"><div class="wrap"><div class="cta"><div><h2>Need help with a BizNii app?</h2><p>For product support, privacy questions or general enquiries, contact us by email.</p></div><a class="button" href="mailto:support@biznii.com">support@biznii.com</a></div></div></section>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> Practical software, thoughtfully built</div>
+        <h1>Apps for real <span>business needs.</span></h1>
+        <p class="lead">BizNii creates focused, useful apps that simplify everyday work. No unnecessary complexity — just tools designed around the problems people actually need to solve.</p>
+        <div class="actions">
+          <a class="button" href="#apps">Explore our apps</a>
+          <a class="button secondary" href="#about">About BizNii</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-logo"><img src="biznii-logo.png?v=3" alt="BizNii logo"></div>
+        <div class="mini"><div>Business</div><div>Needs</div><div>Innovation</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">What we build</div>
+        <h2>Useful by design.</h2>
+        <p>Our focus is straightforward: identify a real need, remove friction, and build an app that makes the task easier.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="icon">01</div><h3>Business tools</h3><p>Practical applications that make everyday business workflows faster, clearer and easier to manage.</p></article>
+        <article class="card"><div class="icon">02</div><h3>Productivity</h3><p>Focused tools for scheduling, communication, organization and the jobs that otherwise take too much time.</p></article>
+        <article class="card"><div class="icon">03</div><h3>Everyday solutions</h3><p>Useful apps do not need to be complicated. We build simple solutions around real-world needs.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap about-grid">
+      <div>
+        <div class="kicker">About BizNii</div>
+        <h2>Built around needs, not features.</h2>
+        <p>BizNii is an independent app brand focused on practical software for business and everyday life. We believe the best apps are the ones that solve a clear problem without getting in the user's way.</p>
+        <p>Our products are designed with simplicity, privacy and useful functionality at the centre.</p>
+      </div>
+      <div class="meaning">
+        <div><b>Biz</b><span>Business</span></div>
+        <div><b>N</b><span>Needs</span></div>
+        <div><b>ii</b><span>Innovation &amp; Improvement</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="apps">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Apps</div>
+        <h2>From idea to useful tool.</h2>
+        <p>BizNii apps are being prepared for release on Google Play. This section will grow as new products become available.</p>
+      </div>
+      <div class="apps-grid">
+        <article class="app"><div class="app-icon"><img src="favicon.png?v=3" alt=""></div><div><h3>BizNii Business Apps</h3><p>Simple tools designed to support real day-to-day business workflows.</p><span class="coming">Coming to Google Play</span></div></article>
+        <article class="app"><div class="app-icon"><img src="favicon.png?v=3" alt=""></div><div><h3>More apps in development</h3><p>Additional practical apps for productivity, communication and everyday needs are on the way.</p><span class="coming">In development</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="support">
+    <div class="wrap">
+      <div class="cta">
+        <div><h2>Need help with a BizNii app?</h2><p>For product support, privacy questions or general enquiries, contact us by email.</p></div>
+        <a class="button" href="mailto:support@biznii.com">support@biznii.com</a>
+      </div>
+    </div>
+  </section>
 </main>
-<footer><div class="wrap footer-row"><div>© <span id="year"></span> BizNii. All rights reserved.</div><div class="footer-links"><a href="privacy.html">Privacy Policy</a><a href="mailto:support@biznii.com">Support</a></div></div></footer>
+
+<footer>
+  <div class="wrap footer-row">
+    <div>© <span id="year"></span> BizNii. All rights reserved.</div>
+    <div class="footer-links"><a href="privacy.html">Privacy Policy</a><a href="mailto:support@biznii.com">Support</a></div>
+  </div>
+</footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
-</body></html>
+</body>
+</html>
