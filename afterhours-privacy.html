@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AfterHours Privacy Policy — BizNii</title>
+  <meta name="description" content="Privacy policy for AfterHours by BizNii, package com.biznii.afterhours.">
+  <meta name="theme-color" content="#FF6630">
+  <link rel="icon" type="image/png" href="favicon.png?v=3">
+  <link rel="shortcut icon" type="image/png" href="favicon.png?v=3">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=3">
+  <style>
+    :root{--orange:#FF6630;--ink:#25282D;--muted:#6D7178;--line:#E8E8EA;--soft:#F7F7F8;--note:#FFF3EE}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);line-height:1.7;background:#fff}
+    .wrap{width:min(860px,calc(100% - 40px));margin:auto}
+    header{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:10}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand img{width:155px;height:auto;display:block}
+    .back{color:var(--orange);text-decoration:none;font-weight:700}
+    main{padding:70px 0 90px}
+    h1{font-size:clamp(2.5rem,6vw,4.5rem);line-height:1;letter-spacing:-.05em;margin:0 0 18px}
+    h2{margin-top:38px;line-height:1.25}
+    p,li{color:#3d4147}
+    .muted{color:var(--muted)}
+    a{color:var(--orange)}
+    .note{background:var(--note);border:1px solid #FFD7C8;border-radius:14px;padding:18px;margin:26px 0}
+    .meta{background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:18px;margin:26px 0}
+    .meta p{margin:4px 0}
+    footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.9rem}
+    code{background:var(--soft);padding:2px 6px;border-radius:6px}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="BizNii home"><img src="biznii-logo.png?v=3" alt="BizNii"></a>
+    <a class="back" href="privacy.html">← Privacy</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <h1>AfterHours Privacy Policy</h1>
+    <p class="muted">Last updated: 5 October 2026</p>
+
+    <div class="meta">
+      <p><strong>Developer:</strong> BizNii</p>
+      <p><strong>App:</strong> AfterHours</p>
+      <p><strong>Android package:</strong> <code>com.biznii.afterhours</code></p>
+      <p><strong>Privacy &amp; support:</strong> <a href="mailto:support@biznii.com">support@biznii.com</a></p>
+      <p><strong>Website:</strong> <a href="https://biznii.com">biznii.com</a></p>
+    </div>
+
+    <div class="note"><strong>Privacy by design:</strong> AfterHours is designed to perform its core call-screening and automatic-reply functions locally on your Android device. The audited release does not use a BizNii backend, advertising, tracking, analytics upload or crash-reporting service.</div>
+
+    <h2>What AfterHours does</h2>
+    <p>AfterHours is a business and productivity utility that lets you configure operating hours or quiet periods, allowed callers and optional automatic SMS replies. Android's call-screening role allows AfterHours to allow or reject eligible incoming calls. AfterHours does not replace your phone dialer and does not become your default SMS application.</p>
+
+    <h2>Call and contact information processed locally</h2>
+    <p>Android supplies incoming telephone details to the AfterHours call-screening service. The app processes caller numbers, timing, screening decisions, schedule names and SMS outcomes locally on the device. Android may not deliver every call to the service, including some withheld or restricted numbers and certain contact calls when contact access is unavailable. Statistics shown by AfterHours therefore describe calls received by the service rather than your complete system call log.</p>
+
+    <p>AfterHours stores schedules, SMS templates, settings, allowed caller names, numbers and notes, schedule-specific exceptions and call activity. Full stored allowed-caller and activity numbers are encrypted using a key held in Android Keystore. Salted caller hashes and masked numbers are used for local matching and cooldown functions. Names, schedule names, settings and reply text are stored in Android-private app storage but are not individually encrypted. Depending on your settings, full numbers may be displayed in Activity, notifications or the home-screen widget.</p>
+
+    <h2>Contacts permission</h2>
+    <p>Contact access is optional. If you grant the <code>READ_CONTACTS</code> permission, AfterHours can let you select contacts and import or synchronize phone favourites into your local allowed-caller list. You can also enter numbers manually without granting contact access.</p>
+    <p>Imported contact names and numbers remain on your device. AfterHours does not upload your address book to BizNii. If you later revoke contact permission, the app stops further contact reads but previously imported entries remain until you remove them in the app or clear the app's storage.</p>
+
+    <h2>Automatic SMS replies</h2>
+    <p>Automatic SMS sending uses the Android <code>SEND_SMS</code> permission only after a prominent disclosure, your affirmative consent and Android's permission approval. You can disable automatic SMS replies at any time.</p>
+    <p>SMS messages are sent directly from your phone through your mobile provider to the caller. They are not sent through a BizNii server. Standard carrier charges may apply, including charges for multipart messages. AfterHours does not read your SMS inbox, incoming text messages or message conversations.</p>
+    <p>Reply text is stored locally as settings or templates. Activity records the reply outcome rather than maintaining an SMS inbox or conversation transcript. Sending an SMS necessarily provides your phone number and the reply content to your mobile carrier and the recipient. Their own privacy, retention and security practices apply. SMS should not be assumed to be end-to-end encrypted.</p>
+
+    <h2>SMS safeguards</h2>
+    <p>AfterHours uses local cooldowns, an hourly attempt cap and destination/message validation to reduce unintended sending. The audited release limits automatic attempts and does not automatically retry failed sends. A configured default SMS SIM is required for unattended replies on compatible dual-SIM devices. Revoking SMS permission disables automatic sending without disabling call screening.</p>
+
+    <h2>Notifications</h2>
+    <p>If you grant Android notification permission, AfterHours can display status information, blocked-call summaries, per-call results and action controls. Notification details can include caller information according to your settings. Lock-screen notifications use a generic redacted public version, while Android and your own notification settings ultimately control visibility.</p>
+
+    <h2>Information AfterHours does not request</h2>
+    <p>The audited release does not request SMS-reading permissions, incoming-SMS permissions, call-log permissions, phone-state permissions, phone-number permissions, location, storage or media access, accessibility access, advertising ID, Internet access, network-state access, battery-exemption access, exact alarms, wake locks, boot access or foreground-service permissions.</p>
+
+    <h2>Sharing, sale and external services</h2>
+    <p>AfterHours does not transmit SMS contents, call information or contacts to BizNii or an external application server. Normal operation requires no BizNii account or backend. The audited release contains no advertising, tracking, analytics-upload or crash-reporting SDK, and statistics are calculated locally. BizNii does not sell this data or use it to profile users for advertising.</p>
+    <p>If you deliberately use a callback or SMS-composer action, the selected telephone number is passed to your chosen dialer or SMS application. A Google Play link may open the browser or Play Store. Your mobile provider, Android/Google Play and other apps you deliberately open operate under their own privacy policies. This policy covers AfterHours itself.</p>
+
+    <h2>Retention and deletion</h2>
+    <p>Call activity uses a default 90-day retention setting with selectable retention options. Purging occurs when the app starts and when the retention setting changes; it is not a continuously running erasure service.</p>
+    <p>You can clear local analytics/activity and edit or delete schedules, SMS templates and allowed callers. Settings, templates and allowed-caller data otherwise remain until deleted or until you clear the app's storage. Uninstalling AfterHours or using Android's Clear storage function removes the app's local data. Messages that have already been sent remain with the recipient or mobile provider and may also appear in your SMS application; clearing AfterHours cannot recall them.</p>
+    <p>There is no BizNii server copy of caller data to request deletion from.</p>
+
+    <h2>Security</h2>
+    <p>AfterHours uses Android app-private storage, Android Keystore encryption for full stored telephone numbers, non-exported internal receivers and disabled app backups to help protect local information. Cloud backup and device-transfer rules exclude app data. No software or SMS transmission can guarantee absolute security.</p>
+    <p>A home-screen widget can display caller details. If other people may see your device's home screen, use the app's masked-number settings where appropriate.</p>
+
+    <h2>Children</h2>
+    <p>AfterHours is intended for adult business and productivity users. It is not designed or marketed for children, and BizNii does not knowingly collect children's data through the app.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>We may update this policy when AfterHours features or data handling change. When appropriate, we will also update the in-app policy, effective date, disclosures and Google Play Data Safety information.</p>
+
+    <h2>Contact</h2>
+    <p>For privacy questions or support relating to AfterHours, contact <a href="mailto:support@biznii.com">support@biznii.com</a>.</p>
+  </div>
+</main>
+
+<footer><div class="wrap">© 2026 BizNii. All rights reserved. · <a href="privacy.html">BizNii Privacy Policy</a></div></footer>
+</body>
+</html>
