@@ -1,0 +1,13 @@
+WEBVTT
+
+00:00.000 --> 00:02.200
+Open a sample native Odoo private chat.
+
+00:02.200 --> 00:04.500
+Read the message received from the PC.
+
+00:04.500 --> 00:06.800
+Write and send a reply from the phone.
+
+00:06.800 --> 00:09.200
+The reply appears. Return to the chat list.
