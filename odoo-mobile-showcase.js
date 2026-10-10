@@ -1,4 +1,6 @@
 'use strict';
+// Preserve bookmarks from the earlier two-page website.
+if (location.hash === '#demo') location.replace(location.pathname + location.search + '#explore');
 const menu = document.querySelector('#menu-toggle');
 const navigation = document.querySelector('#navigation');
 menu.addEventListener('click', () => {
@@ -12,6 +14,7 @@ navigation.querySelectorAll('a').forEach(link => link.addEventListener('click', 
   menu.setAttribute('aria-label', 'Open navigation');
 }));
 
+if (document.querySelector("#feature-search")) {
 const search = document.querySelector('#feature-search');
 const category = document.querySelector('#feature-category');
 const groups = [...document.querySelectorAll('.feature-group')];
@@ -59,25 +62,6 @@ expand.addEventListener('click', () => {
 groups.forEach(group => group.addEventListener('toggle', updateExpandLabel));
 filterFeatures();
 
-// Native links still open the images when JavaScript or dialog support is absent.
-const dialog = document.querySelector('#capture-dialog');
-if (typeof dialog.showModal === 'function') {
-  document.querySelectorAll('.zoom').forEach(link => link.addEventListener('click', event => {
-    event.preventDefault();
-    const source = link.querySelector('img');
-    const target = dialog.querySelector('img');
-    target.src = source.src;
-    target.alt = source.alt;
-    dialog.querySelector('p').textContent = source.alt;
-    dialog.showModal();
-  }));
-  dialog.querySelector('button').addEventListener('click', () => dialog.close());
-  dialog.addEventListener('click', event => {
-    const bounds = dialog.getBoundingClientRect();
-    if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) dialog.close();
-  });
-}
-
 // A directory link must reveal its destination even after a search filter.
 function revealDestination() {
   const id = location.hash.slice(1);
@@ -94,3 +78,24 @@ document.querySelectorAll('a[href^="#directory-"]').forEach(link => link.addEven
   if (link.hash === location.hash) revealDestination();
 }));
 revealDestination();
+
+}
+
+// Native links still open the images when JavaScript or dialog support is absent.
+const dialog = document.querySelector('#capture-dialog');
+if (dialog && typeof dialog.showModal === 'function') {
+  document.querySelectorAll('.zoom').forEach(link => link.addEventListener('click', event => {
+    event.preventDefault();
+    const source = link.querySelector('img');
+    const target = dialog.querySelector('img');
+    target.src = source.src;
+    target.alt = source.alt;
+    dialog.querySelector('p').textContent = source.alt;
+    dialog.showModal();
+  }));
+  dialog.querySelector('button').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', event => {
+    const bounds = dialog.getBoundingClientRect();
+    if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) dialog.close();
+  });
+}

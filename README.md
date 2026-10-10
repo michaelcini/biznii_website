@@ -1,40 +1,31 @@
 # BizNii website
 
-Static website deployed by the existing GitHub Pages **pages build and deployment** workflow from `main`, using the custom domain in `CNAME`: `biznii.com`.
+Static website published from `main` through GitHub Pages, using `CNAME` for `biznii.com`.
 
-## Odoo Mobile showcase
+## BizNii Odoo Mobile
 
-- `odoo-mobile-showcase.html` — complete app tour, 97 documented capabilities in 12 searchable categories, six native simulator screenshots and a captioned private-chat recording.
-- `odoo-mobile.html` — existing fictional interactive phone/widget previews, retained and linked to the complete showcase.
-- `odoo-mobile-support.html` / `odoo-mobile-privacy.html` — app-specific guidance; the existing corporate `privacy.html` remains separate.
-- `odoo-mobile-showcase.css` / `odoo-mobile-showcase.js` — responsive design, feature filtering and accessible screenshot dialog.
-- `assets/odoo/showcase/` — sample-data media with capture provenance in its README.
-- `biznii-logo.png` — original corporate branding, reused directly by the showcase.
-- `assets/odoo/odoo-mobile-logo.png` — approved transparent app logo exported unchanged from `Odoo-app`'s app resources. The original JPG used by the existing interactive preview is retained.
+- `odoo-mobile.html`: single product page combining all 97 features, app screenshots/video, the interactive phone and widgets in the cream/sage/coral design. Includes a Google Play coming-soon section.
+- `odoo-mobile-showcase.html`: compatibility redirect to the product page; old section bookmarks are retained.
+- `odoo-mobile-support.html`: setup, troubleshooting and support contact.
+- `odoo-mobile-privacy.html`: public app-specific privacy policy for the Play Console URL field.
+- `odoo-mobile-showcase.css` / `.js`: design and navigation shared by all three app pages; search/filtering and image dialog on the product page.
+- `odoo-mobile-experience.css` / `.js`: phone and home-screen-widget interactions.
+- `assets/odoo/showcase/`: Android screen media with internal capture provenance in its README. Marketing copy describes the product experience, not capture tooling.
+- Approved corporate logo `biznii-logo.png` and app logo `assets/odoo/odoo-mobile-logo.png` are reused unchanged.
 
-The main homepage and existing Odoo app page both link to the complete showcase. Existing AfterHours pages and preview behavior are preserved.
+The company homepage links to the unified app page. Corporate privacy lists the app-specific policy. AfterHours remains separate. No APK download or private app-repository link is exposed.
 
-## Local preview
+## Preview and maintenance
 
-From this repository:
+Serve this checkout with `python -m http.server 8089`, then open `http://localhost:8089/odoo-mobile.html`.
 
-```powershell
-python -m http.server 8089
-```
-
-Open `http://localhost:8089/odoo-mobile-showcase.html`.
-
-## Source maintenance
-
-The showcase source and feature inventory are maintained in the `michaelcini/Odoo-app` repository:
+The product/support/privacy sources and capability inventory live in the private Odoo app repository:
 
 ```powershell
 python tools/sync-website-features.py
 python tools/export-biznii-showcase.py ../biznii_website
 ```
 
-The export copies only named showcase/support files and media. It does not overwrite the homepage, corporate logo, corporate privacy, AfterHours or the interactive Odoo preview. Update the homepage/preview links explicitly when changing routes or release messaging. Review the narrative and category assignments when capabilities change.
+The export intentionally updates the unified product page, compatibility redirect, shared assets and app service pages. Company homepage and corporate privacy edits are maintained here. Review routing and release messaging whenever changing the export.
 
-## Verification
-
-The showcase was checked with desktop/mobile browser previews, feature search/filter/expansion, native screenshot dialog, local links/assets/anchors and JavaScript syntax. Simulator media uses sample fixtures, with no production connection/customer information. Video is H.264 MP4 with English captions and web fast-start metadata.
+The public policy is https://biznii.com/odoo-mobile-privacy.html. Before app submission, link it from the Android app and Play Console, complete accurate Data safety including scanner SDK diagnostics, and verify release-build practices. The app repository's website README records the outstanding Play submission steps and policy sources.
