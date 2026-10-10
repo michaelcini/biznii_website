@@ -15,3 +15,11 @@ All assets are real Android simulator captures from the app's Compose screens us
 The chat recording retains the actual chat-list → conversation → reply → chat-list sequence. Startup and launcher footage were trimmed; playback is slowed to 80% to make the short automated interaction legible. H.264 MP4, 540px wide, no audio, fast-start metadata. On-page description explains the flow. Both fresh instrumentation methods passed.
 
 For future capture sessions, run fixture-only tests against a debug emulator and inspect every asset before replacing it. Do not publish connected production customer, financial, contact, connection or credential information. Keep video and screenshots inside `website/assets/` so any static host can serve the complete tour.
+
+## Workspace navigator (2026-10-10)
+
+`workspace-{overview,todo,sales,orders,products,money,more,calendar,customers}.png` are 1080 x 2211 captures from `WebsiteScreenCaptureTest` on API 31. Nine instrumentation tests passed. They render production Compose screens inside the same NavigationSuiteScaffold and WorkspaceTopBar used by MainActivity, with Overview / To Do / Sales / Money / More in production order. Money uses the production accounting labels and shared tab component. Sample records are created in the test; no Odoo connection is opened.
+
+Rebuild debug and AndroidTest APKs, install both on the test emulator, then run `adb shell am instrument -w -r -e class com.cersii.odoomobile.WebsiteScreenCaptureTest com.cersii.odoomobile.debug.test/androidx.test.runner.AndroidJUnitRunner`. Pull `website-*.png` from the debug package's external files directory and rename to `workspace-*.png`. Inspect every image before export.
+
+The website navigates these native screenshots; it does not run the Android app or submit edits. Keep screen names, primary navigation and subgroup mappings aligned with MainActivity when refreshing assets.

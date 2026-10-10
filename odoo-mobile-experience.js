@@ -1,19 +1,42 @@
-
-const app=document.getElementById('odxApp'), toastEl=document.getElementById('odxToast'), overlay=document.getElementById('odxOverlay'), sheetTitle=document.getElementById('odxSheetTitle'), sheetText=document.getElementById('odxSheetText');
-function go(view){app.querySelectorAll('.odx-view').forEach(v=>v.classList.remove('active'));const target=app.querySelector('[data-view="'+view+'"]');if(target)target.classList.add('active');app.querySelectorAll('.odx-nav button').forEach(b=>b.classList.toggle('active',b.dataset.go===view));}
-function toast(msg){toastEl.textContent=msg;toastEl.classList.add('show');setTimeout(()=>toastEl.classList.remove('show'),1200);}
-function openSheet(title,text){sheetTitle.textContent=title;sheetText.textContent=text||'Keep record details, next actions and conversations together.';overlay.classList.add('open');}
-app.querySelectorAll('[data-go]').forEach(x=>x.addEventListener('click',()=>go(x.dataset.go)));
-app.querySelectorAll('[data-toast]').forEach(x=>x.addEventListener('click',()=>toast(x.dataset.toast)));
-app.querySelectorAll('[data-open]').forEach(x=>x.addEventListener('click',()=>openSheet(x.dataset.open)));
-document.getElementById('odxClose').onclick=()=>overlay.classList.remove('open');overlay.addEventListener('click',ev=>{if(ev.target===overlay)overlay.classList.remove('open')});
-document.querySelectorAll('.odx-customer').forEach(c=>c.addEventListener('click',()=>{document.getElementById('odxCustName').textContent=c.dataset.customer;go('customerDetail')}));
-document.getElementById('odxCustomerSearch').addEventListener('input',ev=>{const q=ev.target.value.toLowerCase();document.querySelectorAll('.odx-customer').forEach(c=>c.style.display=c.dataset.name.includes(q)?'flex':'none')});
-document.getElementById('odxInvSearch').addEventListener('input',ev=>{const q=ev.target.value.toLowerCase();document.querySelectorAll('.odx-invoice').forEach(i=>i.style.display=i.dataset.ref.includes(q)?'flex':'none')});
-document.querySelectorAll('.invfilter').forEach(f=>f.addEventListener('click',()=>{document.querySelectorAll('.invfilter').forEach(x=>x.classList.remove('active'));f.classList.add('active');document.querySelectorAll('.odx-invoice').forEach(i=>i.style.display=f.dataset.filter==='all'||i.dataset.status.includes(f.dataset.filter)?'flex':'none')}));
-document.querySelectorAll('[data-sales-tab]').forEach(t=>t.addEventListener('click',()=>{document.querySelectorAll('[data-sales-tab]').forEach(x=>x.classList.remove('active'));t.classList.add('active');const c=document.getElementById('odxSalesContent');if(t.dataset.salesTab==='quotes')c.innerHTML='<div class="odx-doc" onclick="openSheet(\'S00010\')"><div class="odx-doc-left"><div class="odx-docicon">▤</div><div><b>S00010</b><small>Acme Ltd</small></div></div><div class="odx-amount">€125.50<div class="odx-tag">Draft</div></div></div>';else if(t.dataset.salesTab==='orders')c.innerHTML='<div class="odx-doc" onclick="openSheet(\'SO0007\')"><div><b>SO0007</b><small>Blue Harbour Trading</small></div><div class="odx-amount">€840.00</div></div>';else c.innerHTML='<div class="odx-doc" onclick="openSheet(\'Service package\')"><div><b>Service package</b><small>Service product</small></div><div class="odx-amount">€95.00</div></div>';}));
-document.querySelectorAll('[data-calview]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-calview]').forEach(x=>x.classList.remove('active'));b.classList.add('active');toast(b.textContent.trim()+' view selected')}));
-document.querySelectorAll('[data-more]').forEach(c=>c.addEventListener('click',()=>{const v=c.dataset.more;if(['customers','calendar'].includes(v))go(v);else toast(c.querySelector('b').textContent+' opened')}));
+// App imagery is rendered by the Android production screens, not recreated HTML forms.
+const screenPages = {
+  overview: {workspace:'overview', title:'Your business overview', description:'Follow outstanding invoices, financial summaries and your next actions in one place.', label:'Overview'},
+  todo: {workspace:'todo', title:'Your next task, in focus', description:'Open tasks, completed work, scheduling and pending changes stay together in To Do.', label:'To Do'},
+  sales: {workspace:'sales', title:'From quotation to order', description:'Review quotations, orders and products through the app’s Sales workspace.', label:'Sales · Quotations'},
+  orders: {workspace:'sales', title:'Keep your orders moving', description:'Confirmed sales orders stay alongside quotations and products.', label:'Sales · Orders'},
+  products: {workspace:'sales', title:'Your products, close at hand', description:'Find products, references and prices in the Sales workspace.', label:'Sales · Products'},
+  money: {workspace:'money', title:'A clearer view of your money', description:'Customer invoices, vendors, receivables, payables, P & L, reports and statements belong in Money.', label:'Money · Customer invoices'},
+  more: {workspace:'more', title:'Everything else you need', description:'Discussion, customers, stock, purchasing, suppliers, calendar, reports, search, settings and connections.', label:'More'},
+  customers: {workspace:'more', title:'Know your customer', description:'Open Customers from More to find contacts and their business records.', label:'More · Customers'},
+  calendar: {workspace:'more', title:'Make the day work', description:'Open Calendar from More or To Do to plan tasks and appointments.', label:'More · Calendar'}
+};
+const screenImage = document.querySelector('#native-screen-image');
+const workspaceTabs = [...document.querySelectorAll('.native-tabs [role="tab"]')];
+function showScreen(key) {
+  const page = screenPages[key];
+  if (!page) return;
+  screenImage.src = `assets/odoo/showcase/workspace-${key}.png`;
+  screenImage.alt = `BizNii Odoo Mobile ${page.label} page`;
+  document.querySelector('#native-title').textContent = page.title;
+  document.querySelector('#native-description').textContent = page.description;
+  document.querySelector('#native-caption').textContent = page.label;
+  document.querySelector('#native-panel').setAttribute('aria-labelledby', `workspace-${page.workspace}`);
+  workspaceTabs.forEach(tab => { const selected = tab.dataset.screen === page.workspace; tab.setAttribute('aria-selected', String(selected)); tab.tabIndex = selected ? 0 : -1; });
+  document.querySelector('#sales-screen-tabs').hidden = page.workspace !== 'sales';
+  document.querySelector('#more-screen-tabs').hidden = page.workspace !== 'more';
+  document.querySelectorAll('.native-subtabs button').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.screen === key)));
+  document.querySelectorAll('.native-phone-tabs button').forEach(button => { if (button.dataset.screen === page.workspace) button.setAttribute('aria-current','page'); else button.removeAttribute('aria-current'); });
+}
+document.querySelectorAll('[data-screen]').forEach(button => button.addEventListener('click', () => showScreen(button.dataset.screen)));
+workspaceTabs.forEach((tab, index) => tab.addEventListener('keydown', event => {
+  let next = index;
+  if (event.key === 'ArrowRight') next = (index + 1) % workspaceTabs.length;
+  else if (event.key === 'ArrowLeft') next = (index + workspaceTabs.length - 1) % workspaceTabs.length;
+  else if (event.key === 'Home') next = 0;
+  else if (event.key === 'End') next = workspaceTabs.length - 1;
+  else return;
+  event.preventDefault(); workspaceTabs[next].focus(); showScreen(workspaceTabs[next].dataset.screen);
+}));
 
 document.querySelectorAll('.widget-switch').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.widget-switch').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-pressed','false')});document.querySelectorAll('.widget-preview').forEach(p=>p.classList.remove('active'));btn.classList.add('active');btn.setAttribute('aria-pressed','true');document.querySelector('[data-widget-panel="'+btn.dataset.widget+'"]').classList.add('active');}));
 function widgetToast(msg,calendar=false){const el=document.getElementById(calendar?'widgetToastCalendar':'widgetToast');if(!el)return;el.textContent=msg;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),1200);}
@@ -56,8 +79,7 @@ document.querySelector('.today-v2').addEventListener('click', () => {
   const now = new Date(); widgetDate.setFullYear(now.getFullYear(), now.getMonth(), 1); renderWidgetMonth();
 });
 renderWidgetMonth();
-// Give illustrated record cards equivalent keyboard operation.
-document.querySelectorAll('[role="button"][tabindex="0"]').forEach(card => card.addEventListener('keydown', event => {
-  if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); card.click(); }
+
+document.querySelectorAll('[data-widget-toast][role="button"]').forEach(button => button.addEventListener('keydown', event => {
+  if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); button.click(); }
 }));
-document.addEventListener('keydown', event => { if (event.key === 'Escape') overlay.classList.remove('open'); });
