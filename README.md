@@ -30,4 +30,6 @@ The export intentionally updates the unified product page, compatibility redirec
 
 The public policy is https://biznii.com/odoo-mobile-privacy.html. Before app submission, link it from the Android app and Play Console, complete accurate Data safety including scanner SDK diagnostics, and verify release-build practices. The app repository's website README records the outstanding Play submission steps and policy sources.
 
-The app phone navigator uses nine native Android screen captures and the real Overview, To Do, Sales, Money and More navigation. Sales includes Quotations, Orders and Products; More includes Customers and Calendar. The website switches screen images without running or editing an Odoo session.
+The app phone navigator uses thirteen native Android workspace captures plus detail screens and the real Overview, To Do, Sales, Money and More navigation. Sales includes Quotations, Orders and Products; More includes Customers and Calendar. The website switches screen images without running or editing an Odoo session.
+
+The Calendar widget uses the Android five/six-week month rules, task status and configured colours. Interactive sample notes, completion/reopening, conversation filters and replies stay in browser memory; Reset examples restores the original records. Phone imagery includes all five native calendar views and tap targets with Back navigation.

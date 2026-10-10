@@ -23,3 +23,9 @@ For future capture sessions, run fixture-only tests against a debug emulator and
 Rebuild debug and AndroidTest APKs, install both on the test emulator, then run `adb shell am instrument -w -r -e class com.cersii.odoomobile.WebsiteScreenCaptureTest com.cersii.odoomobile.debug.test/androidx.test.runner.AndroidJUnitRunner`. Pull `website-*.png` from the debug package's external files directory and rename to `workspace-*.png`. Inspect every image before export.
 
 The website navigates these native screenshots; it does not run the Android app or submit edits. Keep screen names, primary navigation and subgroup mappings aligned with MainActivity when refreshing assets.
+
+## Calendar views and web interactions (2026-10-10)
+
+Added `workspace-calendar-{schedule,three-days,week,month}.png` from the production `OdooCalendarScreen` with fixture data and the native navigation shell. Four capture tests passed on API 31. Screenshot tap targets are percentage bounds from inspected assets; update their bounds when refreshing imagery. The phone can open existing native customer, job, pricing and discussion captures and keeps a local Back stack.
+
+Interactive widget HTML follows `widget_activity_month.xml`, `widget_month_day*.xml`, the light/dark drawable palette, `WidgetMonthState.cells()` and `DiscussionWidgetModels.filtered()`. Calendar weeks are calculated as five or six, Monday first. Unscheduled overdue tasks are collected on today, completed tasks are crossed out, configured task colours are preserved, and overflow counts disclose hidden chips. Dates and tasks use page-local sample records. Completing/reopening tasks, adding quick notes and adding chat replies change memory only; nothing is persisted or sent to Odoo. Reset examples restores original records. The adjacent day agenda and task/conversation panels are website exploration controls, not extra Android widget surfaces.
