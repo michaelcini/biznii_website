@@ -27,11 +27,19 @@ const output = fs.mkdtempSync(path.join(os.tmpdir(), 'biznii-early-access-'));
       return route.fulfill({status: 200, contentType: 'application/json', body: '{}'});
     });
     await page.goto(`${base}/odoo/early-access/`);
+    assert(await page.locator('#email').isEnabled(), 'shipped configuration enables registration');
+    assert.equal(await page.locator('#registration-consent').isChecked(), false);
+    await page.screenshot({ path: path.join(output, 'desktop.png'), fullPage: true });
+    // Force the closed configuration to verify the emergency disable gate.
+    await page.route('**/odoo/early-access/config.js*', route => route.fulfill({
+      contentType: 'application/javascript',
+      body: 'window.BIZNII_EARLY_ACCESS={enabled:false,privacyApproved:true,formId:"test1234",privacyVersion:"2026-10-15-4"};'
+    }));
+    await page.reload();
     assert(await page.locator('#email').isDisabled());
     await page.locator('form').evaluate(form => form.requestSubmit());
     assert.equal(calls, 0, 'disabled configuration must not submit');
     assert(await page.locator('#registration-success').isHidden());
-    await page.screenshot({ path: path.join(output, 'desktop.png'), fullPage: true });
     // Local-only ready config, without editing the public config file.
     await page.route('**/odoo/early-access/config.js*', route => route.fulfill({
       contentType: 'application/javascript',
@@ -102,7 +110,7 @@ const output = fs.mkdtempSync(path.join(os.tmpdir(), 'biznii-early-access-'));
     assert(await page.locator('#register-button').isEnabled());
     release(); await page.clock.resume();
     assert.equal(await page.evaluate(() => localStorage.length + sessionStorage.length), 0);
-    // Keyboard and responsive checks on the actually shipped, disabled configuration.
+    // Keyboard and responsive checks on the shipped enabled configuration.
     await page.unroute('**/odoo/early-access/config.js*');
     await page.setViewportSize({width:390,height:844});
     await page.goto(`${base}/odoo/early-access/`);
