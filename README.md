@@ -4,7 +4,7 @@ Static website published from `main` through GitHub Pages, using `CNAME` for `bi
 
 ## BizNii for Odoo
 
-- `odoo-mobile.html`: product page with 100 documented features, native screenshots/video, the interactive phone and widgets. Preserves the existing layout, cream/sage palette and #FF6630 brand orange, with darker text accents for readability. Release status is 0.29.33/code 99, Play internal testing; public production availability is not asserted.
+- `odoo-mobile.html`: product page with 100 documented features, native screenshots/video, the interactive phone and widgets. Preserves the existing layout, cream/sage palette and #FF6630 brand orange, with darker text accents for readability. Public copy focuses on app capabilities, the trial and lifetime access. Internal release/distribution evidence belongs in the audit, not the product presentation.
 - `odoo-mobile-showcase.html`: compatibility redirect to the product page; old section bookmarks are retained.
 - `odoo-mobile-support.html`: setup, troubleshooting and support contact.
 - `odoo-mobile-privacy.html`: public app-specific privacy policy for the Play Console URL field.

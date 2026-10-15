@@ -40,7 +40,10 @@ for name in PAGES:
 
 product = (ROOT / PAGES[0]).read_text(encoding='utf-8')
 terms = (ROOT / PAGES[-1]).read_text(encoding='utf-8')
-assert '0.29.33' in product and 'internal testing' in product
+assert '72-hour free trial' in product and 'LIFETIME ACCESS' in product
+for name in ['index.html', *PAGES]:
+    public_copy = (ROOT / name).read_text(encoding='utf-8').lower()
+    assert all(term not in public_copy for term in ('internal testing', 'prerelease', 'production availability', 'eligible tester')), name
 assert 'v0.29.18' not in product and 'Show overdue summary now' in product
 assert product.count('/odoo/terms/') >= 2
 assert len([i for i in Page(ROOT / PAGES[-1]).ids if i not in ('main','menu-toggle','navigation')]) == 16
