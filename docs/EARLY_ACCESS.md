@@ -4,9 +4,12 @@
 
 The website integration is implemented, but **registration is closed**. The owner
 supplied `https://submit-form.com/zhUewNLPQ`; its public form ID is configured.
-Private dashboard access and account settings have not been verified. The disabled
+The owner confirmed finding and deleting the setup test in the private dashboard.
+Account spam/domain and notification-email settings still require confirmation. The disabled
 fieldset and JavaScript configuration both prevent accidental collection. The
-privacy notice is explicitly a draft. Do not describe the programme as operational
+privacy notice remains a pre-launch notice pending the provider-settings check.
+Michael Cini is the confirmed controller, with support@biznii.com as the privacy
+contact, and retention is approved at three months after receipt. Do not describe the programme as operational
 until the launch checks below pass.
 
 - Page: https://biznii.com/odoo/early-access/
@@ -57,11 +60,14 @@ Prices and allowances can change; confirm in the account before launch.
    document its provider, processing countries, transfers and retention in the notice,
    and delete those copies alongside applications. Do not enable analytics,
    webhooks, Google Sheets, Slack, Zapier or other integrations by default.
-5. Publish the controller's **full legal identity and contact/address details** in
-   `odoo/early-access/privacy/index.html`. Only the brand and support@biznii.com were
-   established by existing website content. Confirm consent as the legal basis.
-   Approve or replace the **proposed six months after receipt** retention period and
-   disclose any exceptions. The six months is not currently an approved policy.
+5. **Confirmed by the owner:** Michael Cini is the controller, operating as BizNii
+   from Malta. The established contact is support@biznii.com. These details are
+   published in `odoo/early-access/privacy/index.html`; no postal address has been
+   invented. The selected registration basis is consent, using the required unchecked
+   checkbox. The owner approved deletion **no later than three months after receipt**.
+   This replaces the earlier unapproved six-month proposal. Do not extend retention
+   by changing application status. Any separate ongoing tester relationship requires
+   its own information and legal basis.
 6. Review processor retention separately: Formspark's published DPA says submitted
    content stays until customer deletion, deleted records are recoverable for 30
    days, IP/derived location remain 12 months, filtered submissions remain 12 months
@@ -154,7 +160,8 @@ exists in this website. The form ID permits submission; it is not a read/admin k
   Record only the minimum request-completion evidence justified by the approved policy.
   Do not promise instant erasure of processor backups or logs.
 - **Retention:** review deletion due dates weekly and remove records no later than
-  the approved deadline. The proposed six-month duration is measured from receipt,
+  the approved deadline. At each weekly review, delete records falling due before
+  the next review, so the deadline is not exceeded. The approved three-month duration is measured from receipt,
   not reset by status updates. Delete unnecessary exports promptly. If an ongoing
   tester relationship needs longer retention, explain it and establish its basis
   separately. Provider storage otherwise continues until deletion.
@@ -211,11 +218,12 @@ credentials or public feedback records to this registration form.
   overflow on tested routes. Existing shared styles and media are unchanged.
 - PASS: staged file review and secret/address-pattern scan; no applicant data,
   credentials, domain settings or Pages configuration added/modified.
-- NOT VERIFIED: real Formspark validation/spam enforcement, dashboard storage, duplicate receipt,
-  authenticated/anonymous access boundaries, CSV export, deletion and administrator
-  status editing. Those require the owner's account/endpoint and launch checks.
-- NOT CONFIGURED: confirmation email (omitted on the free plan), controller identity,
-  approved retention and effective programme notice.
+- NOT VERIFIED BY THE AGENT: real Formspark validation/spam enforcement, duplicate
+  receipt, authenticated/anonymous access boundaries, CSV export and administrator
+  status editing. The owner has since confirmed dashboard receipt and test deletion.
+  Remaining checks require the owner's account and launch verification.
+- NOT CONFIGURED: confirmation email (omitted on the free plan) and effective launch
+  notice. The owner has since supplied controller identity and approved three-month retention.
 
 ## Owner-supplied endpoint verification (15 October 2026)
 
@@ -230,7 +238,28 @@ credentials or public feedback records to this registration form.
 - This confirms browser-to-provider request acceptance only. It does not establish
   dashboard persistence, owner access, domain/spam settings, server-side schema
   enforcement, export, deletion or approved privacy arrangements.
-- The owner must locate and delete the setup test in Formspark Submissions and any
-  notification mailbox. No private dashboard credentials were provided or used.
-- Registration remains visibly closed pending the controller identity/contact address,
-  approved retention, final programme notice and remaining real acceptance checks.
+- The owner subsequently confirmed deleting the setup test in Formspark Submissions.
+  Any notification copies must also be deleted. No private dashboard credentials were provided or used.
+- Registration remains visibly closed pending provider-settings confirmation, the final
+  launch notice and remaining real acceptance checks. Controller identity and three-month
+  retention are now confirmed.
+
+## Owner privacy decisions and test deletion
+
+The owner confirmed that the setup test was deleted, supplied **Michael Cini** as
+controller, and shortened retention to **three months after receipt**. The programme
+notice and operations instructions now use those decisions. The privacy contact
+remains the existing public support@biznii.com mailbox; no unprovided postal address
+is published or treated as an automatic launch blocker.
+
+Three months is an administrator-managed deletion deadline, not an automatically
+configured Formspark purge. Apply it to registrations, duplicate copies, exports,
+private trackers and notification emails. Formspark's separately disclosed recovery,
+log and filtered-submission periods remain unchanged and must not be described as
+three months. The owner confirmation is evidence of dashboard receipt/access and
+test deletion, rather than an independent agent audit of all administrative features.
+
+Before launch, confirm automatic spam filtering is enabled, Allowed domains includes
+biznii.com, and submission email notifications are disabled or identify their delivery
+provider and processing arrangements for the notice. No extra provider account or
+private API token is required by this website.
