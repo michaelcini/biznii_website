@@ -2,8 +2,9 @@
 
 ## Current state
 
-The website integration is implemented, but **registration is closed**. No Formspark
-account, endpoint or real submission has been configured or tested. The disabled
+The website integration is implemented, but **registration is closed**. The owner
+supplied `https://submit-form.com/zhUewNLPQ`; its public form ID is configured.
+Private dashboard access and account settings have not been verified. The disabled
 fieldset and JavaScript configuration both prevent accidental collection. The
 privacy notice is explicitly a draft. Do not describe the programme as operational
 until the launch checks below pass.
@@ -210,8 +211,26 @@ credentials or public feedback records to this registration form.
   overflow on tested routes. Existing shared styles and media are unchanged.
 - PASS: staged file review and secret/address-pattern scan; no applicant data,
   credentials, domain settings or Pages configuration added/modified.
-- NOT VERIFIED: real Formspark validation/spam behaviour, storage, duplicate receipt,
+- NOT VERIFIED: real Formspark validation/spam enforcement, dashboard storage, duplicate receipt,
   authenticated/anonymous access boundaries, CSV export, deletion and administrator
   status editing. Those require the owner's account/endpoint and launch checks.
 - NOT CONFIGURED: confirmation email (omitted on the free plan), controller identity,
-  approved retention, effective programme notice and live registration endpoint.
+  approved retention and effective programme notice.
+
+## Owner-supplied endpoint verification (15 October 2026)
+
+- Configured the public form ID `zhUewNLPQ` supplied by the owner and bumped the
+  configuration asset cache version. Both launch gates remain false.
+- Made **one real setup submission** from a browser on the live `biznii.com` origin
+  to `https://submit-form.com/zhUewNLPQ`. Formspark returned HTTP 200 and a JSON object
+  containing the submitted fields. The optional technical fields were empty.
+- Used the existing public support mailbox and marked the payload `SETUP TEST ONLY`,
+  not an applicant. The consent field was `setup-test-not-applicant`; no applicant
+  consent was asserted. This test consumes one submission from the free allowance.
+- This confirms browser-to-provider request acceptance only. It does not establish
+  dashboard persistence, owner access, domain/spam settings, server-side schema
+  enforcement, export, deletion or approved privacy arrangements.
+- The owner must locate and delete the setup test in Formspark Submissions and any
+  notification mailbox. No private dashboard credentials were provided or used.
+- Registration remains visibly closed pending the controller identity/contact address,
+  approved retention, final programme notice and remaining real acceptance checks.
