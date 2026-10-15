@@ -8,7 +8,7 @@ The owner confirmed finding and deleting the setup test in the private dashboard
 Account spam/domain and notification-email settings still require confirmation. The disabled
 fieldset and JavaScript configuration both prevent accidental collection. The
 privacy notice remains a pre-launch notice pending the provider-settings check.
-Michael Cini is the confirmed controller, with support@biznii.com as the privacy
+Biznii is the confirmed controller, with support@biznii.com as the privacy
 contact, and retention is approved at three months after receipt. Do not describe the programme as operational
 until the launch checks below pass.
 
@@ -60,7 +60,7 @@ Prices and allowances can change; confirm in the account before launch.
    document its provider, processing countries, transfers and retention in the notice,
    and delete those copies alongside applications. Do not enable analytics,
    webhooks, Google Sheets, Slack, Zapier or other integrations by default.
-5. **Confirmed by the owner:** Michael Cini is the controller, operating as BizNii
+5. **Confirmed by the owner:** Biznii is the controller, operating as BizNii
    from Malta. The established contact is support@biznii.com. These details are
    published in `odoo/early-access/privacy/index.html`; no postal address has been
    invented. The selected registration basis is consent, using the required unchecked
@@ -246,7 +246,7 @@ credentials or public feedback records to this registration form.
 
 ## Owner privacy decisions and test deletion
 
-The owner confirmed that the setup test was deleted, supplied **Michael Cini** as
+The owner confirmed that the setup test was deleted, supplied **Biznii** as
 controller, and shortened retention to **three months after receipt**. The programme
 notice and operations instructions now use those decisions. The privacy contact
 remains the existing public support@biznii.com mailbox; no unprovided postal address
@@ -263,3 +263,7 @@ Before launch, confirm automatic spam filtering is enabled, Allowed domains incl
 biznii.com, and submission email notifications are disabled or identify their delivery
 provider and processing arrangements for the notice. No extra provider account or
 private API token is required by this website.
+
+The owner requested **Biznii** as the published controller name. The current notice
+and this guide use that name. This change does not assert incorporation or a
+registered company status. The three-month retention policy remains unchanged.
