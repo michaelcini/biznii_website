@@ -15,8 +15,8 @@ const screenPages = {
   'calendar-month': {workspace:'more',title:'The whole month, in view',description:'Find your work by day, then open the appointment for more context.',label:'Calendar · Month'},
   'customer-detail': {workspace:'more',asset:'customer',detail:true,title:'The customer, in context',description:'Contact details, documents and your next actions together.',label:'Customer · Acme Ltd'},
   'task-detail': {workspace:'todo',asset:'job',detail:true,title:'Everything that belongs to the job',description:'Materials, evidence, delivery links and the job report stay with the task.',label:'To Do · Job details'},
-  pricing: {workspace:'sales',asset:'pricing',detail:true,title:'Review the numbers',description:'The native pricing editor shows product prices, quantity, taxes and totals.',label:'Sales · Pricing'},
-  discussion: {workspace:'more',asset:'discussion',detail:true,title:'Keep the conversation going',description:'Native Odoo chats keep the conversation with the work.',label:'More · Discussion'}
+  pricing: {workspace:'sales',asset:'pricing',detail:true,title:'Review the numbers',description:'Review product prices, quantities, taxes and totals before saving.',label:'Sales · Pricing'},
+  discussion: {workspace:'more',asset:'discussion',detail:true,title:'Keep the conversation going',description:'Keep your Odoo conversations connected to your work.',label:'More · Discussion'}
 };
 const screenImage = document.querySelector('#native-screen-image');
 screenImage.addEventListener('load',()=> { screenImage.width=screenImage.naturalWidth; screenImage.height=screenImage.naturalHeight; });

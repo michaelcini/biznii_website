@@ -4,7 +4,7 @@ from pathlib import Path
 from urllib.parse import urlsplit, unquote
 
 ROOT = Path(__file__).resolve().parents[1]
-PAGES = ['odoo-mobile.html', 'odoo-mobile-support.html', 'odoo-mobile-privacy.html', 'odoo-mobile-showcase.html', 'odoo/terms/index.html']
+PAGES = ['odoo-mobile.html', 'odoo-mobile-support.html', 'odoo-mobile-privacy.html', 'odoo-mobile-showcase.html', 'index.html', 'privacy.html', 'afterhours.html', 'afterhours-privacy.html', 'odoo/terms/index.html']
 
 class Page(HTMLParser):
     def __init__(self, path):
@@ -43,12 +43,13 @@ terms = (ROOT / PAGES[-1]).read_text(encoding='utf-8')
 assert '72-hour free trial' in product and 'LIFETIME ACCESS' in product
 for name in ['index.html', *PAGES]:
     public_copy = (ROOT / name).read_text(encoding='utf-8').lower()
-    assert all(term not in public_copy for term in ('internal testing', 'prerelease', 'production availability', 'eligible tester')), name
+    assert all(term not in public_copy for term in ('internal testing', 'prerelease', 'production availability', 'eligible tester', 'audited release', 'instrumented large-account', 'fully durable offline file composition remains deferred', 'data loss is not categorically excluded')), name
 assert 'v0.29.18' not in product and 'Show overdue summary now' in product
 assert product.count('/odoo/terms/') >= 2
 assert len([i for i in Page(ROOT / PAGES[-1]).ids if i not in ('main','menu-toggle','navigation')]) == 16
-assert 'mandatory consumer rights' in terms and 'data loss is not categorically excluded' in terms
+assert 'mandatory consumer rights' in terms and 'data-protection obligations' in terms
+assert 'data loss is not categorically excluded' not in terms
 assert 'Google Play billing and promo redemption' in (ROOT / PAGES[2]).read_text(encoding='utf-8')
 if errors:
     raise SystemExit('\n'.join(errors))
-print(f'PASS: {len(PAGES)} Odoo pages, {checked} local asset/route/fragment references, release and legal checks.')
+print(f'PASS: {len(PAGES)} public pages, {checked} local asset/route/fragment references, release and legal checks.')

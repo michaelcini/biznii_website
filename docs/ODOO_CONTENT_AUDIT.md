@@ -63,3 +63,7 @@ Only the Odoo product name/release badge on the company homepage and its product
 ## Product presentation correction — 15 October 2026
 
 At the owner’s request, removed internal-testing, prerelease, build/version and distribution-status messaging from customer-facing pages. Product copy describes capabilities, the 72-hour trial and one-time lifetime purchase. Navigation now says App access; the existing anchor is preserved. No unverified public store availability or installation link has been introduced. Release evidence above remains an audit record only.
+
+## Customer-facing copy review — 15 October 2026
+
+Reviewed every public HTML page and the interactive preview descriptions at the owner’s request. Rewrote the 100 Odoo feature entries around user actions; removed test claims, implementation mechanics and development-roadmap commentary. Simplified privacy descriptions without removing data categories, recipients, retention guidance or rights. Removed drafting commentary about categorical data-loss exclusions, missing backups, publication/acceptance and legal enforceability from the Terms. Kept the practical backup/risk guidance and the mandatory-rights savings clause. Tidied homepage and AfterHours preview/audit wording without changing app behavior or privacy practices.
