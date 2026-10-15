@@ -29,3 +29,7 @@ The public policy is https://biznii.com/odoo-mobile-privacy.html. Before app sub
 The app phone navigator uses thirteen native Android workspace captures plus detail screens and the real Overview, To Do, Sales, Money and More navigation. Sales includes Quotations, Orders and Products; More includes Customers and Calendar. The website switches screen images without running or editing an Odoo session.
 
 The Calendar widget uses the Android five/six-week month rules, task status and configured colours. Interactive sample notes, completion/reopening, conversation filters and replies stay in browser memory; Reset examples restores the original records. Phone imagery includes all five native calendar views and tap targets with Back navigation.
+
+## Early Access programme
+
+The Odoo product page links to `/odoo/early-access/`. Registration is intentionally disabled until the owner configures Formspark Free, approves the programme privacy notice and completes real acceptance tests. See [setup, privacy decisions and private administration](docs/EARLY_ACCESS.md). No applicant data or secrets belong in this repository.

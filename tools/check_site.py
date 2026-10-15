@@ -4,7 +4,7 @@ from pathlib import Path
 from urllib.parse import urlsplit, unquote
 
 ROOT = Path(__file__).resolve().parents[1]
-PAGES = ['odoo-mobile.html', 'odoo-mobile-support.html', 'odoo-mobile-privacy.html', 'odoo-mobile-showcase.html', 'index.html', 'privacy.html', 'afterhours.html', 'afterhours-privacy.html', 'odoo/terms/index.html']
+PAGES = ['odoo-mobile.html', 'odoo-mobile-support.html', 'odoo-mobile-privacy.html', 'odoo-mobile-showcase.html', 'index.html', 'privacy.html', 'afterhours.html', 'afterhours-privacy.html', 'odoo/early-access/index.html', 'odoo/early-access/privacy/index.html', 'odoo/terms/index.html']
 
 class Page(HTMLParser):
     def __init__(self, path):

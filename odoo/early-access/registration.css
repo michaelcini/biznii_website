@@ -1,0 +1,29 @@
+/* Scoped additions; the shared approved website stylesheet remains unchanged. */
+.early-access-intro h1{font-size:clamp(40px,6vw,76px);max-width:920px;line-height:1.08}
+.early-access-intro .lead{max-width:760px}
+.registration-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:64px;align-items:start}
+.registration-grid h2{font-size:clamp(30px,4vw,44px)}
+.registration-grid .plain-list{font-size:15px}
+.registration-card{border:1px solid var(--line);background:var(--paper);padding:32px;border-radius:8px;min-width:0}
+.registration-card fieldset{border:0;padding:0;margin:0;min-width:0}
+.registration-card legend{font-size:24px;font-weight:650;margin-bottom:12px}
+.registration-card label{display:block;font-size:14px;font-weight:600;margin-bottom:8px}
+.registration-card input:not([type=checkbox]),.registration-card select,.registration-card textarea{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:16px;color:var(--ink);background:var(--paper);border:1px solid var(--muted);border-radius:5px;padding:12px;min-height:48px}
+.registration-card textarea{resize:vertical;min-height:132px}
+.registration-card .field{margin-top:24px}
+.registration-card .hint,.registration-card .notice{font-size:13px;color:var(--muted);margin-top:8px}
+.registration-card a{text-decoration:underline;text-underline-offset:3px;color:var(--orange-text)}
+.registration-card .consent{display:flex;align-items:flex-start;gap:12px;font-weight:400;line-height:1.6;margin:24px 0}
+.registration-card input[type=checkbox]{width:20px;height:20px;flex:0 0 20px;margin-top:3px;accent-color:var(--orange-text)}
+.registration-card .button{border:0;cursor:pointer;font-family:inherit;min-height:48px}
+.registration-card :disabled{cursor:not-allowed;opacity:.65}
+.registration-card :focus-visible{outline:3px solid var(--orange-text);outline-offset:4px}
+.registration-card [aria-invalid=true]{border-color:#9c251b}
+.registration-message{padding:16px;border:1px solid var(--line);border-radius:5px;margin-bottom:20px;background:var(--sage-soft,#e8ebdf)}
+#registration-error{color:#8b251a;margin-top:16px;font-size:14px}
+#registration-success{scroll-margin-top:120px}
+#registration-success h2{font-size:28px;margin-bottom:20px}
+.early-test-note{margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
+.early-test-note p{margin-top:16px;color:var(--muted)}
+@media(max-width:800px){.registration-grid{grid-template-columns:1fr;gap:32px}.registration-card{padding:24px 18px}}
+@media(prefers-reduced-motion:reduce){.registration-card .button{transition:none}}
