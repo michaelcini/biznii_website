@@ -2,12 +2,13 @@
 
 Static website published from `main` through GitHub Pages, using `CNAME` for `biznii.com`.
 
-## BizNii Odoo Mobile
+## BizNii for Odoo
 
-- `odoo-mobile.html`: single product page combining all 97 features, app screenshots/video, the interactive phone and widgets in the cream/sage/coral design. Includes a Google Play coming-soon section.
+- `odoo-mobile.html`: product page with 100 documented features, native screenshots/video, the interactive phone and widgets. Preserves the existing layout, cream/sage palette and #FF6630 brand orange, with darker text accents for readability. Release status is 0.29.33/code 99, Play internal testing; public production availability is not asserted.
 - `odoo-mobile-showcase.html`: compatibility redirect to the product page; old section bookmarks are retained.
 - `odoo-mobile-support.html`: setup, troubleshooting and support contact.
 - `odoo-mobile-privacy.html`: public app-specific privacy policy for the Play Console URL field.
+- `odoo/terms/index.html`: Terms of Use and Disclaimer at `/odoo/terms/`, linked from product, support and privacy pages.
 - `odoo-mobile-showcase.css` / `.js`: design and navigation shared by all three app pages; search/filtering and image dialog on the product page.
 - `odoo-mobile-experience.css` / `.js`: phone and home-screen-widget interactions.
 - `assets/odoo/showcase/`: Android screen media with internal capture provenance in its README. Marketing copy describes the product experience, not capture tooling.
@@ -19,14 +20,9 @@ The company homepage links to the unified app page. Corporate privacy lists the 
 
 Serve this checkout with `python -m http.server 8089`, then open `http://localhost:8089/odoo-mobile.html`.
 
-The product/support/privacy sources and capability inventory live in the private Odoo app repository:
+Maintain the published product and legal pages in this repository. Earlier app-repository export tooling is not authoritative for the current release/legal copy and can overwrite it. Review generated content before any future import. Do not modify the app repository to maintain this site. See `docs/ODOO_CONTENT_AUDIT.md` for release/source evidence, boundaries, legal references and Android onboarding recommendations.
 
-```powershell
-python tools/sync-website-features.py
-python tools/export-biznii-showcase.py ../biznii_website
-```
-
-The export intentionally updates the unified product page, compatibility redirect, shared assets and app service pages. Company homepage and corporate privacy edits are maintained here. Review routing and release messaging whenever changing the export.
+Run `python tools/check_site.py` and `node --check` on both Odoo JavaScript files. Serve locally and check desktop/mobile layout, phone hotspots, feature search, widget interactions, and legal links before publishing to `main`.
 
 The public policy is https://biznii.com/odoo-mobile-privacy.html. Before app submission, link it from the Android app and Play Console, complete accurate Data safety including scanner SDK diagnostics, and verify release-build practices. The app repository's website README records the outstanding Play submission steps and policy sources.
 

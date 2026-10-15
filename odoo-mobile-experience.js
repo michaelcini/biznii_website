@@ -5,7 +5,7 @@ const screenPages = {
   sales: {workspace:'sales',title:'From quotation to order',description:'Review quotations, orders and products through the app’s Sales workspace.',label:'Sales · Quotations'},
   orders: {workspace:'sales',title:'Keep your orders moving',description:'Confirmed sales orders stay alongside quotations and products.',label:'Sales · Orders'},
   products: {workspace:'sales',title:'Your products, close at hand',description:'Find products, references and prices in the Sales workspace.',label:'Sales · Products'},
-  money: {workspace:'money',title:'A clearer view of your money',description:'Customer invoices, vendors, receivables, payables, P & L, reports and statements belong in Money.',label:'Money · Customer invoices'},
+  money: {workspace:'money',title:'A clearer view of your money',description:'Customer invoices and credit notes, vendor accounting, receivables, payables, P & L, reports and statements belong in Money. Available actions follow Odoo permissions.',label:'Money · Customer invoices'},
   more: {workspace:'more',title:'Everything else you need',description:'Discussion, customers, stock, purchasing, suppliers, calendar, reports, search, settings and connections.',label:'More'},
   customers: {workspace:'more',title:'Know your customer',description:'Find contacts and open their business records.',label:'More · Customers'},
   calendar: {workspace:'more',title:'Make the day work',description:'Explore Schedule, Day, 3 days, Week and Month views with appointments in context.',label:'Calendar · Day'},
@@ -29,10 +29,10 @@ const salesTabs = [['Show quotations','sales',3,7,29,6],['Show orders','orders',
 const earlyCalendarTabs = [['Show schedule','calendar-schedule',3,13,27,5],['Show day','calendar',30,13,17,5],['Show three days','calendar-three-days',47,13,22,5],['Show week','calendar-week',69,13,25,5]];
 const lateCalendarTabs = [['Show day','calendar',13,13,18,5],['Show three days','calendar-three-days',31,13,22,5],['Show week','calendar-week',53,13,23,5],['Show month','calendar-month',76,13,22,5]];
 const hotspots = {
-  overview: [['Open calendar','calendar',35,22,25,6],['Explore customer records','customers',8,66,41,8],['Explore invoices','money',51,66,41,8],['Explore quotations','sales',8,75,41,8],['Explore products','products',51,75,41,8]],
-  todo: [['Open task calendar','calendar',44,14,9,6],['Open job details','task-detail',3,44,94,11]],
+  overview: [['Open calendar','calendar',36,23,25,6],['Explore customer records','customers',8,66,41,8],['Explore invoices','money',51,66,41,8],['Explore quotations','sales',8,75,41,8],['Explore products','products',51,75,41,8]],
+  todo: [['Open task calendar','calendar',44,14,9,6],['Explore job details','task-detail',3,47,94,9]],
   customers: [['Open Acme customer','customer-detail',4,19,92,11]],
-  more: [['Open Discussion','discussion',4,27,45,18],['Open Customers','customers',51,27,45,18],['Explore stock products','products',4,47,45,18],['Open Calendar','calendar',51,66,45,18]],
+  more: [['Open Discussion','discussion',4,28,45,19],['Open Customers','customers',51,28,45,19],['Explore stock products','products',4,49,45,19],['Open Calendar','calendar',51,69,45,19]],
   money: [['Explore invoice pricing','pricing',4,27,92,9]],
   sales: [...salesTabs,['Explore quotation pricing','pricing',4,27,92,9]],
   orders: salesTabs,
@@ -52,8 +52,8 @@ function showScreen(key, remember = true) {
   const page = screenPages[key]; if (!page) return;
   if (remember && key !== currentScreen) screenHistory.push(currentScreen);
   currentScreen = key;
-  screenImage.src = `assets/odoo/showcase/${page.asset || 'workspace-' + key}.png`;
-  screenImage.alt = `BizNii Odoo Mobile ${page.label} page`;
+  screenImage.src = `assets/odoo/showcase/${page.asset || 'workspace-' + key}.png?v=release-033-20261015`;
+  screenImage.alt = `BizNii for Odoo ${page.label} page`;
   document.querySelector('#native-title').textContent = page.title;
   document.querySelector('#native-description').textContent = page.description;
   document.querySelector('#native-caption').textContent = page.label;

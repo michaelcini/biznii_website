@@ -1,6 +1,14 @@
 # Native app showcase media
 
-All assets are real Android simulator captures from the app's Compose screens using **test fixtures**, not production records or invented website UI. Some focused tests render a screen without the complete app shell. Capture dates and theme/layout reflect the corresponding test run. Media does not demonstrate every feature; the complete feature inventory is on `showcase.html`.
+All assets are real Android simulator captures from the app's Compose screens using **test fixtures**, not production records or invented website UI. Some focused tests render a screen without the complete app shell. Capture dates and theme/layout reflect the corresponding test run. Media does not demonstrate every feature; the feature inventory is on `odoo-mobile.html`.
+
+## Current workspace refresh — 15 October 2026
+
+All thirteen `workspace-*.png` images were replaced with untouched 1080 × 2091 native Compose captures from the current 0.29.33 source/build (`5f3c3fe`, documentation HEAD `d726955`). `calendar.png` now uses the same fresh native day-view capture. The older fixture-only customer/job/offline/pricing/chat detail media and video below remain valid representative native screens; they are not claimed to be fresh captures of every new feature.
+
+The existing `WebsiteScreenCaptureTest` first passed all 13 methods on the isolated API-30 emulator. Its old defaults now correctly hide features without current permission evidence. A temporary **external** copy, `WebsiteCurrentCaptureTest`, sets fictional `BusinessCapabilities` and feature-entitlement values and passes them to the production `WorkspaceMoreScreen`. No production layout, composable or Android repository file was changed. The external capture source was supplied through a temporary Gradle init script. This updated fixture suite passed all 13 methods in 45.471 seconds. The capture build passed; an intermediate duplicate-class fixture configuration was corrected before that successful run.
+
+Only test data appears: Northbay Services, Acme Ltd, Blue Harbour Trading, reserved `.test` email and synthetic documents/amounts. No Odoo connection, real business data, live purchase or production device was used. The emulator was stopped after extraction. Native images were visually reviewed; the website's percentage-based tap areas were updated for the current frames. No image was redrawn or retouched. Earlier capture notes below are historical provenance, superseded for these thirteen workspace assets and `calendar.png`.
 
 | Website asset | Capture source |
 | --- | --- |
