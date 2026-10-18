@@ -5,5 +5,5 @@ window.BIZNII_EARLY_ACCESS = Object.freeze({
   enabled: true,
   formId: 'zhUewNLPQ',
   privacyApproved: true,
-  privacyVersion: '2026-10-15-4'
+  privacyVersion: '2026-10-18'
 });

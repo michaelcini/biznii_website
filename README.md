@@ -32,4 +32,4 @@ The Calendar widget uses the Android five/six-week month rules, task status and 
 
 ## Early Access programme
 
-The Odoo product page links to `/odoo/early-access/`. Registration is enabled using the owner’s Formspark Free endpoint. The owner confirmed spam filtering, the biznii.com allowed-domain restriction and disabled notification emails. The programme notice names Biznii and sets a three-month registration retention deadline. See [setup, privacy decisions and private administration](docs/EARLY_ACCESS.md). No applicant data or secrets belong in this repository.
+The Odoo product page links to `/odoo/early-access/`. Registration is enabled using the owner’s Formspark Free endpoint. The owner confirmed spam filtering and the biznii.com allowed-domain restriction, and subsequently enabled administrator notifications received in Gmail. The programme notice names Biznii and sets a three-month registration retention deadline. See [setup, privacy decisions and private administration](docs/EARLY_ACCESS.md). No applicant data or secrets belong in this repository.
