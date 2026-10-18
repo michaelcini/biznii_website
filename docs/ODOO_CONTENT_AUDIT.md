@@ -67,3 +67,35 @@ At the owner’s request, removed internal-testing, prerelease, build/version an
 ## Customer-facing copy review — 15 October 2026
 
 Reviewed every public HTML page and the interactive preview descriptions at the owner’s request. Rewrote the 100 Odoo feature entries around user actions; removed test claims, implementation mechanics and development-roadmap commentary. Simplified privacy descriptions without removing data categories, recipients, retention guidance or rights. Removed drafting commentary about categorical data-loss exclusions, missing backups, publication/acceptance and legal enforceability from the Terms. Kept the practical backup/risk guidance and the mandatory-rights savings clause. Tidied homepage and AfterHours preview/audit wording without changing app behavior or privacy practices.
+
+## Compatibility update — 18 October 2026
+
+The owner confirmed the requested range is every major version from Odoo 14 through
+20. Read-only review of the application README, `docs/release-v0.30.0.md`,
+`docs/RELEASE_READINESS_REVIEW_0.30.0_2026-10-18.md`, and the compatibility-client code
+supports updating public compatibility wording. The older Odoo-19-only evidence
+above describes the earlier release and is superseded for this compatibility claim.
+
+The release notes document Community-edition testing across 14–20, not Enterprise-only
+feature certification or universal custom-module support. They also record remaining
+matrix limitations and no new Play rollout. This website task does not rerun app QA,
+certify all workflows, modify the Android repository or announce a new Play release.
+Username/password is used on Odoo 14–18; the app's API-key path needs Odoo 19/20 JSON-2.
+
+Updated the homepage product badge, product metadata/badges/features/FAQ, support
+connection instructions, supported-environment terms and Early Access compatibility
+copy/dropdown. Existing 15–19 dropdown values are unchanged; explicit 14 and 20 values
+are added. No screenshots, preview scripts, form endpoint, consent basis, retention,
+notification settings, analytics, hosting or domain configuration is changed.
+
+Public Odoo release reference: https://www.odoo.com/page/release-notes lists Odoo 20
+as released September 2026. Promotional text remains an Early Access invitation and
+does not claim the app is already on Google Play. Copy variants are maintained in
+`docs/EARLY_ACCESS_PROMOTION.md`.
+
+Website verification for this update: static checks passed for 11 pages and 227 local
+references; all relevant JavaScript syntax checks passed. The existing browser suite
+passed with 39 intercepted POSTs, including every Odoo option from 14 through 20,
+blank optional fields, validation, errors, navigation and preview tabs. No real
+applicant submissions were made. Mobile screenshot review found no layout issue.
+This is website validation, not a new Android/Enterprise test run.
