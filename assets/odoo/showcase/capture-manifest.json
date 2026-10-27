@@ -132,7 +132,8 @@
     "test": "WebsiteCallsCaptureTest#connectingVideo",
     "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
     "theme": "Light",
-    "sha256": "4d73bd58d4402fdd59aa9d1aeb91ffd7d3a4892232a26b87be8e10d12087d38f"
+    "sha256": "a877db2b86d4d81d891655f3de1b735f5e88c332ad0811e36b8516ec05c043e9",
+    "presentationEdit": "2026-10-27: imagegen office sample backgrounds; original native header, controls and connecting caller card restored. Not an unedited capture or live call."
   },
   {
     "asset": "call-video.png",
@@ -147,7 +148,8 @@
     "test": "WebsiteCallsCaptureTest#activeVideo",
     "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
     "theme": "Light",
-    "sha256": "73574f0d51ea46c69b9cd51be4e0f3bca9900b6123b00d2203ca80809ebc72e6"
+    "sha256": "9bb250a4bacb2ff6e1e31539825741a4e366b467ae6073afbc9a1a550645ba15",
+    "presentationEdit": "2026-10-27: imagegen office sample backgrounds; original native header, controls and connecting caller card restored. Not an unedited capture or live call."
   },
   {
     "asset": "call-voice.png",

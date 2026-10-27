@@ -183,7 +183,8 @@ function showScreen(key, remember = true) {
   const page = screenPages[key]; if (!page) return;
   if (remember && key !== currentScreen) screenHistory.push(currentScreen);
   currentScreen = key;
-  screenImage.src = `assets/odoo/showcase/${page.asset || 'workspace-' + key}.png`;
+  const mediaVersion = ['call-video', 'call-video-connecting'].includes(page.asset) ? '?v=office-20261027' : '';
+  screenImage.src = `assets/odoo/showcase/${page.asset || 'workspace-' + key}.png${mediaVersion}`;
   screenImage.alt = `BizNii for Odoo ${page.label} page`;
   document.querySelector('#native-title').textContent = page.title;
   document.querySelector('#native-description').textContent = page.description;

@@ -62,3 +62,7 @@ python tools/collect-website-captures.py --serial <serial> --raw-dir <outside-ch
 ```
 
 The collector refuses physical devices and restarts adbd as root only on the selected emulator, to read Android scoped external storage. Original PNGs and the initial manifest stay in the explicit raw directory. Review every rendition and refresh this provenance/manifest before export. Old `calendar.png`, `customer.png`, `pricing.png` and `chat-demo.mp4` were retired; no obsolete media remains linked. Public marketing copy contains no capture/test implementation details beyond the page-level sample-data explanation.
+
+## Office sample background update — 27 October 2026
+
+At the owner's request, `call-video.png` and `call-video-connecting.png` now use imagegen office sample backgrounds in the main video area and self-preview. These two assets are presentation composites, replacing the geometric synthetic rooms described in the original capture record. The native header, control bar and connecting caller card were restored from the original captures; header and control pixels were verified unchanged. Dimensions remain 810 × 1658. No production Android code or APK changed; no new instrumentation or live calls were run. The manifest hashes describe these edited renditions. All other capture records remain unchanged. Repeat capture alone will restore the original geometric room unless this presentation edit is reapplied.
