@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#FF6630">
-  <meta name="description" content="BizNii for Odoo is an independent Android app compatible with Odoo 14–20, with customers, sales, invoices, calendar, offline To Dos, inventory and widgets.">
+  <meta name="description" content="BizNii for Odoo is an independent Android app compatible with Odoo 14–20, with customers, field work, Money, stock, Discuss messages, voice/video calls and widgets.">
   <meta property="og:title" content="BizNii for Odoo | Android App for Odoo ERP">
   <meta property="og:description" content="Explore your native Android workspace for Odoo 14–20. Explore every feature, from customer relationships to your Android home screen.">
   <meta property="og:url" content="https://biznii.com/odoo-mobile.html">
@@ -12,10 +12,10 @@
   <meta property="og:image" content="https://biznii.com/assets/odoo/odoo-mobile-logo.png">
   <title>BizNii for Odoo | Android App for Odoo ERP</title>
   <link rel="icon" href="favicon.png?v=3" type="image/png">
-  <link rel="stylesheet" href="odoo-mobile-showcase.css?v=legal-20261015">
-  <link rel="stylesheet" href="odoo-mobile-experience.css?v=21b96cdfd7">
-  <script defer src="odoo-mobile-showcase.js?v=5e1cea947f"></script>
-  <script defer src="odoo-mobile-experience.js?v=customer-copy-20261015"></script>
+  <link rel="stylesheet" href="odoo-mobile-showcase.css?v=6326d0783b">
+  <link rel="stylesheet" href="odoo-mobile-experience.css?v=240a3456dd">
+  <script defer src="odoo-mobile-showcase.js?v=5b9981a362"></script>
+  <script defer src="odoo-mobile-experience.js?v=68d4886586"></script>
 <link rel="canonical" href="https://biznii.com/odoo-mobile.html"></head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -23,7 +23,7 @@
     <div class="wrap nav">
       <a class="wordmark" href="index.html" aria-label="BizNii home"><img class="site-logo" src="biznii-logo.png?v=3" alt="BizNii" width="1169" height="466"></a>
       <button id="menu-toggle" class="menu-toggle" type="button" aria-controls="navigation" aria-expanded="false" aria-label="Open navigation">Menu <span>＋</span></button>
-      <nav id="navigation" aria-label="Main navigation"><a href="#workspaces">Workspaces</a><a href="#explore">Inside the app</a><a href="#feature-directory">All features</a><a href="odoo-mobile-support.html">Support</a><a href="odoo-mobile-privacy.html">Privacy policy</a><a class="button small" href="#coming-soon">App access <span aria-hidden="true">↗</span></a></nav>
+      <nav id="navigation" aria-label="Main navigation"><a href="#workspaces">Workspaces</a><a href="#explore">Inside the app</a><a href="#calls">Discuss &amp; calls</a><a href="#feature-directory">All features</a><a href="odoo-mobile-support.html">Support</a><a href="odoo-mobile-privacy.html">Privacy policy</a><a class="button small" href="#coming-soon">App access <span aria-hidden="true">↗</span></a></nav>
     </div>
   </header>
   <main id="main">
@@ -31,15 +31,15 @@
       <div class="hero-copy">
         <div class="app-identity"><img src="assets/odoo/odoo-mobile-logo.png" alt="BizNii for Odoo app logo" width="1280" height="1280"><div><strong>BizNii for Odoo</strong><p class="eyebrow"><span class="signal"></span> NATIVE ANDROID · ODOO 14–20</p></div></div>
         <h1>Business,<br>wherever<br><em>you are.</em></h1>
-        <p class="lead">The customer visit. The next quotation. The job that needs finishing. Bring your Odoo workspace with you, in one focused Android app.</p>
+        <p class="lead">Your Odoo business, in your hand. Manage the customer visit, the next quotation and the job that needs finishing. Stay connected through Discuss messages and one-to-one voice and video calls.</p>
         <div class="actions"><a class="button" href="#feature-directory">Explore all features <span aria-hidden="true">↗</span></a><a class="text-link" href="#in-action">See it in action <span aria-hidden="true">↓</span></a></div>
-        <p class="launch-status"><span class="signal"></span>72-hour free trial · No automatic charge</p><div class="hero-specs"><span>Odoo 14–20</span><span>Android 8.0+</span><span>Lifetime access</span></div>
+        <p class="launch-status"><span class="signal"></span>Coming soon on Google Play · 72-hour free trial at launch</p><div class="hero-specs"><span>Odoo 14–20</span><span>Android 8.0+</span><span>Lifetime access</span></div>
       </div>
       <div class="hero-stage">
         <span class="orbit orbit-one" aria-hidden="true"></span><span class="orbit orbit-two" aria-hidden="true"></span>
         <div class="stage-label"><span class="signal"></span> YOUR WORK. CONNECTED.</div>
-        <figure class="device device-back"><img src="assets/odoo/showcase/customer.png" alt="BizNii customer profile with quotation, invoice and discussion actions, for Acme Ltd" width="1080" height="2400"><figcaption>Customer → quotation</figcaption></figure>
-        <figure class="device device-front"><img src="assets/odoo/showcase/job.png" alt="Completed installation with linked delivery, materials, notes and job report in the Android app" width="1080" height="2400"><figcaption>Visit → completed job</figcaption></figure>
+        <figure class="device device-back"><img src="assets/odoo/showcase/workspace-customer-detail.png" alt="BizNii customer profile with quotation, invoice and discussion actions, for Acme Ltd" width="810" height="1658"><figcaption>Customer → quotation</figcaption></figure>
+        <figure class="device device-front"><img src="assets/odoo/showcase/job.png" alt="Customer-linked installation task with materials, delivery and job-report actions" width="810" height="1658"><figcaption>Visit → job context</figcaption></figure>
         <div class="floating-note"><span aria-hidden="true">✓</span><div><strong>From office to on site.</strong><small>Keep the whole job in context.</small></div></div>
         <p class="capture-note">Your workspace, wherever you go.</p>
       </div>
@@ -52,7 +52,7 @@
         <a class="workspace warm" href="#customers"><span class="workspace-number">01</span><h3>Know your customer.</h3><p>Contacts, history, documents and the next conversation.</p><span class="workspace-link">Customers & sales ↗</span></a>
         <a class="workspace green" href="#planning"><span class="workspace-number">02</span><h3>Make the day work.</h3><p>Tasks, appointments and field jobs that stay connected.</p><span class="workspace-link">Planning & field work ↗</span></a>
         <a class="workspace sand" href="#operations"><span class="workspace-number">03</span><h3>Keep things moving.</h3><p>Invoices, stock, deliveries, purchasing and payments.</p><span class="workspace-link">Money & operations ↗</span></a>
-        <a class="workspace charcoal" href="#team"><span class="workspace-number">04</span><h3>Stay in the loop.</h3><p>Native Odoo chats, shared discussions and widgets.</p><span class="workspace-link">Team & connection ↗</span></a>
+        <a class="workspace charcoal" href="#team"><span class="workspace-number">04</span><h3>Stay in the loop.</h3><p>Discuss messages, voice and video calls, and live widgets.</p><span class="workspace-link">Team & connection ↗</span></a>
       </div>
     </section>
 
@@ -61,20 +61,20 @@
         <div class="subsections"><article><h3>Customer relationships</h3><p>Search, create and edit contacts and addresses. Call, compose an email, map the address or open the shared discussion. Explore the customer’s To Dos, quotations, sales orders and invoice history, plus photos and documents.</p></article><article><h3>Quotations & sales orders</h3><p>Edit draft lines with company pricelists, quantity-aware pricing and permission-aware margins. Confirm orders, review cancellation consequences and restore cancelled documents to draft.</p></article><article><h3>Products & pricing</h3><p>See prices and available stock. Create and edit single-variant products. Use Calc net with actual Odoo tax rules, clear totals and price references in quotation and invoice editors.</p></article></div>
         <a class="text-link" href="#directory-sales">Explore every sales feature ↗</a>
       </div>
-      <div class="story-media"><figure class="device single"><img src="assets/odoo/showcase/customer.png" alt="Acme Ltd customer profile in BizNii for Odoo" loading="lazy" width="1080" height="2400"></figure><div class="media-caption"><span>CUSTOMER RELATIONSHIPS</span><p>The customer profile connects contact details, business documents and history.</p></div></div>
+      <div class="story-media"><figure class="device single"><img src="assets/odoo/showcase/workspace-customer-detail.png" alt="Acme Ltd customer profile in BizNii for Odoo" loading="lazy" width="810" height="1658"></figure><div class="media-caption"><span>CUSTOMER RELATIONSHIPS</span><p>The customer profile connects contact details, business documents and history.</p></div></div>
     </div></section>
 
     <section class="section wrap" id="planning">
       <div class="section-heading wide"><p class="eyebrow">03 / PLAN IT. DO IT. FINISH IT.</p><h2>Your day has a lot going on.<br><em>Keep it together.</em></h2></div>
       <div class="planning-grid"><article class="planning-main"><p class="eyebrow">TO DO & CALENDAR</p><h3>Give every task<br>its time and place.</h3><p>Create, edit, schedule, complete and reopen Odoo activities. Find today’s work, overdue tasks and completed jobs. Link a customer and start a prefilled quote or invoice directly from the task.</p><ul class="plain-list"><li>Schedule, Day, 3-day, Week and Month views</li><li>Hourly grids, all-day lanes and true-duration task blocks</li><li>15-minute drag and resize, including dragging into the next day</li><li>Overlap warnings, working hours and unscheduled-task tray</li><li>Recurring events, calendar copy/move and bulk date changes</li><li>Completed-task search, feedback and reviewed bulk deletion</li></ul><a class="text-link" href="#directory-planning">All planning features ↗</a></article>
-      <figure class="planning-image"><img src="assets/odoo/showcase/calendar.png?v=release-033-20261015" alt="Native calendar day view showing a customer visit and pending work with scheduled tasks" loading="lazy" width="1080" height="2091"><figcaption>Your day, clearly planned</figcaption></figure>
+      <figure class="planning-image"><img src="assets/odoo/showcase/workspace-calendar.png" alt="Native calendar day view showing a customer visit and pending work with scheduled tasks" loading="lazy" width="810" height="1658"><figcaption>Your day, clearly planned</figcaption></figure>
       <article class="field-card"><span class="eyebrow">FIELD WORK</span><h3>The job is more<br>than an appointment.</h3><p>Carry materials, travel buffers and installation checklists with the task. Capture job photos, signatures and documents. Share a job-report PDF and hand the ordered appointments to your maps app.</p><div class="field-tags"><span>Job reports</span><span>Signatures</span><span>Checklists</span><span>Warranty lookup</span><span>Van stock</span></div><p class="fine">Repeat tasks advance when you complete them in BizNii.</p></article></div>
     </section>
 
     <section class="section operations" id="operations"><div class="wrap">
       <div class="section-heading"><p class="eyebrow">04 / MONEY & OPERATIONS</p><h2>See what’s due.<br>Know what’s in stock.</h2><p>Follow the business from the first order to the delivery, invoice and payment. Review consequential actions before they reach Odoo.</p></div>
       <div class="operations-grid">
-        <article><span class="line-icon" aria-hidden="true">€</span><h3>Invoices & payments</h3><p>Create and edit draft invoices with dates, references, customer and product lines, taxes and prices. Review before posting. Register payments through the configured bank/cash journal; create credit notes as drafts for review.</p><a href="#directory-money">Invoice features ↗</a></article>
+        <article><span class="line-icon" aria-hidden="true">€</span><h3>Invoices & payments</h3><p>Create and edit draft invoices with dates, references, customer and product lines, taxes and prices. Review before posting. Register payments through the configured bank/cash journal; create credit notes as drafts for review.</p><a href="#directory-invoices">Invoice features ↗</a></article>
         <article><span class="line-icon" aria-hidden="true">▥</span><h3>Accounting & reports</h3><p>Explore receivables and payables in current, 1–30, 31–60, 61–90 and 91+ day buckets. Share branded, paginated customer statements and calendar-year P&L, bank/cash and VAT summaries. Prepare payment reminders in your mail app.</p><a href="#boundaries">Reporting scope ↗</a></article>
         <article><span class="line-icon" aria-hidden="true">▦</span><h3>Inventory & transfers</h3><p>Check on-hand, forecast, incoming, outgoing and low stock. Look up barcodes with a camera or hardware scanner. Reserve deliveries and complete supported transfers, tracked receipts, serial adjustments and stock counts.</p><a href="#directory-stock">Inventory features ↗</a></article>
         <article><span class="line-icon" aria-hidden="true">↙</span><h3>Purchasing & suppliers</h3><p>Search suppliers, edit draft RFQs, review purchase orders, arrivals and vendor references. Confirm within Odoo approval rules, cancel or restore eligible drafts, share PDFs and prepare vendor bills for eligible quantities.</p><a href="#directory-purchasing">Purchasing features ↗</a></article>
@@ -82,11 +82,19 @@
     </div></section>
 
     <section class="section wrap story" id="team">
-      <div class="story-media"><figure class="device single"><img src="assets/odoo/showcase/discussion.png" alt="Native Odoo private chat showing an exchange between PC and phone" loading="lazy" width="1080" height="2400"></figure><div class="media-caption"><span>NATIVE ODOO DISCUSSION</span><p>The same conversation, carried with you.</p></div></div>
-      <div class="story-copy"><p class="eyebrow">05 / TEAM, WIDGETS & REMINDERS</p><h2>Keep the conversation<br><em>with the work.</em></h2><div class="subsections"><article><h3>Direct chats, groups & record discussions</h3><p>Start native Odoo direct or group chats, mention internal users, and attach photos or files. Open shared business-record discussions from a familiar message box. Inbox, Mentions and unread state help you find what needs attention.</p></article><article><h3>Your Android home screen</h3><p>An adaptive full-month activity widget includes task colours, completed work, overdue styling, pending summaries and date shortcuts. The Discussion widget brings All, Inbox and Mentions to the home screen with refresh and shortcuts to your conversations.</p></article><article><h3>Reminders with context</h3><p>Opt into appointment warnings, due-today reminders and overdue digests every 6 or 12 hours. Use Settings → Notifications → Show overdue summary now to request an expandable summary from the current workspace’s saved tasks. Low-stock and overdue-invoice alerts are also optional. Appointment reminders follow your Android notification and alarm settings. Expand an overdue notification to see available task details; Android may initially show only the count. Business alerts show counts, and lock-screen public content is redacted.</p></article></div><p class="fine">Sending private messages requires a connection. Background message checks run periodically and may be delayed by Android battery settings.</p></div>
+      <div class="story-media"><figure class="device single"><img src="assets/odoo/showcase/discussion.png" alt="Private Odoo conversation with fictional installation notes and an attachment" loading="lazy" width="810" height="1658"></figure><div class="media-caption"><span>NATIVE ODOO DISCUSSION</span><p>The same conversation, carried with you.</p></div></div>
+      <div class="story-copy"><p class="eyebrow">05 / TEAM, WIDGETS & REMINDERS</p><h2>Keep the conversation<br><em>with the work.</em></h2><div class="subsections"><article><h3>Discuss, wherever work takes you</h3><p>Read and send messages in supported private conversations. Share attachments, follow Inbox and Mentions, and open a record’s discussion from the work itself. Supported password sessions receive live updates, with periodic checks as a fallback.</p></article><article><h3>Your Android home screen</h3><p>An adaptive full-month activity widget includes task colours, completed work, overdue styling, pending summaries and date shortcuts. The Discuss widget brings All, Inbox and Mentions to the home screen, live updates on supported connections, and shortcuts to conversations and one-to-one calls.</p></article><article><h3>Reminders with context</h3><p>Opt into appointment warnings, due-today reminders and overdue digests every 6 or 12 hours. Use Settings → Notifications → Show overdue summary now to request an expandable summary from the current workspace’s saved tasks. Low-stock and overdue-invoice alerts are also optional. Appointment reminders follow your Android notification and alarm settings. Expand an overdue notification to see available task details; Android may initially show only the count. Business alerts show counts, and lock-screen public content is redacted.</p></article></div><p class="fine">Messages and calls require a connection. Background listening is optional and needs notifications and Android permission to keep running; device restrictions can delay or prevent delivery.</p></div>
     </section>
 
-<section class="section soft" id="explore"><div class="wrap experience-grid"><div class="experience-copy"><p class="eyebrow">YOUR WORKSPACE, AT YOUR FINGERTIPS</p><h2>A little less tapping.<br><em>A lot more doing.</em></h2><p class="lead">Overview, To Do, Sales, Money and More. Your everyday Odoo work, organised around the way you use it.</p><p class="screen-instruction">Tap the tabs, cards and highlighted actions to explore the app with sample data.</p><div class="native-tabs" role="tablist" aria-label="App workspaces"><button id="workspace-overview" role="tab" aria-selected="true" aria-controls="native-panel" data-screen="overview">Overview</button><button id="workspace-todo" role="tab" aria-selected="false" aria-controls="native-panel" tabindex="-1" data-screen="todo">To Do</button><button id="workspace-sales" role="tab" aria-selected="false" aria-controls="native-panel" tabindex="-1" data-screen="sales">Sales</button><button id="workspace-money" role="tab" aria-selected="false" aria-controls="native-panel" tabindex="-1" data-screen="money">Money</button><button id="workspace-more" role="tab" aria-selected="false" aria-controls="native-panel" tabindex="-1" data-screen="more">More</button></div><div class="native-description" aria-live="polite"><h3 id="native-title">Your business overview</h3><p id="native-description">Follow outstanding invoices, financial summaries and your next actions in one place.</p></div><div class="native-subtabs" id="sales-screen-tabs" role="group" aria-label="Sales pages" hidden><button data-screen="sales" aria-pressed="true">Quotations</button><button data-screen="orders" aria-pressed="false">Orders</button><button data-screen="products" aria-pressed="false">Products</button></div><div class="native-subtabs" id="more-screen-tabs" role="group" aria-label="More pages" hidden><button data-screen="more" aria-pressed="true">All tools</button><button data-screen="customers" aria-pressed="false">Customers</button><button data-screen="calendar" aria-pressed="false">Calendar</button></div><a class="text-link" href="#feature-directory">Find your workflow ↗</a></div><div class="phone-wrap"><figure class="native-phone" id="native-panel" role="tabpanel" aria-labelledby="workspace-overview"><div class="phone-explore-controls"><button id="phone-back" type="button" disabled aria-label="Previous app screen">← Back</button><button id="phone-hints" type="button" aria-pressed="true">Show tap areas</button></div><div class="native-screen"><img id="native-screen-image" src="assets/odoo/showcase/workspace-overview.png?v=release-033-20261015" alt="BizNii for Odoo Overview workspace" width="1080" height="2091"><div id="phone-hotspots" class="phone-hotspots hints-on" aria-label="Screen actions"></div><nav class="native-phone-tabs" aria-label="Phone workspace navigation"><button data-screen="overview" aria-label="Open Overview" aria-current="page"></button><button data-screen="todo" aria-label="Open To Do"></button><button data-screen="sales" aria-label="Open Sales"></button><button data-screen="money" aria-label="Open Money"></button><button data-screen="more" aria-label="Open More"></button></nav></div><figcaption id="native-caption" aria-live="polite">Overview</figcaption></figure></div></div></section>
+<section class="section soft" id="calls"><div class="wrap">
+  <div class="section-heading wide"><p class="eyebrow">DISCUSS / ONE-TO-ONE CALLS</p><h2>A quick question.<br><em>A familiar voice.</em></h2><p class="lead">Move from a private chat to a voice or video call. Connect with another BizNii user, or a colleague in standard Odoo Discuss on a supported PC browser configuration.</p></div>
+  <div class="call-story-grid"><article><h3>Answer straight from the ring</h3><p>See who is calling. Answer a video invitation with video or choose audio only. With background listening enabled and Android delivery permitted, incoming calls can reach you outside the chat and on the lock screen.</p><a class="zoom" href="assets/odoo/showcase/call-incoming-video.png"><img src="assets/odoo/showcase/call-incoming-video.png" alt="Alex Morgan’s incoming video call with Answer video, Audio only and Decline choices" loading="lazy" width="810" height="1658"></a></article>
+  <article><h3>Keep the controls in reach</h3><p>Mute, choose speaker output, switch cameras or turn video off. Remote video and your small local preview stay clear of the controls; connection status appears beneath the call identity.</p><a class="zoom" href="assets/odoo/showcase/call-video.png"><img src="assets/odoo/showcase/call-video.png" alt="Active video call with controlled sample media, local preview above mute, speaker, camera and end controls" loading="lazy" width="810" height="1658"></a></article>
+  <article><h3>Your app, your appearance</h3><p>Choose Light, Dark or System, with optional Android dynamic colours. The same call surface follows your appearance when opened from the foreground or a background invitation.</p><a class="zoom" href="assets/odoo/showcase/call-incoming-video-dark.png"><img src="assets/odoo/showcase/call-incoming-video-dark.png" alt="The same incoming Alex Morgan video invitation using the app’s Dark appearance" loading="lazy" width="810" height="1658"></a></article></div>
+  <p class="fine">One-to-one calls require a supported regular Odoo 16–20 release and username/password sign-in. Odoo 14/15, API-key connections and unsupported rolling Online builds do not support calling. Wi-Fi and mobile-data connectivity depend on the network path and Odoo’s configured services; some networks need an available relay. <a href="#boundaries">Connection and background requirements ↓</a></p>
+</div></section>
+
+<section class="section soft" id="explore"><div class="wrap experience-grid"><div class="experience-copy"><p class="eyebrow">YOUR WORKSPACE, AT YOUR FINGERTIPS</p><h2>A little less tapping.<br><em>A lot more doing.</em></h2><p class="lead">Overview, To Do, Sales, Money and More. Your everyday Odoo work, organised around the way you use it.</p><p class="screen-instruction">Tap the tabs, cards and highlighted actions to explore real app screens with sample data. These examples stay on this page; no Odoo account is connected. Call media uses controlled sample scenes.</p><div class="native-tabs" role="tablist" aria-label="App workspaces"><button id="workspace-overview" role="tab" aria-selected="true" aria-controls="native-panel" data-screen="overview">Overview</button><button id="workspace-todo" role="tab" aria-selected="false" aria-controls="native-panel" tabindex="-1" data-screen="todo">To Do</button><button id="workspace-sales" role="tab" aria-selected="false" aria-controls="native-panel" tabindex="-1" data-screen="sales">Sales</button><button id="workspace-money" role="tab" aria-selected="false" aria-controls="native-panel" tabindex="-1" data-screen="money">Money</button><button id="workspace-more" role="tab" aria-selected="false" aria-controls="native-panel" tabindex="-1" data-screen="more">More</button></div><div class="native-description" aria-live="polite"><h3 id="native-title">Your business overview</h3><p id="native-description">Follow outstanding invoices, financial summaries and your next actions in one place.</p></div><div class="native-subtabs" id="sales-screen-tabs" role="group" aria-label="Sales pages" hidden><button data-screen="sales" aria-pressed="true">Quotations</button><button data-screen="orders" aria-pressed="false">Orders</button><button data-screen="products" aria-pressed="false">Products</button></div><div class="native-subtabs" id="more-screen-tabs" role="group" aria-label="More pages" hidden><button data-screen="more" aria-pressed="true">All tools</button><button data-screen="customers" aria-pressed="false">Customers</button><button data-screen="customer-history" aria-pressed="false">Customer history</button><button data-screen="calendar" aria-pressed="false">Calendar</button><button data-screen="discuss-list" aria-pressed="false">Discuss</button><button data-screen="incoming-video" aria-pressed="false">Calls</button><button data-screen="stock" aria-pressed="false">Stock</button><button data-screen="purchasing" aria-pressed="false">Purchasing</button></div><a class="text-link" href="#feature-directory">Find your workflow ↗</a></div><div class="phone-wrap"><figure class="native-phone" id="native-panel" role="tabpanel" aria-labelledby="workspace-overview"><div class="phone-explore-controls"><button id="phone-back" type="button" disabled aria-label="Previous app screen">← Back</button><button id="phone-hints" type="button" aria-pressed="true">Show tap areas</button></div><div class="native-screen"><img id="native-screen-image" src="assets/odoo/showcase/workspace-overview.png" alt="BizNii for Odoo Overview workspace" width="810" height="1658"><div id="phone-hotspots" class="phone-hotspots hints-on" aria-label="Screen actions"></div><nav class="native-phone-tabs" aria-label="Phone workspace navigation"><button data-screen="overview" aria-label="Open Overview" aria-current="page"></button><button data-screen="todo" aria-label="Open To Do"></button><button data-screen="sales" aria-label="Open Sales"></button><button data-screen="money" aria-label="Open Money"></button><button data-screen="more" aria-label="Open More"></button></nav></div><figcaption id="native-caption" aria-live="polite">Overview</figcaption></figure></div></div></section>
 <section class="section widgets-v2" id="widgets"><div class="wrap">
   <div class="widget-showcase-head"><p class="eyebrow">YOUR ANDROID HOME SCREEN</p><h2>Useful information before you even open the app.</h2><p>Move through the months, open a day’s work or follow a conversation. Your next action is always close.</p></div>
   <div class="widget-controls"><div class="widget-switcher" role="group" aria-label="Choose a home-screen widget"><button class="widget-switch active" data-widget="calendar" aria-pressed="true">Calendar widget</button><button class="widget-switch" data-widget="discuss" aria-pressed="false">Discuss widget</button></div><div class="widget-theme-switch" role="group" aria-label="Widget appearance"><button data-widget-theme="light" aria-pressed="true">Light</button><button data-widget-theme="dark" aria-pressed="false">Dark</button></div></div>
@@ -106,19 +114,11 @@
   <dialog id="widget-note-dialog" class="experience-dialog"><form id="widget-note-form"><div class="dialog-heading"><h3>Add a quick note</h3><button type="button" data-close-note aria-label="Close quick note">×</button></div><label for="note-title">Task</label><input id="note-title" required maxlength="80" placeholder="Follow up with a customer"><label for="note-date">Date</label><input id="note-date" type="date" required><label for="note-colour">Task colour</label><select id="note-colour"><option value="green">Green</option><option value="blue">Blue</option><option value="coral">Coral</option><option value="purple">Purple</option></select><p class="sample-note">This adds a sample task to the calendar on this page.</p><button type="submit" class="experience-action">Add to calendar</button></form></dialog>
 </div></section>
 
-<section class="section soft" id="in-action"><div class="wrap">
-      <div class="section-heading"><p class="eyebrow">06 / INSIDE THE APP</p><h2>See the details.<br><em>Watch the flow.</em></h2><p>See your calendar, job details, offline tasks and pricing up close. Keep conversations connected as you move between your desk and your phone.</p></div>
-      <div class="demo-layout"><div class="demo-video"><video controls playsinline preload="metadata" poster="assets/odoo/showcase/discussion.png" aria-label="A conversation continued from desktop to phone"><source src="assets/odoo/showcase/chat-demo.mp4" type="video/mp4"><track kind="captions" src="assets/odoo/showcase/chat-demo.vtt" srclang="en" label="English" default>Your browser cannot play this video. <a href="assets/odoo/showcase/chat-demo.mp4">Watch the conversation.</a></video><div><span class="eyebrow">KEEP THE CONVERSATION GOING</span><h3>From a PC message to a phone reply.</h3><p>Read a message, send your reply and keep your team moving. Native Odoo conversations travel with your work.</p></div></div>
-      <div class="capture-grid">
-        <figure><a class="zoom" href="assets/odoo/showcase/calendar.png?v=release-033-20261015"><img src="assets/odoo/showcase/calendar.png?v=release-033-20261015" alt="Calendar showing a scheduled customer visit" loading="lazy" width="1080" height="2091"><span>View screenshot ↗</span></a><figcaption><strong>Plan the visit</strong><small>Native hourly calendar</small></figcaption></figure>
-        <figure><a class="zoom" href="assets/odoo/showcase/job.png"><img src="assets/odoo/showcase/job.png" alt="Completed installation task with delivery link and job evidence" loading="lazy" width="1080" height="2400"><span>View screenshot ↗</span></a><figcaption><strong>Finish the job</strong><small>Materials, delivery & job report</small></figcaption></figure>
-        <figure><a class="zoom" href="assets/odoo/showcase/offline.png"><img src="assets/odoo/showcase/offline.png" alt="Offline repair visit showing a pending task waiting to sync" loading="lazy" width="1080" height="2400"><span>View screenshot ↗</span></a><figcaption><strong>Keep working offline</strong><small>Visible pending sync state</small></figcaption></figure>
-        <figure><a class="zoom" href="assets/odoo/showcase/pricing.png"><img src="assets/odoo/showcase/pricing.png" alt="Calc net pricing editor with quantity, subtotal, VAT and total with item prices" loading="lazy" width="1080" height="2400"><span>View screenshot ↗</span></a><figcaption><strong>Review the numbers</strong><small>Odoo taxes & clear totals</small></figcaption></figure>
-      </div></div>
-    </div></section>
+<section class="section wrap" id="screens"><div class="section-heading"><p class="eyebrow">THE SCREEN GALLERY</p><h2>Work that travels<br><em>with you.</em></h2><p>Open any screen to inspect it. Explore calls and appearance above, and all calendar modes in the phone.</p></div><div class="gallery-filters" role="group" aria-label="Screen categories"><button type="button" data-gallery-filter="all" aria-pressed="true">All screens</button><button type="button" data-gallery-filter="work" aria-pressed="false">Business</button><button type="button" data-gallery-filter="field" aria-pressed="false">Field & calendar</button><button type="button" data-gallery-filter="stock" aria-pressed="false">Stock & purchases</button><button type="button" data-gallery-filter="team" aria-pressed="false">Discuss & calls</button><button type="button" data-gallery-filter="widgets" aria-pressed="false">Widgets</button></div><p id="gallery-count" class="fine" role="status"></p><div class="capture-grid"><figure data-gallery-category="work"><a class="zoom" href="assets/odoo/showcase/workspace-overview.png"><img src="assets/odoo/showcase/workspace-overview.png" alt="BizNii your business overview: outstanding balances and business performance" loading="lazy" width="810" height="1658"><span>View screenshot ↗</span></a><figcaption><strong>Your business overview</strong><small>Outstanding balances and business performance</small></figcaption></figure><figure data-gallery-category="field"><a class="zoom" href="assets/odoo/showcase/workspace-todo.png"><img src="assets/odoo/showcase/workspace-todo.png" alt="BizNii the next job: customer-linked to dos and planned work" loading="lazy" width="810" height="1658"><span>View screenshot ↗</span></a><figcaption><strong>The next job</strong><small>Customer-linked To Dos and planned work</small></figcaption></figure><figure data-gallery-category="field"><a class="zoom" href="assets/odoo/showcase/job.png"><img src="assets/odoo/showcase/job.png" alt="BizNii carry the job context: materials, linked delivery and job evidence" loading="lazy" width="810" height="1658"><span>View screenshot ↗</span></a><figcaption><strong>Carry the job context</strong><small>Materials, linked delivery and job evidence</small></figcaption></figure><figure data-gallery-category="field"><a class="zoom" href="assets/odoo/showcase/workspace-calendar.png"><img src="assets/odoo/showcase/workspace-calendar.png" alt="BizNii give work its time: day, week and month views in the phone navigator" loading="lazy" width="810" height="1658"><span>View screenshot ↗</span></a><figcaption><strong>Give work its time</strong><small>Day, Week and Month views in the phone navigator</small></figcaption></figure><figure data-gallery-category="work"><a class="zoom" href="assets/odoo/showcase/workspace-customer-detail.png"><img src="assets/odoo/showcase/workspace-customer-detail.png" alt="BizNii know your customer: profile, contact actions and documents" loading="lazy" width="810" height="1658"><span>View screenshot ↗</span></a><figcaption><strong>Know your customer</strong><small>Profile, contact actions and documents</small></figcaption></figure><figure data-gallery-category="work"><a class="zoom" href="assets/odoo/showcase/workspace-customer-history.png"><img src="assets/odoo/showcase/workspace-customer-history.png" alt="BizNii follow the history: related tasks, quotations and invoices" loading="lazy" width="810" height="1658"><span>View screenshot ↗</span></a><figcaption><strong>Follow the history</strong><small>Related tasks, quotations and invoices</small></figcaption></figure><figure data-gallery-category="work"><a class="zoom" href="assets/odoo/showcase/workspace-quotation-editor.png"><img src="assets/odoo/showcase/workspace-quotation-editor.png" alt="BizNii prepare the quotation: customer, reference and product lines" loading="lazy" width="810" height="1658"><span>View screenshot ↗</span></a><figcaption><strong>Prepare the quotation</strong><small>Customer, reference and product lines</small></figcaption></figure><figure data-gallery-category="work"><a class="zoom" href="assets/odoo/showcase/workspace-money.png"><img src="assets/odoo/showcase/workspace-money.png" alt="BizNii see what is due: invoice states and amounts in money" loading="lazy" width="810" height="1658"><span>View screenshot ↗</span></a><figcaption><strong>See what is due</strong><small>Invoice states and amounts in Money</small></figcaption></figure><figure data-gallery-category="stock"><a class="zoom" href="assets/odoo/showcase/workspace-purchasing.png"><img src="assets/odoo/showcase/workspace-purchasing.png" alt="BizNii prepare replenishment: supplier rfqs and expected arrivals" loading="lazy" width="810" height="1658"><span>View screenshot ↗</span></a><figcaption><strong>Prepare replenishment</strong><small>Supplier RFQs and expected arrivals</small></figcaption></figure><figure data-gallery-category="stock"><a class="zoom" href="assets/odoo/showcase/workspace-deliveries.png"><img src="assets/odoo/showcase/workspace-deliveries.png" alt="BizNii follow the delivery: transfer states and related orders" loading="lazy" width="810" height="1658"><span>View screenshot ↗</span></a><figcaption><strong>Follow the delivery</strong><small>Transfer states and related orders</small></figcaption></figure><figure data-gallery-category="stock"><a class="zoom" href="assets/odoo/showcase/workspace-van-stock.png"><img src="assets/odoo/showcase/workspace-van-stock.png" alt="BizNii bring the right materials: on-hand, reserved and available quantities" loading="lazy" width="810" height="1658"><span>View screenshot ↗</span></a><figcaption><strong>Bring the right materials</strong><small>On-hand, reserved and available quantities</small></figcaption></figure><figure data-gallery-category="stock"><a class="zoom" href="assets/odoo/showcase/workspace-kits.png"><img src="assets/odoo/showcase/workspace-kits.png" alt="BizNii keep components together: supported kits and bills of materials" loading="lazy" width="810" height="1658"><span>View screenshot ↗</span></a><figcaption><strong>Keep components together</strong><small>Supported kits and bills of materials</small></figcaption></figure><figure data-gallery-category="stock"><a class="zoom" href="assets/odoo/showcase/workspace-warranties.png"><img src="assets/odoo/showcase/workspace-warranties.png" alt="BizNii trace the installation: serial numbers, warranty dates and local certificates" loading="lazy" width="810" height="1658"><span>View screenshot ↗</span></a><figcaption><strong>Trace the installation</strong><small>Serial numbers, warranty dates and local certificates</small></figcaption></figure><figure data-gallery-category="team"><a class="zoom" href="assets/odoo/showcase/discuss-list.png"><img src="assets/odoo/showcase/discuss-list.png" alt="BizNii find the conversation: chats, inbox and mentions" loading="lazy" width="810" height="1658"><span>View screenshot ↗</span></a><figcaption><strong>Find the conversation</strong><small>Chats, Inbox and Mentions</small></figcaption></figure><figure data-gallery-category="team"><a class="zoom" href="assets/odoo/showcase/discussion.png"><img src="assets/odoo/showcase/discussion.png" alt="BizNii keep in touch: private messages in odoo discuss" loading="lazy" width="810" height="1658"><span>View screenshot ↗</span></a><figcaption><strong>Keep in touch</strong><small>Private messages in Odoo Discuss</small></figcaption></figure><figure data-gallery-category="team"><a class="zoom" href="assets/odoo/showcase/call-incoming-voice.png"><img src="assets/odoo/showcase/call-incoming-voice.png" alt="BizNii see who is calling: named incoming voice call" loading="lazy" width="810" height="1658"><span>View screenshot ↗</span></a><figcaption><strong>See who is calling</strong><small>Named incoming voice call</small></figcaption></figure><figure data-gallery-category="team"><a class="zoom" href="assets/odoo/showcase/call-voice.png"><img src="assets/odoo/showcase/call-voice.png" alt="BizNii stay in control: mute, speaker and end controls" loading="lazy" width="810" height="1658"><span>View screenshot ↗</span></a><figcaption><strong>Stay in control</strong><small>Mute, speaker and end controls</small></figcaption></figure><figure data-gallery-category="team"><a class="zoom" href="assets/odoo/showcase/call-video-connecting.png"><img src="assets/odoo/showcase/call-video-connecting.png" alt="BizNii know the connection state: indicator and local preview clear of controls" loading="lazy" width="810" height="1658"><span>View screenshot ↗</span></a><figcaption><strong>Know the connection state</strong><small>Indicator and local preview clear of controls</small></figcaption></figure><figure data-gallery-category="widgets"><a class="zoom" href="assets/odoo/showcase/widget-calendar.png"><img src="assets/odoo/showcase/widget-calendar.png" alt="BizNii your month at a glance: native monthly activity widget" loading="lazy" width="810" height="1013"><span>View screenshot ↗</span></a><figcaption><strong>Your month at a glance</strong><small>Native monthly activity widget</small></figcaption></figure><figure data-gallery-category="widgets"><a class="zoom" href="assets/odoo/showcase/widget-discuss.png"><img src="assets/odoo/showcase/widget-discuss.png" alt="BizNii a conversation away: native discuss rows and private-call shortcuts" loading="lazy" width="810" height="1013"><span>View screenshot ↗</span></a><figcaption><strong>A conversation away</strong><small>Native Discuss rows and private-call shortcuts</small></figcaption></figure><figure data-gallery-category="field"><a class="zoom" href="assets/odoo/showcase/offline.png"><img src="assets/odoo/showcase/offline.png" alt="BizNii keep supported work moving: queued offline task with visible sync state" loading="lazy" width="810" height="1658"><span>View screenshot ↗</span></a><figcaption><strong>Keep supported work moving</strong><small>Queued offline task with visible sync state</small></figcaption></figure></div><p class="fine">Screens use fictional sample data. Widget examples demonstrate their native appearance; the interactive examples use page-local sample records.</p></section>
+<section class="section wrap" id="in-action"><div class="section-heading"><p class="eyebrow">INSIDE THE APP</p><h2>From your desk<br><em>to the next job.</em></h2><p>Explore the screen gallery and the interactive phone. Each example uses fictional business data.</p><a class="text-link" href="#screens">Open the screen gallery ↓</a></div></section>
 
     <section class="section wrap" id="security"><div class="security-heading"><div><p class="eyebrow">07 / CONNECTED. PROTECTED.</p><h2>Your work travels.<br><em>Your context stays yours.</em></h2></div><p>Switch between named Odoo connections and companies. Open cached work quickly. Keep credentials, tasks and queued changes protected on the device.</p></div>
-      <div class="security-grid"><article><span>01 / OFFLINE</span><h3>Useful without a signal.</h3><p>Read saved customers and tasks offline. Supported To-Do changes and job attachments are kept securely until they can sync. Review any conflicts when you reconnect.</p></article><article><span>02 / CONNECTIONS</span><h3>The right business context.</h3><p>Use an API key or username/password. Test before saving a profile. Select a company per connection; permissions, caches, recent records, favourites and queued tasks keep their profile and company context.</p></article><article><span>03 / SECURITY</span><h3>Protection you control.</h3><p>Saved credentials, business records and pending task changes are encrypted on your device. Secure connections, optional trusted-server settings, section locks and screenshot privacy controls help protect your information.</p></article><article><span>04 / ADMINISTRATION</span><h3>Know what’s happening.</h3><p>Review your access permissions, saved records and pending changes. Check synchronization issues, choose whether to share a support report, and clear saved records without deleting them from Odoo.</p></article></div>
+      <div class="security-grid"><article><span>01 / OFFLINE</span><h3>Useful without a signal.</h3><p>Read saved customers and tasks offline. Supported To-Do changes and job attachments are kept securely until they can sync. Review any conflicts when you reconnect.</p></article><article><span>02 / CONNECTIONS</span><h3>The right business context.</h3><p>Use username/password on Odoo Online and Odoo.sh, or an API key for supported self-hosted business work. Test before saving a profile. Select a company per connection; permissions, caches, recent records, favourites and queued tasks keep their profile and company context.</p></article><article><span>03 / SECURITY</span><h3>Protection you control.</h3><p>Saved credentials, business records and pending task changes are encrypted on your device. Secure connections, optional trusted-server settings, section locks and screenshot privacy controls help protect your information.</p></article><article><span>04 / ADMINISTRATION</span><h3>Know what’s happening.</h3><p>Review your access permissions, saved records and pending changes. Check synchronization issues, choose whether to share a support report, and clear saved records without deleting them from Odoo.</p></article></div>
     </section>
 
     <section class="section directory-section" id="feature-directory"><div class="wrap">
@@ -127,144 +127,213 @@
       <p id="feature-count" role="status" aria-live="polite"></p>
       <div id="feature-groups">
       <!-- FEATURE_DIRECTORY_START -->
-<details class="feature-group" id="directory-access" data-title="Trial, lifetime access &amp; recovery">
-<summary>Trial, lifetime access &amp; recovery <small>3 features</small></summary><ul>
-<li>Start a 72-hour free trial after connecting to Odoo, with the remaining time clearly shown and no automatic charge.</li>
-<li>Unlock lifetime access with a one-time Google Play purchase. See your local price before confirming payment.</li>
-<li>Restore an eligible purchase or redeem a Google Play promo code using the account linked to your installation.</li>
+<details class="feature-group" id="directory-security" data-title="Connections and workspaces">
+<summary>Connections and workspaces <small>9 features</small></summary><ul>
+<li>Connect to your own Odoo server and database.</li>
+<li>Save multiple named connections and switch between workspaces.</li>
+<li>Work in the selected Odoo company with account- and company-aware records.</li>
+<li>Sign in using username and password, including Odoo two-factor authentication when requested.</li>
+<li>Use API-key authentication for supported self-hosted business workflows.</li>
+<li>Use username/password sign-in for Odoo Online and Odoo.sh connections.</li>
+<li>Keep credentials encrypted on the device.</li>
+<li>Access actions according to the Odoo apps installed and the permissions of the signed-in user.</li>
+<li>Use HTTPS connections, with optional advanced certificate settings for compatible self-hosted environments.</li>
 </ul></details>
-<details class="feature-group" id="directory-workspace" data-title="Overview, navigation &amp; appearance">
-<summary>Overview, navigation &amp; appearance <small>16 features</small></summary><ul>
-<li>Choose a light or dark appearance, with clear contact cards and focused editing screens.</li>
-<li>See outstanding invoices, overdue amounts, sales and profit from your business overview.</li>
+<details class="feature-group" id="directory-workspace" data-title="Business overview and quick access">
+<summary>Business overview and quick access <small>8 features</small></summary><ul>
+<li>See outstanding and overdue customer balances.</li>
+<li>Review annual sales and profit figures where permitted.</li>
+<li>Explore monthly business performance in an interactive graph.</li>
+<li>Use quick actions to create common business records.</li>
 <li>Search customers, products, quotations, sales orders and invoices from one place.</li>
-<li>Return quickly to recent records and favourites for each Odoo connection.</li>
-<li>Share Odoo documents as PDFs, or a clearly labelled app-generated summary where available.</li>
-<li>Use Android’s Back action to return through your work without losing your place.</li>
-<li>Enjoy a consistent BizNii design across your workspace.</li>
-<li>Follow your device’s appearance or choose Light, Dark and optional Android dynamic colours.</li>
-<li>Move between workspaces using clearly labelled bottom navigation.</li>
-<li>Focus on the record you are editing with more space for the details.</li>
-<li>Reach common actions from the Overview, with support for Android gesture and button navigation.</li>
-<li>Return to your selected workspace and open saved customer information quickly.</li>
-<li>Filter invoices and stock, and load more results as you browse.</li>
-<li>Navigate Overview, To Do, Sales, Money and More; find additional tools in More.</li>
-<li>Use wider list-and-detail views on supported larger screens, and open relevant records from widgets and notifications.</li>
-<li>Review dashboard totals drawn from your connected Odoo business.</li>
+<li>Find To Dos and appointments through the header search.</li>
+<li>Return quickly to recent records and favourites saved for the current connection.</li>
+<li>Move directly from a search result, notification or widget to its related screen.</li>
 </ul></details>
-<details class="feature-group" id="directory-customers" data-title="Customers, history &amp; attachments">
-<summary>Customers, history &amp; attachments <small>6 features</small></summary><ul>
-<li>Browse your active Odoo customers.</li>
-<li>Create and edit customer names, contact details and addresses.</li>
-<li>Search, refresh and browse customer records, including previously saved records offline.</li>
-<li>Call a customer, draft an email, open their address in maps or start a record discussion.</li>
-<li>See a customer’s recent tasks, quotations, orders and invoices together.</li>
-<li>Add, download and open photos or documents on supported records, with uploads up to 15 MB.</li>
+<details class="feature-group" id="directory-customers" data-title="Customers and suppliers">
+<summary>Customers and suppliers <small>8 features</small></summary><ul>
+<li>Search and browse customer and supplier records.</li>
+<li>Create and edit supported contact, company and address details.</li>
+<li>View customer profiles and contact information.</li>
+<li>Open your phone dialler, email app or maps from a customer record.</li>
+<li>See a customer history timeline with related tasks, quotations, orders and invoices.</li>
+<li>Open the related Odoo discussion from a record.</li>
+<li>Add, view, download and share supported photos and documents.</li>
+<li>Access cached customer information offline.</li>
 </ul></details>
-<details class="feature-group" id="directory-sales" data-title="Products, quotations &amp; sales orders">
-<summary>Products, quotations &amp; sales orders <small>8 features</small></summary><ul>
-<li>Browse products, prices and available stock for the selected company.</li>
-<li>Create and edit single-variant products; manage multi-variant products in Odoo.</li>
-<li>Prepare quotations, confirm sales orders and create draft invoices through Odoo’s workflow.</li>
-<li>Apply company pricelists and quantity-based pricing, with margins shown when your permissions allow.</li>
-<li>Review cancellation consequences before cancelling a quotation or order, and restore eligible documents to draft.</li>
-<li>View tax-inclusive product prices while keeping quotation and invoice calculations aligned with Odoo.</li>
-<li>Use Calc net to review quantities, taxes and totals. Keep an unfinished editor draft when rotating your device.</li>
-<li>See units of measure, document status and currency clearly while working.</li>
+<details class="feature-group" id="directory-products" data-title="Products and pricing">
+<summary>Products and pricing <small>8 features</small></summary><ul>
+<li>Search products and inspect descriptions, prices and stock availability.</li>
+<li>Create and edit supported single-variant products.</li>
+<li>Use Odoo company-specific pricelists and quantity-aware pricing.</li>
+<li>Apply supported taxes and use the net-price calculator.</li>
+<li>View margins where the Odoo account permits it.</li>
+<li>Scan product barcodes using the phone&#x27;s supported scanner service.</li>
+<li>Use typed or compatible hardware-scanner input for product lookup.</li>
+<li>Attach supported product photos and documents.</li>
 </ul></details>
-<details class="feature-group" id="directory-money" data-title="Invoices, payments &amp; accounting">
-<summary>Invoices, payments &amp; accounting <small>12 features</small></summary><ul>
-<li>Create and edit draft customer invoices, then review before posting.</li>
-<li>Find invoices by search or status, check amounts due and share PDFs.</li>
-<li>Manage customer invoices, vendor accounting, receivables, payables, reports and statements from Money.</li>
-<li>Review aged receivables in current, 1–30, 31–60, 61–90 and 91+ day groups.</li>
-<li>Review aged payables and find vendor bills by supplier or due date.</li>
-<li>Prepare payment-reminder emails and review them in your email app before sending.</li>
-<li>Review and register payments against posted customer invoices using your configured Odoo journals.</li>
-<li>Create a draft credit note from an eligible invoice, then review it before posting.</li>
-<li>Search for the customer whose statement you need.</li>
-<li>Share calendar-year profit-and-loss summaries and customer statements based on posted Odoo entries.</li>
-<li>Review calendar-year bank, cash and VAT summaries. Open Odoo Accounting for Balance Sheet and statutory reports.</li>
-<li>Share customer statements with company branding, account details, running balances and page numbers.</li>
+<details class="feature-group" id="directory-sales" data-title="Quotations and sales orders">
+<summary>Quotations and sales orders <small>8 features</small></summary><ul>
+<li>Create and edit draft quotations.</li>
+<li>Select customers and add product lines, quantities, prices and taxes.</li>
+<li>Use the relevant Odoo pricelist.</li>
+<li>Confirm quotations into sales orders.</li>
+<li>Review quotation and order status and details.</li>
+<li>Cancel eligible documents with confirmation and restore supported cancelled documents to draft.</li>
+<li>Create draft customer invoices through the supported Odoo sales workflow.</li>
+<li>Open related discussions and share available quotation/order PDFs.</li>
 </ul></details>
-<details class="feature-group" id="directory-stock" data-title="Inventory, deliveries &amp; receipts">
-<summary>Inventory, deliveries &amp; receipts <small>5 features</small></summary><ul>
-<li>Check on-hand, forecast, incoming, outgoing, low and unavailable stock.</li>
-<li>Filter delivery orders, review stock lines, reserve goods and complete supported transfers.</li>
-<li>Follow incoming receipts and purchase references, including supported serial tracking and stock counts.</li>
-<li>Look up products by barcode using your phone or a compatible hardware scanner.</li>
-<li>Review interrupted or conflicting stock operations in Odoo before continuing.</li>
+<details class="feature-group" id="directory-invoices" data-title="Invoices, payments and credit notes">
+<summary>Invoices, payments and credit notes <small>9 features</small></summary><ul>
+<li>Search customer invoices and filter by status.</li>
+<li>View invoice details, amounts due and payment status.</li>
+<li>Create and edit draft customer invoices, including product lines, dates, references and taxes.</li>
+<li>Post eligible invoices after confirmation.</li>
+<li>Register payments against eligible posted customer invoices using Odoo&#x27;s configured payment journals and methods.</li>
+<li>Browse supported customer payment records.</li>
+<li>Create draft credit notes through Odoo&#x27;s reversal workflow for review.</li>
+<li>Share available invoice and credit-note documents.</li>
+<li>Prepare payment-reminder emails in your email app for review before sending.</li>
 </ul></details>
-<details class="feature-group" id="directory-purchasing" data-title="Purchasing &amp; suppliers">
-<summary>Purchasing &amp; suppliers <small>2 features</small></summary><ul>
-<li>Search suppliers and purchase documents, edit draft RFQs and share available Odoo PDFs.</li>
-<li>Review purchase confirmation, cancellation, receipts and draft vendor-bill creation within Odoo’s approval rules.</li>
+<details class="feature-group" id="directory-money" data-title="Money, statements and reports">
+<summary>Money, statements and reports <small>8 features</small></summary><ul>
+<li>Review aged receivables and payables.</li>
+<li>See current, 1–30, 31–60, 61–90 and 91+ day ageing buckets.</li>
+<li>Search outstanding balances by customer, supplier, document and due date.</li>
+<li>Generate customer and supplier statements for supported periods.</li>
+<li>Share statement PDFs with account details, transactions, running balances and period totals.</li>
+<li>Review and share calendar-year Profit &amp; Loss summaries.</li>
+<li>View supported bank/cash and VAT summaries.</li>
+<li>Open native Odoo Accounting for Balance Sheet and configured statutory/localised reporting.</li>
 </ul></details>
-<details class="feature-group" id="directory-planning" data-title="To Dos &amp; calendar">
-<summary>To Dos &amp; calendar <small>8 features</small></summary><ul>
-<li>Create, schedule, edit and complete tasks. Select several tasks to complete or delete them together, with confirmation for deletion.</li>
-<li>Link a customer to a task, call or navigate to them, and start a prefilled quotation or invoice.</li>
-<li>See your next appointment, find unscheduled tasks and check for overlapping appointments.</li>
-<li>Set working hours and open the hourly calendar at the start of your working day.</li>
-<li>Search open and completed tasks, view completion feedback and reopen work when needed.</li>
-<li>Plan with Schedule, Day, 3-day, Week and Month views, including all-day appointments.</li>
-<li>Set task durations, drag or resize in 15-minute steps, edit recurring appointments and copy or move supported calendar items.</li>
-<li>Find overdue work, select multiple tasks and use colours to distinguish activity types or event tags.</li>
+<details class="feature-group" id="directory-purchasing" data-title="Purchasing">
+<summary>Purchasing <small>9 features</small></summary><ul>
+<li>Search suppliers, requests for quotation and purchase orders.</li>
+<li>Create and edit supported draft RFQs and their product lines.</li>
+<li>Set expected arrival dates and supplier references.</li>
+<li>Confirm eligible RFQs while respecting Odoo approval rules.</li>
+<li>Cancel or restore eligible purchase documents.</li>
+<li>View purchase receipt status and related references.</li>
+<li>Create draft supplier bills for eligible purchase quantities.</li>
+<li>Choose supported bill-line expense accounts.</li>
+<li>Share available Odoo purchasing PDFs.</li>
 </ul></details>
-<details class="feature-group" id="directory-field" data-title="Field work, warranties &amp; van stock">
-<summary>Field work, warranties &amp; van stock <small>4 features</small></summary><ul>
-<li>Keep materials, repeat-task settings and travel time with a field task. Repeat tasks advance when completed in BizNii.</li>
-<li>Look up warranties by serial number and share available certificates; unavailable expiry dates are marked clearly.</li>
-<li>Share job-report PDFs, follow installation checklists and open your ordered appointments in a maps app.</li>
-<li>Check van stock by location and prepare a draft RFQ for replenishment.</li>
+<details class="feature-group" id="directory-stock" data-title="Inventory, receipts and deliveries">
+<summary>Inventory, receipts and deliveries <small>8 features</small></summary><ul>
+<li>Review on-hand, forecast, incoming, outgoing, low-stock and out-of-stock quantities.</li>
+<li>Search and filter delivery orders by supported workflow states.</li>
+<li>Review detailed transfer lines and reserve eligible stock.</li>
+<li>Receive stock and complete supported receipts and deliveries.</li>
+<li>Work with supported lot- and serial-tracked items.</li>
+<li>Carry out supported stock counts and serial-number adjustments.</li>
+<li>Use recovery checks for staged stock operations interrupted by a connection problem.</li>
+<li>Open native Odoo Inventory/Barcode when an operation requires functionality outside the supported mobile workflow.</li>
 </ul></details>
-<details class="feature-group" id="directory-discussion" data-title="Discussion &amp; team collaboration">
-<summary>Discussion &amp; team collaboration <small>6 features</small></summary><ul>
-<li>Start Odoo direct or group chats, mention colleagues and discuss business records.</li>
-<li>Share chat photos and files through Odoo. Sending private messages requires a connection.</li>
-<li>Follow unread messages, Inbox and Mentions across your Odoo conversations.</li>
-<li>Choose privacy and lock-screen settings to control how message details appear on your device.</li>
-<li>Read previously saved internal notes offline. A connection is required to send new private-chat files.</li>
-<li>Keep the notification and email preferences configured in Odoo.</li>
+<details class="feature-group" id="directory-field" data-title="Van stock, kits and warranties">
+<summary>Van stock, kits and warranties <small>8 features</small></summary><ul>
+<li>View van/location stock with on-hand, reserved and available quantities.</li>
+<li>Identify low-stock deficits and pass them into a draft replenishment RFQ for review.</li>
+<li>Search, create and edit supported kits and bills of materials.</li>
+<li>Choose a finished product and manage component products and quantities.</li>
+<li>Look up warranty information by serial number.</li>
+<li>Review supported warranty dates associated with completed delivery and sales records.</li>
+<li>Set supported warranty expiry information during delivery validation and edit it from the warranty workspace.</li>
+<li>Share locally generated warranty certificates from available Odoo records.</li>
 </ul></details>
-<details class="feature-group" id="directory-widgets" data-title="Widgets, reminders &amp; notifications">
-<summary>Widgets, reminders &amp; notifications <small>7 features</small></summary><ul>
-<li>See your month, task colours, overdue work and completed tasks in the Android calendar widget.</li>
-<li>Choose appointment warnings and overdue digests every 6 or 12 hours. Use Show overdue summary now in notification settings and expand the notification for available task details.</li>
-<li>Receive appointment reminders, subject to Android permissions and battery settings.</li>
-<li>Enable optional overdue-invoice and low-stock alerts that show counts without customer names or financial totals.</li>
-<li>Read All, Inbox and Mentions in the Discussion widget, refresh it and open a conversation in the app.</li>
-<li>Receive discussion notifications, with richer details on Android 11 and newer. Background checks may be delayed by your device.</li>
-<li>Open available phone or email actions from appointment reminders, with private details hidden in the lock-screen public view.</li>
+<details class="feature-group" id="directory-todo" data-title="To Dos and field work">
+<summary>To Dos and field work <small>11 features</small></summary><ul>
+<li>Create, edit, reschedule, complete and reopen supported Odoo activities.</li>
+<li>Search open and completed work, including completion feedback.</li>
+<li>Review overdue work and unfinished tasks from earlier dates.</li>
+<li>Delete eligible tasks with confirmation, individually or through multi-selection.</li>
+<li>Link a task to a customer and its business context.</li>
+<li>Start a customer-prefilled quotation or invoice from a job.</li>
+<li>Record supported products and materials against field-work tasks.</li>
+<li>Add job photos, documents, signatures and installation checklists.</li>
+<li>Share job-report PDFs.</li>
+<li>Use BizNii-managed recurring-task and travel-buffer options.</li>
+<li>Hand an ordered appointment list to a compatible installed maps app.</li>
 </ul></details>
-<details class="feature-group" id="directory-offline" data-title="Offline work, recovery &amp; diagnostics">
-<summary>Offline work, recovery &amp; diagnostics <small>7 features</small></summary><ul>
-<li>Read saved tasks offline and queue supported task changes, photos, signatures and documents for synchronization.</li>
-<li>Search your saved tasks offline without mixing information between Odoo connections.</li>
-<li>Review synchronization status and local diagnostics in Administration, and choose whether to share a support report.</li>
-<li>Keep supported task changes and their attachments linked when synchronization completes.</li>
-<li>See task lists, calendars, pending counts and widgets update after synchronization.</li>
-<li>Recover supported pending tasks after a connection interruption; review the server result before repeating an uncertain action.</li>
-<li>Keep pending task work associated with its original company and review any items needing attention.</li>
+<details class="feature-group" id="directory-planning" data-title="Calendar and scheduling">
+<summary>Calendar and scheduling <small>12 features</small></summary><ul>
+<li>Choose Schedule, Day, 3-day, Week or Month views.</li>
+<li>Work with hourly timelines and all-day events.</li>
+<li>Create and edit appointments and schedule supported tasks into the calendar.</li>
+<li>Choose preset or custom appointment durations.</li>
+<li>Drag and resize appointments with supported time increments.</li>
+<li>Scroll through the timeline while dragging and move across adjacent days.</li>
+<li>See overlapping appointments in separate lanes and receive overlap warnings.</li>
+<li>Use an unscheduled-task tray and next-appointment summary.</li>
+<li>Copy or move supported appointments between dates or Odoo users&#x27; calendars.</li>
+<li>Apply supported recurrence-editing choices.</li>
+<li>Configure working hours and colours by activity type or event tag.</li>
+<li>Retain your selected calendar view and navigate quickly back to today.</li>
 </ul></details>
-<details class="feature-group" id="directory-security" data-title="Connections, companies &amp; security">
-<summary>Connections, companies &amp; security <small>16 features</small></summary><ul>
-<li>Save several named Odoo connections, with separate credentials and saved business data.</li>
-<li>Connect using an Odoo API key or username and password.</li>
-<li>Test your connection details before saving them.</li>
-<li>Connect securely to your remote Odoo server using HTTPS.</li>
-<li>Configure trusted certificates with your administrator for servers that need them.</li>
-<li>Protect saved API keys and passwords with Android-backed encryption.</li>
-<li>Keep saved business records and pending task changes encrypted on your device.</li>
-<li>App-private business records are excluded from Android backup and device transfer; maintain Odoo server backups separately.</li>
-<li>Connect to compatible Odoo 14–20 environments with the required API access.</li>
-<li>Keep saved records separate for each Odoo connection and user.</li>
-<li>See available tools according to your Odoo access rights and installed modules.</li>
-<li>Review your connection, selected company and read, create and edit permissions in Administration.</li>
-<li>Enable privacy mode to block app screenshots and recent-app previews.</li>
-<li>Protect supported sections with biometrics or your device lock, choose when they relock and lock them immediately when needed.</li>
-<li>Clear supported saved records without deleting Odoo records or your saved login details.</li>
-<li>Restore saved workspace information for the matching Odoo connection and user.</li>
+<details class="feature-group" id="directory-discussion" data-title="Discuss messaging">
+<summary>Discuss messaging <small>9 features</small></summary><ul>
+<li>Read and send messages in supported private Odoo conversations.</li>
+<li>View Inbox, Mentions and related record discussions.</li>
+<li>Start supported new private conversations.</li>
+<li>See colleague names where available instead of combined email-address titles.</li>
+<li>Send supported attachments and open shared documents.</li>
+<li>Receive real-time message updates on supported password-session connections.</li>
+<li>Keep periodic message checks as a fallback when live delivery is unavailable.</li>
+<li>Receive configurable message and mention notifications.</li>
+<li>Open the relevant chat directly from a notification or widget.</li>
+</ul></details>
+<details class="feature-group" id="directory-calls" data-title="Voice and video calls">
+<summary>Voice and video calls <small>13 features</small></summary><ul>
+<li>Start one-to-one voice or video calls from supported private chats.</li>
+<li>Call between two BizNii Android users.</li>
+<li>Connect with colleagues using standard Odoo Discuss in a PC browser on supported configurations.</li>
+<li>See the caller&#x27;s name on a full-screen incoming-call screen.</li>
+<li>Answer supported video invitations with video or audio only.</li>
+<li>Receive missed-call notifications.</li>
+<li>Mute or unmute the microphone, select speaker output, turn the camera on/off and switch cameras.</li>
+<li>See remote video and your own small preview, positioned clear of the call controls.</li>
+<li>See a connection/reconnection indicator below the call identity.</li>
+<li>Receive incoming calls outside the chat screen and while the phone is locked when background listening is enabled and Android permits delivery.</li>
+<li>Use the same call screen and selected appearance for foreground and background entry.</li>
+<li>Place calls over Wi-Fi or mobile data where the available network path supports them.</li>
+<li>Keep a media-status throttling warning separate from an automatic call hang-up where media can continue.</li>
+</ul></details>
+<details class="feature-group" id="directory-widgets" data-title="Home-screen widgets and reminders">
+<summary>Home-screen widgets and reminders <small>11 features</small></summary><ul>
+<li>Use a resizable monthly activity widget with task and appointment summaries.</li>
+<li>Navigate months, jump to today and open a selected date or task.</li>
+<li>Distinguish open, overdue and completed tasks and use configured task colours.</li>
+<li>Add supported quick notes from the activity widget.</li>
+<li>Use a scrollable Discuss widget with All, Inbox and Mentions views.</li>
+<li>Open a conversation directly or choose a supported call shortcut from the Discuss widget.</li>
+<li>Receive live Discuss widget updates on supported connections.</li>
+<li>Receive optional upcoming-task, due-today and overdue reminders.</li>
+<li>Configure the advance-warning interval for task reminders.</li>
+<li>Enable count-based overdue-invoice and low/out-of-stock alerts.</li>
+<li>Manage notification and background-listener preferences from Settings.</li>
+</ul></details>
+<details class="feature-group" id="directory-offline" data-title="Offline work and synchronization">
+<summary>Offline work and synchronization <small>8 features</small></summary><ul>
+<li>Open cached tasks, appointments and supported customer information without waiting for a fresh server response.</li>
+<li>Queue supported To-Do creation, edits, completion/reopening, scheduling and deletion while offline.</li>
+<li>Queue supported job photos, signatures and task documents for later synchronization.</li>
+<li>Queue supported calendar moves and reconcile them when connectivity returns.</li>
+<li>Refresh shared changes from Odoo without requiring a full screen reload.</li>
+<li>Use conflict checks and duplicate-prevention recovery for supported queued operations.</li>
+<li>Keep cached data and pending work isolated between connection profiles and companies.</li>
+<li>Adapt request pacing to server responses, merge duplicate reads and respect rate-limit cooldowns.</li>
+</ul></details>
+<details class="feature-group" id="directory-appearance" data-title="Privacy, security and appearance">
+<summary>Privacy, security and appearance <small>10 features</small></summary><ul>
+<li>Encrypt saved credentials and supported local business databases using Android-backed key protection.</li>
+<li>Protect selected business sections with biometrics or device credentials.</li>
+<li>Choose supported idle/session locking policies and lock immediately when needed.</li>
+<li>Enable privacy mode to block screenshots and hide recent-app previews.</li>
+<li>Control notification disclosure through the app and Android settings.</li>
+<li>Clear supported local cached data without deleting Odoo records.</li>
+<li>Share privacy-safe diagnostics when you choose to troubleshoot a problem.</li>
+<li>Use Light, Dark or System appearance, with optional Android dynamic colours.</li>
+<li>Use responsive list/detail layouts on supported wider screens.</li>
+<li>Access the core workspaces through Overview, To Do, Sales, Money and More.</li>
 </ul></details>
       <!-- FEATURE_DIRECTORY_END -->
       </div><p id="no-features" hidden>No matching features. Try another term or choose all workspaces.</p>
@@ -272,17 +341,17 @@
     </div></section>
 
     <section class="section wrap" id="boundaries"><div class="section-heading"><p class="eyebrow">09 / BEFORE YOU CONNECT</p><h2>A clear view of what’s supported.</h2></div><div class="faq">
-      <details open><summary>What works offline?</summary><p>Read previously saved customers and tasks without a connection. Supported To-Do changes and job attachments can wait to sync when you reconnect. Sales, stock, purchasing, accounting and private-message sending require an online connection.</p></details>
-      <details><summary>Which Odoo and Android versions?</summary><p>Android 8.0 or newer and a compatible Odoo 14–20 server, including supported Odoo Online and Odoo.sh environments. Your Odoo plan must allow external API access. Community editions have been tested. Enterprise-only modules and custom configurations need their own checks. Use username/password on Odoo 14–18; API-key sign-in requires Odoo 19 or 20. Test your connection before purchase; available tools depend on your modules, permissions and customisations.</p></details>
+      <details open><summary>What works offline?</summary><p>Open cached customers, tasks and appointments. Queue supported To-Do creation, edits, completion/reopening, scheduling and deletion, plus job photos, signatures, documents and supported calendar moves. Reconnect to reconcile pending work and review conflicts. Sales, stock, purchasing, accounting and private-message sending require an online connection.</p></details>
+      <details><summary>Which Odoo and Android versions?</summary><p>Android 8.0 or newer, with supported Odoo 14–20 business workflows. Availability depends on Odoo version and edition, installed apps, user permissions and hosting entitlement. Use username/password with Odoo Online and Odoo.sh, including the Odoo two-factor prompt when requested. API keys serve supported self-hosted business workflows. Password sign-in and a successful connection test or trial do not establish contractual entitlement on every Odoo Online plan; check with your provider.</p></details>
       <details><summary>Which financial reports are available?</summary><p>Ageing shows balances as of today. App-generated profit-and-loss, bank, cash and VAT summaries support financial years ending 31 December. Check them against your Odoo accounts. Balance Sheet and statutory reports open in Odoo Accounting.</p></details>
-      <details><summary>How are stock and product operations handled?</summary><p>Review stock movements before confirming them. If a transfer is interrupted or needs attention, check its status in Odoo Inventory before continuing. Manage multi-variant product editing in Odoo.</p></details>
-      <details><summary>Are notifications instant?</summary><p>Discussion messages are checked periodically, usually around every 15 minutes. Android battery settings and connectivity can delay alerts. Appointment reminders require the relevant Android permissions. Sending private messages requires a connection.</p></details>
+      <details><summary>How are stock and product operations handled?</summary><p>Review stock movements before confirming them. If a transfer is interrupted or needs attention, check its status in Odoo Inventory before continuing. Manage multi-variant product editing in Odoo. Kit/BOM tools require the relevant Odoo functionality and permissions; they are not a complete manufacturing execution system. Local warranty certificates are separate from official Odoo documents.</p></details>
+      <details><summary>How do live messages and background calls arrive?</summary><p>Supported password-session connections receive live Discuss updates, with periodic checks as a fallback. Opt into the background listener in Settings and allow notifications and Android permission for it to run. A quiet listener notification is required. Battery restrictions, force-stop and process termination can prevent delivery. This is an on-device listener, not a guaranteed server-push service.</p></details><details><summary>Which calls and networks are supported?</summary><p>Calls are one-to-one on supported regular Odoo 16–20 releases with username/password. They are unavailable on 14/15, API-key connections and unsupported rolling Online builds. Microphone permission is needed for voice; camera permission is needed when using video. Wi-Fi or mobile data must provide a working path through Odoo’s configured calling services. Some networks need a relay; changing networks can interrupt a call. A media-status throttling warning can appear without hanging up media that is still flowing.</p></details>
       <details><summary>How do the trial and lifetime purchase work?</summary><p>Start an optional 72-hour trial after connecting to Odoo. It does not automatically charge you. Lifetime access is a separate one-time Google Play purchase, with no subscription. Google Play shows the price and applicable taxes before confirmation. Restore uses the Play account associated with this installation. Promo redemption and ownership updates can take time; return to the app and use Restore purchase. Pending purchases do not grant lifetime access. Odoo hosting and third-party services are separate.</p></details>
-      <details><summary>Is BizNii an official Odoo app?</summary><p>BizNii for Odoo is an independent native Android client. Your records stay in Odoo. No additional BizNii server module is required. Your Odoo hosting plan must allow the required external API access; check this with your provider. Odoo is a trademark of Odoo S.A.</p></details>
+      <details><summary>Is BizNii an official Odoo app?</summary><p>BizNii for Odoo is an independent native Android client and is not affiliated with Odoo S.A. Your records stay in Odoo. No additional BizNii server module is required. Your Odoo hosting plan must allow the required external API access; check this with your provider. Odoo is a trademark of Odoo S.A.</p></details>
     </div></section>
 
     <section class="section soft" id="early-access"><div class="wrap section-heading"><div><p class="eyebrow">HELP SHAPE WHAT COMES NEXT</p><h2>Interested in trying<br><em>BizNii for Odoo?</em></h2></div><div><p class="lead">Join our Early Access programme, tell us which Odoo version you're using, and get the chance to help shape the application before launch.</p><div class="actions"><a class="button" href="/odoo/early-access/">Register for Early Access <span aria-hidden="true">↗</span></a></div></div></div></section>
-    <section class="launch-section" id="coming-soon"><div class="wrap launch-grid"><div><p class="eyebrow">YOUR WORKSPACE. YOUR WAY.</p><h2>Your Odoo workspace.<br><em>Ready for your day.</em></h2><p class="lead">Keep your customers, tasks, documents and team connected in one focused Android app for Odoo.</p><p>Try the app for 72 hours with no automatic charge. Lifetime access is a separate one-time Google Play purchase. The price and applicable taxes are shown by Google Play; Odoo hosting is not included.</p><div class="hero-specs"><span>Android 8.0+</span><span>Odoo 14–20</span><span>No subscription</span></div></div><div class="launch-card"><img src="assets/odoo/odoo-mobile-logo.png" alt="BizNii for Odoo" width="1280" height="1280" loading="lazy"><span class="store-label">LIFETIME ACCESS</span><h3>Google Play</h3><p>One payment. No subscription. Purchase and restore lifetime access through Google Play from within the app.</p><a class="text-link" href="odoo-mobile-support.html">Setup &amp; support ↗</a></div></div></section>
+    <span id="directory-access"></span><section class="launch-section" id="coming-soon"><div class="wrap launch-grid"><div><p class="eyebrow">YOUR WORKSPACE. YOUR WAY.</p><h2>Your Odoo workspace.<br><em>Ready for your day.</em></h2><p class="lead">Keep your customers, tasks, documents and team connected in one focused Android app for Odoo.</p><p>Coming soon on Google Play. At launch, try the app for 72 hours with no automatic charge. Lifetime access is a separate one-time Google Play purchase. The price and applicable taxes are shown by Google Play; Odoo hosting is not included.</p><div class="hero-specs"><span>Android 8.0+</span><span>Odoo 14–20</span><span>No subscription</span></div></div><div class="launch-card"><img src="assets/odoo/odoo-mobile-logo.png" alt="BizNii for Odoo" loading="lazy" width="1280" height="1280"><span class="store-label">LIFETIME ACCESS</span><h3>Coming soon<br>on Google Play</h3><p>Planned lifetime access is a separate one-time purchase, with no subscription. Store availability will be announced here.</p><a class="text-link" href="odoo-mobile-support.html">Setup &amp; support ↗</a></div></div></section>
     <section class="wrap product-disclaimer" aria-labelledby="disclaimer-title"><h2 id="disclaimer-title">Independent software. Informed use.</h2><p>BizNii for Odoo is independent software. Users should maintain regular Odoo backups and verify critical business information. Application operation and synchronization may be affected by third-party systems and connectivity. Please review our <a href="/odoo/terms/">Terms of Use and Disclaimer</a>.</p></section>
   </main>
   <footer class="wrap footer"><a class="wordmark" href="index.html" aria-label="BizNii home"><img class="site-logo" src="biznii-logo.png?v=3" alt="BizNii" width="1169" height="466"></a><nav aria-label="Footer"><a href="index.html">Website home</a><a href="odoo-mobile-support.html">Support</a><a href="odoo-mobile-privacy.html">Privacy policy</a><a href="/odoo/terms/">Terms &amp; disclaimer</a><a href="/odoo/early-access/">Early Access</a><a href="#top">Back to top ↑</a></nav><p>Independent client for Odoo. Odoo is a trademark of Odoo S.A. </p></footer>

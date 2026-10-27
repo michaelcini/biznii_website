@@ -13,11 +13,133 @@ const screenPages = {
   'calendar-three-days': {workspace:'more',title:'A little room to plan ahead',description:'Keep three days of appointments in view.',label:'Calendar · 3 days'},
   'calendar-week': {workspace:'more',title:'See the week ahead',description:'Your scheduled work, organised across the week.',label:'Calendar · Week'},
   'calendar-month': {workspace:'more',title:'The whole month, in view',description:'Find your work by day, then open the appointment for more context.',label:'Calendar · Month'},
-  'customer-detail': {workspace:'more',asset:'customer',detail:true,title:'The customer, in context',description:'Contact details, documents and your next actions together.',label:'Customer · Acme Ltd'},
+  'customer-detail': {workspace:'more',asset:'workspace-customer-detail',detail:false,title:'The customer, in context',description:'Contact details, documents and your next actions together.',label:'Customer · Acme Ltd'},
   'task-detail': {workspace:'todo',asset:'job',detail:true,title:'Everything that belongs to the job',description:'Materials, evidence, delivery links and the job report stay with the task.',label:'To Do · Job details'},
-  pricing: {workspace:'sales',asset:'pricing',detail:true,title:'Review the numbers',description:'Review product prices, quantities, taxes and totals before saving.',label:'Sales · Pricing'},
+  pricing: {workspace:'sales',asset:'workspace-quotation-editor',detail:true,title:'Review the numbers',description:'Review product prices, quantities, taxes and totals before saving.',label:'Sales · Pricing'},
   discussion: {workspace:'more',asset:'discussion',detail:true,title:'Keep the conversation going',description:'Keep your Odoo conversations connected to your work.',label:'More · Discussion'}
 };
+Object.assign(screenPages, {
+  "discuss-list": {
+    "workspace": "more",
+    "asset": "discuss-list",
+    "detail": true,
+    "title": "Discuss, at a glance",
+    "description": "Find private conversations, Inbox and Mentions.",
+    "label": "Discuss · Conversations"
+  },
+  "incoming-voice": {
+    "workspace": "more",
+    "asset": "call-incoming-voice",
+    "detail": true,
+    "title": "See who is calling",
+    "description": "Open the incoming voice-call screen. This preview cannot place or answer a call.",
+    "label": "Discuss · Incoming voice"
+  },
+  "incoming-video": {
+    "workspace": "more",
+    "asset": "call-incoming-video",
+    "detail": true,
+    "title": "Choose how to answer",
+    "description": "Answer a supported invitation with video or audio only.",
+    "label": "Discuss · Incoming video"
+  },
+  "incoming-video-dark": {
+    "workspace": "more",
+    "asset": "call-incoming-video-dark",
+    "detail": true,
+    "title": "The same call in Dark",
+    "description": "Call entry follows your selected app appearance.",
+    "label": "Discuss · Dark appearance"
+  },
+  "voice": {
+    "workspace": "more",
+    "asset": "call-voice",
+    "detail": true,
+    "title": "A familiar voice",
+    "description": "Mute, choose speaker output and end a one-to-one call.",
+    "label": "Discuss · Voice controls"
+  },
+  "video": {
+    "workspace": "more",
+    "asset": "call-video",
+    "detail": true,
+    "title": "Keep the conversation in view",
+    "description": "Remote sample video and the local preview sit above native controls.",
+    "label": "Discuss · Video controls"
+  },
+  "video-connecting": {
+    "workspace": "more",
+    "asset": "call-video-connecting",
+    "detail": true,
+    "title": "Connection status, clearly placed",
+    "description": "The local preview stays clear of the call identity, indicator and controls.",
+    "label": "Discuss · Connecting video"
+  },
+  "stock": {
+    "workspace": "more",
+    "asset": "workspace-stock",
+    "detail": false,
+    "title": "Know what is on hand",
+    "description": "Product availability and a stock snapshot for the selected company.",
+    "label": "Stock · Products"
+  },
+  "purchasing": {
+    "workspace": "more",
+    "asset": "workspace-purchasing",
+    "detail": false,
+    "title": "Prepare the next order",
+    "description": "Review draft RFQs, vendor references and expected arrivals.",
+    "label": "Purchasing · RFQs"
+  },
+  "deliveries": {
+    "workspace": "more",
+    "asset": "workspace-deliveries",
+    "detail": false,
+    "title": "Keep deliveries moving",
+    "description": "Review supported delivery workflow states before acting.",
+    "label": "Stock · Deliveries"
+  },
+  "receipts": {
+    "workspace": "more",
+    "asset": "workspace-receipts",
+    "detail": false,
+    "title": "Know what is arriving",
+    "description": "Find incoming stock transfers and their related references.",
+    "label": "Stock · Receipts"
+  },
+  "van-stock": {
+    "workspace": "more",
+    "asset": "workspace-van-stock",
+    "detail": false,
+    "title": "Bring the right materials",
+    "description": "See on-hand, reserved and available van stock; review replenishment deficits.",
+    "label": "Stock · Van stock"
+  },
+  "kits": {
+    "workspace": "more",
+    "asset": "workspace-kits",
+    "detail": false,
+    "title": "Keep components together",
+    "description": "Browse supported kits and bills of materials.",
+    "label": "Stock · Kits"
+  },
+  "warranties": {
+    "workspace": "more",
+    "asset": "workspace-warranties",
+    "detail": false,
+    "title": "A serial number with a history",
+    "description": "Review installation and expiry information, then share a local certificate.",
+    "label": "Stock · Warranties"
+  },
+  "customer-history": {
+    "workspace": "more",
+    "asset": "workspace-customer-history",
+    "detail": false,
+    "title": "Every next step, in context",
+    "description": "Customer-linked tasks and business documents in the history timeline.",
+    "label": "Customer · History"
+  }
+});
 const screenImage = document.querySelector('#native-screen-image');
 screenImage.addEventListener('load',()=> { screenImage.width=screenImage.naturalWidth; screenImage.height=screenImage.naturalHeight; });
 const workspaceTabs = [...document.querySelectorAll('.native-tabs [role="tab"]')];
@@ -25,34 +147,43 @@ const screenHistory = [];
 let currentScreen = 'overview';
 const phoneHotspots = document.querySelector('#phone-hotspots');
 // Percentage bounds from inspected native images: left, top, width, height.
-const salesTabs = [['Show quotations','sales',3,7,29,6],['Show orders','orders',33,7,26,6],['Show products','products',59,7,30,6]];
-const earlyCalendarTabs = [['Show schedule','calendar-schedule',3,13,27,5],['Show day','calendar',30,13,17,5],['Show three days','calendar-three-days',47,13,22,5],['Show week','calendar-week',69,13,25,5]];
-const lateCalendarTabs = [['Show day','calendar',13,13,18,5],['Show three days','calendar-three-days',31,13,22,5],['Show week','calendar-week',53,13,23,5],['Show month','calendar-month',76,13,22,5]];
+// Bounds measured on the 2026-10-27 810×1658 workspace renditions.
+const salesTabs = [['Show quotations','sales',3,7,29,5],['Show orders','orders',33,7,26,5],['Show products','products',59,7,30,5]];
+const earlyCalendarTabs=[['Show schedule','calendar-schedule',3,12,27,5],['Show day','calendar',30,12,17,5],['Show three days','calendar-three-days',47,12,22,5],['Show week','calendar-week',69,12,25,5]];
+const lateCalendarTabs=[['Show day','calendar',13,12,18,5],['Show three days','calendar-three-days',31,12,22,5],['Show week','calendar-week',53,12,23,5],['Show month','calendar-month',76,12,22,5]];
+const calendarTabs = [['Show schedule','calendar-schedule',3,12,20,5],['Show day','calendar',23,12,16,5],['Show three days','calendar-three-days',39,12,23,5],['Show week','calendar-week',62,12,20,5],['Show month','calendar-month',82,12,18,5]];
 const hotspots = {
-  overview: [['Open calendar','calendar',36,23,25,6],['Explore customer records','customers',8,66,41,8],['Explore invoices','money',51,66,41,8],['Explore quotations','sales',8,75,41,8],['Explore products','products',51,75,41,8]],
-  todo: [['Open task calendar','calendar',44,14,9,6],['Explore job details','task-detail',3,47,94,9]],
-  customers: [['Open Acme customer','customer-detail',4,19,92,11]],
-  more: [['Open Discussion','discussion',4,28,45,19],['Open Customers','customers',51,28,45,19],['Explore stock products','products',4,49,45,19],['Open Calendar','calendar',51,69,45,19]],
-  money: [['Explore invoice pricing','pricing',4,27,92,9]],
-  sales: [...salesTabs,['Explore quotation pricing','pricing',4,27,92,9]],
-  orders: salesTabs,
-  products: [...salesTabs,['Explore product pricing','pricing',4,20,92,9]],
+  overview: [['Open calendar','calendar',36,21,25,7],['Explore customer records','customers',6,65,42,7],['Explore invoices','money',52,65,42,7],['Explore quotations','sales',6,73,42,7],['Explore products','products',52,73,42,7]],
+  todo: [['Open task calendar','calendar',18,13,8,5],['Explore job details','task-detail',3,19,94,7]],
+  customers: [['Open Acme customer','customer-detail',4,19,92,9]],
+  more: [['Open Discuss conversations','discuss-list',4,27,44,18],['Open Customers','customers',52,27,44,18],['Explore stock products','stock',4,47,44,18],['Open Purchasing','purchasing',52,47,44,18],['Open Calendar','calendar',52,67,44,18]],
+  money: [['Explore invoice pricing','pricing',4,22,92,7]],
+  sales: [...salesTabs,['Explore quotation editor','pricing',4,20,92,7]],
+  orders: [...salesTabs,['Explore order pricing','pricing',4,20,92,7]],
+  products: [...salesTabs,['Explore product pricing','pricing',4,16,92,7]],
   calendar: earlyCalendarTabs,
   'calendar-schedule': earlyCalendarTabs,
-  'calendar-three-days': [['Show schedule','calendar-schedule',0,13,18,5],['Show day','calendar',18,13,21,5],['Show three days','calendar-three-days',39,13,23,5],['Show week','calendar-week',62,13,21,5],['Show month','calendar-month',83,13,17,5]],
+  'calendar-three-days': calendarTabs,
   'calendar-week': lateCalendarTabs,
-  'calendar-month': lateCalendarTabs
+  'calendar-month': lateCalendarTabs,
+  'discuss-list': [['Open Alex Morgan conversation','discussion',4,20,92,10]]
 };
 const calendarModes = [['calendar-schedule','Schedule'],['calendar','Day'],['calendar-three-days','3 days'],['calendar-week','Week'],['calendar-month','Month']];
 const calendarControls = document.createElement('div');
 calendarControls.className = 'phone-calendar-modes'; calendarControls.setAttribute('aria-label','Phone calendar views');
 calendarModes.forEach(([key,label]) => { const button = document.createElement('button'); button.textContent = label; button.dataset.screen = key; button.addEventListener('click',()=>showScreen(key)); calendarControls.append(button); });
 document.querySelector('.phone-explore-controls').after(calendarControls);
+const callKeys=['incoming-voice','incoming-video','voice','video','video-connecting','incoming-video-dark'];
+const stockKeys=['stock','purchasing','deliveries','receipts','van-stock','kits','warranties'];
+function screenChoices(keys,labels,name){const group=document.createElement('div');group.className='phone-calendar-modes';group.setAttribute('aria-label',name);keys.forEach((key,i)=>{const b=document.createElement('button');b.textContent=labels[i];b.dataset.screen=key;b.addEventListener('click',()=>showScreen(key));group.append(b)});calendarControls.after(group);return group}
+const callControls=screenChoices(callKeys,['Incoming voice','Incoming video','Voice','Video','Connecting','Dark'],'Call screen examples');
+const stockControls=screenChoices(stockKeys,['Products','Purchasing','Deliveries','Receipts','Van stock','Kits','Warranties'],'Stock screen examples');
+
 function showScreen(key, remember = true) {
   const page = screenPages[key]; if (!page) return;
   if (remember && key !== currentScreen) screenHistory.push(currentScreen);
   currentScreen = key;
-  screenImage.src = `assets/odoo/showcase/${page.asset || 'workspace-' + key}.png?v=release-033-20261015`;
+  screenImage.src = `assets/odoo/showcase/${page.asset || 'workspace-' + key}.png`;
   screenImage.alt = `BizNii for Odoo ${page.label} page`;
   document.querySelector('#native-title').textContent = page.title;
   document.querySelector('#native-description').textContent = page.description;
@@ -66,6 +197,8 @@ function showScreen(key, remember = true) {
   document.querySelectorAll('.native-phone-tabs button').forEach(button => { if(button.dataset.screen === page.workspace) button.setAttribute('aria-current','page'); else button.removeAttribute('aria-current'); });
   document.querySelector('#phone-back').disabled = screenHistory.length === 0;
   calendarControls.hidden = !key.startsWith('calendar');
+  callControls.hidden=!callKeys.includes(key); stockControls.hidden=!stockKeys.includes(key);
+  [callControls,stockControls].forEach(group=>group.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.screen===key))));
   calendarControls.querySelectorAll('button').forEach(button => button.setAttribute('aria-pressed',String(button.dataset.screen === key)));
   phoneHotspots.replaceChildren();
   (hotspots[key] || []).forEach(([label,target,x,y,w,h]) => {
@@ -210,7 +343,10 @@ function renderThreads() {
     const content=document.createElement('span'); content.className='discuss-main-v2'; const title=document.createElement('strong'); title.textContent=thread.name;
     const preview=document.createElement('span'); preview.className='discuss-line2-v2'; const last=thread.messages[thread.messages.length-1]; preview.textContent=last?last.author+': '+last.text:'No messages yet';
     const kind=document.createElement('span'); kind.className='discuss-line3-v2'; kind.textContent='Private / group chat'; content.append(title,preview,kind); row.append(avatar,content);
-    if(thread.unread) { const count=document.createElement('span'); count.className='unread-v2'; count.textContent=thread.unread; row.append(count); } list.append(row);
+    if(thread.unread) { const count=document.createElement('span'); count.className='unread-v2'; count.textContent=thread.unread; row.append(count); }
+    const line=document.createElement('div');line.className='discuss-thread-line';line.append(row);
+    if(thread.id===1){const shortcut=button('☎','widget-call-preview',()=>openPhone('voice'));shortcut.setAttribute('aria-label','Preview voice call with Alex Morgan');line.append(shortcut)}
+    list.append(line);
   });
 }
 function openThread(thread) {

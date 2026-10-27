@@ -1,39 +1,64 @@
-# Native app showcase media
+# Native Android showcase media — 27 October 2026
 
-All assets are real Android simulator captures from the app's Compose screens using **test fixtures**, not production records or invented website UI. Some focused tests render a screen without the complete app shell. Capture dates and theme/layout reflect the corresponding test run. Media does not demonstrate every feature; the feature inventory is on `odoo-mobile.html`.
+All 35 published screenshots are fresh renders from the feature-branch production Compose screens or native Android widget resources, with fictional fixture data. No existing website image or old APK was used as capture input. The production source checkpoint is `da8759695b960e9f090aca1d8c5405c68f6ab29e` (normal realtime/voice/video/background defaults enabled; debug protocol trial disabled). Capture-only instrumentation changes live in the same source commit as this document; no production app behavior, permissions, layout, signing or version was changed.
 
-## Current workspace refresh — 15 October 2026
+Device: isolated `BizNiiWebsite30`, emulator serial `emulator-5580`, Android 11 / API30, Google APIs x86, 1080 × 2400, density 420, portrait. The debug package was resolved from the current build as `com.biznii.bizniiforodoo.debug`; runner package is `com.biznii.bizniiforodoo.debug.test`. Emulator identity (`ro.kernel.qemu=1`) was checked before the clean debug-data reset. No physical phone was used. The fresh run starts with a cleared app and debug-only local trial bootstrap. No Odoo credentials or connection profile was saved.
 
-All thirteen `workspace-*.png` images were replaced with untouched 1080 × 2091 native Compose captures from the current 0.29.33 source/build (`5f3c3fe`, documentation HEAD `d726955`). `calendar.png` now uses the same fresh native day-view capture. The older fixture-only customer/job/offline/pricing/chat detail media and video below remain valid representative native screens; they are not claimed to be fresh captures of every new feature.
+The final clean selection passed 37 tests. Subsequent focused captures passed after presentation-fixture improvements: overview/fictional chat (2), native chat-list capture (1), job dialog capture (1), and stock quantities (1). The earlier existing job-completion test failed because its confirmation button was not displayed following its keyboard/Back sequence; this was not changed or presented as passing. A separate capture-only job test avoids the completion action. No live calls, live database walkthrough, production release, physical-device acceptance or universal Odoo interoperability are claimed.
 
-The existing `WebsiteScreenCaptureTest` first passed all 13 methods on the isolated API-30 emulator. Its old defaults now correctly hide features without current permission evidence. A temporary **external** copy, `WebsiteCurrentCaptureTest`, sets fictional `BusinessCapabilities` and feature-entitlement values and passes them to the production `WorkspaceMoreScreen`. No production layout, composable or Android repository file was changed. The external capture source was supplied through a temporary Gradle init script. This updated fixture suite passed all 13 methods in 45.471 seconds. The capture build passed; an intermediate duplicate-class fixture configuration was corrected before that successful run.
+Calls use `DiscussCallSurface` and the production `DiscussMediaDocument`. Local canvas video streams supply controlled synthetic room scenes through the real WebView media elements; they do not use camera, microphone, a peer connection or Odoo signalling. These media fixtures demonstrate the interface and preview placement only. They are identified as sample scenes on the product page. Theme comparison uses the same fictional incoming invitation in Light and Dark.
 
-Only test data appears: Northbay Services, Acme Ltd, Blue Harbour Trading, reserved `.test` email and synthetic documents/amounts. No Odoo connection, real business data, live purchase or production device was used. The emulator was stopped after extraction. Native images were visually reviewed; the website's percentage-based tap areas were updated for the current frames. No image was redrawn or retouched. Earlier capture notes below are historical provenance, superseded for these thirteen workspace assets and `calendar.png`.
+Widgets use the actual Android resource layouts, monthly renderer and production Discuss row renderer. Discuss header/rows are bound locally in a native View fixture, without a launcher service, account or callbacks. These captures demonstrate widget appearance and available controls, not background delivery. The separate HTML widget examples update browser memory only.
 
-| Website asset | Capture source |
-| --- | --- |
-| `customer.png` | `DiscussionScreenTest` customer fixture: `review-customerReadsPostsAndReturnsToSameDetail.png`, emulator API 31 app-private test capture |
-| `job.png` | `ActivityScreenSmokeTest` task/evidence fixture: `review-completeJobConfirmsWithOptionalCommentWithoutChecklist.png`, app-private test capture |
-| `offline.png` | `ActivityScreenSmokeTest` queued task fixture: `review-pendingOfflineTaskShowsItsSyncState.png`, app-private test capture |
-| `pricing.png` | `PricingUxTest`: `review-pricing-calc-net-totals.png`, app-private test capture |
-| `discussion.png` | `DirectChatScreenTest`: `review-direct-chat-phone-reply.png`, app-private test capture |
-| `calendar.png` | Fresh 2026-10-09 API 31 run: `CalendarScreenSmokeTest#calendarDayOpensLinkedTaskThroughTodoFlowAndShowsCustomer`, `calendar-day.png` |
-| `chat-demo.mp4` | Fresh 2026-10-09 API 31 screenrecord of `DirectChatScreenTest#pcConversationOpensSendsPrivateReplyAndReturnsToChats`; fixture repository, no real messages sent |
+Every PNG is converted to RGB, downscaled with Lanczos to fit 810 × 1800 without changing aspect ratio, and losslessly PNG-optimized. Compose root/dialog captures use no crop. Full-window chat/offline/customer/editor captures remove 63px at the top and 126px at the bottom for Android system bars. The native chat list uses its production hub node directly, without system bars or a dismissal scrim. The native widget viewports are 1000 × 1250 before resizing. No UI text, controls, content or branding was redrawn or retouched. Per-file dimensions/checksums are in `capture-manifest.json`.
 
-The chat recording retains the actual chat-list → conversation → reply → chat-list sequence. Startup and launcher footage were trimmed; playback is slowed to 80% to make the short automated interaction legible. H.264 MP4, 540px wide, no audio, fast-start metadata. On-page description explains the flow. Both fresh instrumentation methods passed.
+| Website asset | Fixture/test | Theme | Original capture filename | Crop before resizing |
+| --- | --- | --- | --- | --- |
+| `workspace-calendar-month.png` | `WebsiteScreenCaptureTest#calendarMonth` | Light | `website-calendar-month.png` | none |
+| `workspace-calendar-schedule.png` | `WebsiteScreenCaptureTest#calendarSchedule` | Light | `website-calendar-schedule.png` | none |
+| `workspace-calendar-three-days.png` | `WebsiteScreenCaptureTest#calendarThreeDays` | Light | `website-calendar-three-days.png` | none |
+| `workspace-calendar-week.png` | `WebsiteScreenCaptureTest#calendarWeek` | Light | `website-calendar-week.png` | none |
+| `workspace-calendar.png` | `WebsiteScreenCaptureTest#calendar` | Light | `website-calendar.png` | none |
+| `call-incoming-video-dark.png` | `WebsiteCallsCaptureTest#incomingVideoDark` | Dark | `website-call-incoming-video-dark.png` | none |
+| `call-incoming-video.png` | `WebsiteCallsCaptureTest#incomingVideoLight` | Light | `website-call-incoming-video.png` | none |
+| `call-incoming-voice.png` | `WebsiteCallsCaptureTest#incomingVoiceLight` | Light | `website-call-incoming-voice.png` | none |
+| `call-video-connecting.png` | `WebsiteCallsCaptureTest#connectingVideo` | Light | `website-call-video-connecting.png` | none |
+| `call-video.png` | `WebsiteCallsCaptureTest#activeVideo` | Light | `website-call-video.png` | none |
+| `call-voice.png` | `WebsiteCallsCaptureTest#activeVoice` | Light | `website-call-voice.png` | none |
+| `workspace-customer-detail.png` | `WebsiteScreenCaptureTest#customerDetail` | Light | `website-customer-detail.png` | 63px top / 126px bottom Android system bars |
+| `workspace-customer-history.png` | `WebsiteScreenCaptureTest#customerHistory` | Light | `website-customer-history.png` | 63px top / 126px bottom Android system bars |
+| `workspace-customers.png` | `WebsiteScreenCaptureTest#customers` | Light | `website-customers.png` | none |
+| `workspace-deliveries.png` | `WebsiteScreenCaptureTest#deliveries` | Light | `website-deliveries.png` | none |
+| `job.png` | `ActivityScreenSmokeTest#websiteJobEvidence` | Dark | `website-job.png` | none |
+| `workspace-kits.png` | `WebsiteScreenCaptureTest#kits` | Light | `website-kits.png` | none |
+| `workspace-money.png` | `WebsiteScreenCaptureTest#money` | Light | `website-money.png` | none |
+| `workspace-more.png` | `WebsiteScreenCaptureTest#more` | Light | `website-more.png` | none |
+| `workspace-orders.png` | `WebsiteScreenCaptureTest#orders` | Light | `website-orders.png` | none |
+| `workspace-overview.png` | `WebsiteScreenCaptureTest#overview` | Light | `website-overview.png` | none |
+| `workspace-products.png` | `WebsiteScreenCaptureTest#products` | Light | `website-products.png` | none |
+| `workspace-purchasing.png` | `WebsiteScreenCaptureTest#purchasing` | Light | `website-purchasing.png` | none |
+| `workspace-quotation-editor.png` | `WebsiteScreenCaptureTest#quotationEditor` | Light | `website-quotation-editor.png` | 63px top / 126px bottom Android system bars |
+| `workspace-receipts.png` | `WebsiteScreenCaptureTest#receipts` | Light | `website-receipts.png` | none |
+| `workspace-sales.png` | `WebsiteScreenCaptureTest#sales` | Light | `website-sales.png` | none |
+| `workspace-stock.png` | `WebsiteScreenCaptureTest#stock` | Light | `website-stock.png` | none |
+| `workspace-todo.png` | `WebsiteScreenCaptureTest#todo` | Light | `website-todo.png` | none |
+| `workspace-van-stock.png` | `WebsiteScreenCaptureTest#vanStock` | Light | `website-van-stock.png` | none |
+| `workspace-warranties.png` | `WebsiteScreenCaptureTest#warranties` | Light | `website-warranties.png` | none |
+| `widget-calendar.png` | `WebsiteWidgetsCaptureTest#calendar` | Light | `website-widget-calendar.png` | none |
+| `widget-discuss.png` | `WebsiteWidgetsCaptureTest#discuss` | Light | `website-widget-discuss.png` | none |
+| `offline.png` | `ActivityScreenSmokeTest#pendingOfflineTaskShowsItsSyncState` | Light | `review-pendingOfflineTaskShowsItsSyncState.png` | 63px top / 126px bottom Android system bars |
+| `discussion.png` | `WebsiteDiscussionCaptureTest#fictionalConversationAndAttachmentReturnToChats` | Light | `review-website-discussion.png` | 63px top / 126px bottom Android system bars |
+| `discuss-list.png` | `WebsiteDiscussionCaptureTest#fictionalConversationAndAttachmentReturnToChats` | Light | `review-website-discuss-list.png` | none |
 
-For future capture sessions, run fixture-only tests against a debug emulator and inspect every asset before replacing it. Do not publish connected production customer, financial, contact, connection or credential information. Keep video and screenshots inside `website/assets/` so any static host can serve the complete tour.
+## Repeat the capture
 
-## Workspace navigator (2026-10-10)
+Use the installed Android Studio Java runtime and Gradle wrapper. Build `:app:assembleDebug :app:assembleDebugAndroidTest` with normal defaults. Windows outputs are under `%LOCALAPPDATA%/CodexBuilds/OdooMobile/app/outputs/apk/`.
 
-`workspace-{overview,todo,sales,orders,products,money,more,calendar,customers}.png` are 1080 x 2211 captures from `WebsiteScreenCaptureTest` on API 31. Nine instrumentation tests passed. They render production Compose screens inside the same NavigationSuiteScaffold and WorkspaceTopBar used by MainActivity, with Overview / To Do / Sales / Money / More in production order. Money uses the production accounting labels and shared tab component. Sample records are created in the test; no Odoo connection is opened.
+On an isolated, root-capable emulator set 1080x2400 and density 420. Verify `adb -s <serial> shell getprop ro.kernel.qemu` returns `1` before any reset. Install the current debug and instrumentation APKs. For a fresh run, clear **only that emulator's** debug package, then run:
 
-Rebuild debug and AndroidTest APKs, install both on the test emulator, then run `adb shell am instrument -w -r -e class com.cersii.odoomobile.WebsiteScreenCaptureTest com.cersii.odoomobile.debug.test/androidx.test.runner.AndroidJUnitRunner`. Pull `website-*.png` from the debug package's external files directory and rename to `workspace-*.png`. Inspect every image before export.
+```text
+adb -s <serial> shell am instrument -w -r -e class com.cersii.odoomobile.UiSuiteBootstrapTest,com.cersii.odoomobile.WebsiteScreenCaptureTest,com.cersii.odoomobile.WebsiteCallsCaptureTest,com.cersii.odoomobile.WebsiteWidgetsCaptureTest,com.cersii.odoomobile.WebsiteDiscussionCaptureTest,com.cersii.odoomobile.ActivityScreenSmokeTest#websiteJobEvidence,com.cersii.odoomobile.ActivityScreenSmokeTest#pendingOfflineTaskShowsItsSyncState com.biznii.bizniiforodoo.debug.test/androidx.test.runner.AndroidJUnitRunner
+python tools/collect-website-captures.py --serial <serial> --raw-dir <outside-checkout-directory>
+```
 
-The website navigates these native screenshots; it does not run the Android app or submit edits. Keep screen names, primary navigation and subgroup mappings aligned with MainActivity when refreshing assets.
-
-## Calendar views and web interactions (2026-10-10)
-
-Added `workspace-calendar-{schedule,three-days,week,month}.png` from the production `OdooCalendarScreen` with fixture data and the native navigation shell. Four capture tests passed on API 31. Screenshot tap targets are percentage bounds from inspected assets; update their bounds when refreshing imagery. The phone can open existing native customer, job, pricing and discussion captures and keeps a local Back stack.
-
-Interactive widget HTML follows `widget_activity_month.xml`, `widget_month_day*.xml`, the light/dark drawable palette, `WidgetMonthState.cells()` and `DiscussionWidgetModels.filtered()`. Calendar weeks are calculated as five or six, Monday first. Unscheduled overdue tasks are collected on today, completed tasks are crossed out, configured task colours are preserved, and overflow counts disclose hidden chips. Dates and tasks use page-local sample records. Completing/reopening tasks, adding quick notes and adding chat replies change memory only; nothing is persisted or sent to Odoo. Reset examples restores original records. The adjacent day agenda and task/conversation panels are website exploration controls, not extra Android widget surfaces.
+The collector refuses physical devices and restarts adbd as root only on the selected emulator, to read Android scoped external storage. Original PNGs and the initial manifest stay in the explicit raw directory. Review every rendition and refresh this provenance/manifest before export. Old `calendar.png`, `customer.png`, `pricing.png` and `chat-demo.mp4` were retired; no obsolete media remains linked. Public marketing copy contains no capture/test implementation details beyond the page-level sample-data explanation.

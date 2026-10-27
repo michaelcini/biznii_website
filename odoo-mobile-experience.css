@@ -53,3 +53,12 @@
 
 .reset-examples{border:0;background:transparent;color:var(--orange);font:inherit;text-decoration:underline;cursor:pointer;padding:0 5px}.conversation-bubble span{overflow-wrap:anywhere}
 .widget-experience[data-theme=dark]{--widget-day:#19221a;--widget-outside:#091422;--widget-outside-border:#243146;--widget-border:#3c483b;--widget-chip:#304832;--widget-today:#243247;--widget-today-border:#8fa5bf}.cal-day-v2.muted{border-color:var(--widget-outside-border,var(--widget-border))}.agenda-task strong,.dialog-heading h3,.discuss-line2-v2{overflow-wrap:anywhere}
+
+.discuss-thread-line{display:flex;align-items:center;gap:6px}.discuss-thread-line>.discuss-row-v2{flex:1;min-width:0}
+.widget-call-preview{border:0;background:transparent;color:inherit;font-size:24px;min-width:44px;min-height:44px;border-radius:50%;cursor:pointer}
+.gallery-filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}.gallery-filters button{padding:10px 16px;border:1px solid #697c69;border-radius:24px;background:transparent;color:#253d2c;cursor:pointer;font:inherit}
+.gallery-filters button[aria-pressed="true"]{background:#253d2c;color:#fff}.capture-grid [hidden]{display:none}
+
+.native-phone-tabs{height:7.6%}.phone-calendar-modes{flex-wrap:wrap}.phone-calendar-modes button{flex:1 1 26%}
+.capture-grid .zoom img{height:auto;aspect-ratio:810/1658;object-fit:contain;object-position:top;background:#f3f5ee}
+.call-story-grid img{aspect-ratio:auto}

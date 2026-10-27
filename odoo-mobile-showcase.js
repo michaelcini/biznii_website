@@ -1,6 +1,7 @@
 'use strict';
 // Preserve bookmarks from the earlier two-page website.
-if (location.hash === '#demo') location.replace(location.pathname + location.search + '#explore');
+const legacyBookmarks = {'#demo':'#explore', '#get-app':'#coming-soon', '#contact':'#coming-soon'};
+if (legacyBookmarks[location.hash]) location.replace(location.pathname + location.search + legacyBookmarks[location.hash]);
 const menu = document.querySelector('#menu-toggle');
 const navigation = document.querySelector('#navigation');
 menu.addEventListener('click', () => {
@@ -99,3 +100,12 @@ if (dialog && typeof dialog.showModal === 'function') {
     if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) dialog.close();
   });
 }
+
+// Gallery filters are local; image links still work without JavaScript.
+const galleryItems=[...document.querySelectorAll('[data-gallery-category]')];
+document.querySelectorAll('[data-gallery-filter]').forEach(control=>control.addEventListener('click',()=>{
+  document.querySelectorAll('[data-gallery-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b===control)));
+  galleryItems.forEach(item=>item.hidden=control.dataset.galleryFilter!=='all'&&item.dataset.galleryCategory!==control.dataset.galleryFilter);
+  document.querySelector('#gallery-count').textContent=`${galleryItems.filter(item=>!item.hidden).length} screens`;
+}));
+if(galleryItems.length)document.querySelector('#gallery-count').textContent=`${galleryItems.length} screens`;

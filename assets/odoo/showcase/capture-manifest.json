@@ -1,0 +1,527 @@
+[
+  {
+    "asset": "workspace-calendar-month.png",
+    "original": "website-calendar-month.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteScreenCaptureTest#calendarMonth",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "891c4325f5911ed77ed11df673d84c7b02b9922e96f53b642a564956d1d56a06"
+  },
+  {
+    "asset": "workspace-calendar-schedule.png",
+    "original": "website-calendar-schedule.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteScreenCaptureTest#calendarSchedule",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "c2b28190839c03247bbef1dc595972df55b5ea44fd04da58a9d30e1f0c5cabbf"
+  },
+  {
+    "asset": "workspace-calendar-three-days.png",
+    "original": "website-calendar-three-days.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteScreenCaptureTest#calendarThreeDays",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "b92c20328b7adc9c2a5258ef222e8fc770f50e6f003539826a9c6d84123bb8ba"
+  },
+  {
+    "asset": "workspace-calendar-week.png",
+    "original": "website-calendar-week.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteScreenCaptureTest#calendarWeek",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "46cc95d70b6e123c3a23421d626be5d901836934739900870734c986f9c41759"
+  },
+  {
+    "asset": "workspace-calendar.png",
+    "original": "website-calendar.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteScreenCaptureTest#calendar",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "3715a07236aa9301e831eb040525e7a51689fa36aa16f50b3604ce6118fd736c"
+  },
+  {
+    "asset": "call-incoming-video-dark.png",
+    "original": "website-call-incoming-video-dark.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteCallsCaptureTest#incomingVideoDark",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Dark",
+    "sha256": "5021ddedfaab5c233bfbc5b7062782dff266207a2c4f65d9567ca1ea263eb411"
+  },
+  {
+    "asset": "call-incoming-video.png",
+    "original": "website-call-incoming-video.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteCallsCaptureTest#incomingVideoLight",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "838b1f0825181ea6036c0b4cdfb089774c1caacbe3e30c4ba8de8818c9adb75d"
+  },
+  {
+    "asset": "call-incoming-voice.png",
+    "original": "website-call-incoming-voice.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteCallsCaptureTest#incomingVoiceLight",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "c4a424fe755ee7e39335584050cb5b326bcead314246b8e3702fd2df77810926"
+  },
+  {
+    "asset": "call-video-connecting.png",
+    "original": "website-call-video-connecting.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteCallsCaptureTest#connectingVideo",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "4d73bd58d4402fdd59aa9d1aeb91ffd7d3a4892232a26b87be8e10d12087d38f"
+  },
+  {
+    "asset": "call-video.png",
+    "original": "website-call-video.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteCallsCaptureTest#activeVideo",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "73574f0d51ea46c69b9cd51be4e0f3bca9900b6123b00d2203ca80809ebc72e6"
+  },
+  {
+    "asset": "call-voice.png",
+    "original": "website-call-voice.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteCallsCaptureTest#activeVoice",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "96b70764118308732c1d05adf919fbade22e6c5c687155c66704bb9a6b991bff"
+  },
+  {
+    "asset": "workspace-customer-detail.png",
+    "original": "website-customer-detail.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "63px top / 126px bottom Android system bars",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteScreenCaptureTest#customerDetail",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "d0bd500a9696a4a7b4c3affadd6df518e7aa28a3d0b33bdc7f8f8d2e71549e7e"
+  },
+  {
+    "asset": "workspace-customer-history.png",
+    "original": "website-customer-history.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "63px top / 126px bottom Android system bars",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteScreenCaptureTest#customerHistory",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "fd406b9130bdc88f5532e8f960df5b1af696bed779b3575c3ada0e05b7bc7e0a"
+  },
+  {
+    "asset": "workspace-customers.png",
+    "original": "website-customers.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteScreenCaptureTest#customers",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "f0bbabae81e9ed8a59f2f8f3e1235556f05cbdde4a1d24741143d8f640915b8a"
+  },
+  {
+    "asset": "workspace-deliveries.png",
+    "original": "website-deliveries.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteScreenCaptureTest#deliveries",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "a86ff5942dff9b7d57563b4b37f7373534e3c6488b51c33fdc4f0298743a3b9e"
+  },
+  {
+    "asset": "job.png",
+    "original": "website-job.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "ActivityScreenSmokeTest#websiteJobEvidence",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Dark",
+    "sha256": "ad65d511a0481e3a975815032f39be9a0874d8bdab170603acd573851cdffee9"
+  },
+  {
+    "asset": "workspace-kits.png",
+    "original": "website-kits.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteScreenCaptureTest#kits",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "289b402e4213ad0ec35420663dfa36b4379957570cd42700561c8a9636a39388"
+  },
+  {
+    "asset": "workspace-money.png",
+    "original": "website-money.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteScreenCaptureTest#money",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "a1f70ce97a4d5618ef17a8e7ad5fdec9806c2da9fe1a113e8c24da8dd23bfdc7"
+  },
+  {
+    "asset": "workspace-more.png",
+    "original": "website-more.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteScreenCaptureTest#more",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "2a013715e6c40f255b23ab7ee8962368eb55b577fa4c62457e7f53ea8b7a9d51"
+  },
+  {
+    "asset": "workspace-orders.png",
+    "original": "website-orders.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteScreenCaptureTest#orders",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "201752df3ca347cd0c882ac4b765b1c993d5a1beb21127974b5ff23008a8e7d2"
+  },
+  {
+    "asset": "workspace-overview.png",
+    "original": "website-overview.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteScreenCaptureTest#overview",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "6714430c0f7a5066b59bd7bfd8f3710bd0aa035ad9d778494827432e68cf0e2d"
+  },
+  {
+    "asset": "workspace-products.png",
+    "original": "website-products.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteScreenCaptureTest#products",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "9505b46a0eeac9168a5de5ff4a4e4ea8297beba8f280169e8acefb345b9cc08b"
+  },
+  {
+    "asset": "workspace-purchasing.png",
+    "original": "website-purchasing.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteScreenCaptureTest#purchasing",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "5d43f3cf98b375c0f7d8bb78b98e636d85a574a96d50f0f255b7800098bf0320"
+  },
+  {
+    "asset": "workspace-quotation-editor.png",
+    "original": "website-quotation-editor.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "63px top / 126px bottom Android system bars",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteScreenCaptureTest#quotationEditor",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "bda394fc49a757666d0c369e66423c3821abe7ea7e00ab7ab51e30928a1db163"
+  },
+  {
+    "asset": "workspace-receipts.png",
+    "original": "website-receipts.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteScreenCaptureTest#receipts",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "62bb4884b5218569434765406ed797d667c99b6fa108f1abadf8a9b03aae56ec"
+  },
+  {
+    "asset": "workspace-sales.png",
+    "original": "website-sales.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteScreenCaptureTest#sales",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "299ac6089d0f10822b4d6807ccb899d362a8ec8553430fdc242f978e1a3c1892"
+  },
+  {
+    "asset": "workspace-stock.png",
+    "original": "website-stock.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteScreenCaptureTest#stock",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "f117530badea3222e9171f120318b78fccd7626b3ce3a65592ff012054c9fd21"
+  },
+  {
+    "asset": "workspace-todo.png",
+    "original": "website-todo.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteScreenCaptureTest#todo",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "2b68ef48472bcac9b9180a64c87eac562e6137b1dba7e3a9438e869ae2a43336"
+  },
+  {
+    "asset": "workspace-van-stock.png",
+    "original": "website-van-stock.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteScreenCaptureTest#vanStock",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "36f27411e0f0d5d860e723ec16f736773bd1a38f6fc2f50eab8f38fdae7f589f"
+  },
+  {
+    "asset": "workspace-warranties.png",
+    "original": "website-warranties.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteScreenCaptureTest#warranties",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "79fd1bc6666c4411ce787ce4c7b392a901100528b787dd9c3d44134ff546459c"
+  },
+  {
+    "asset": "widget-calendar.png",
+    "original": "website-widget-calendar.png",
+    "size": [
+      810,
+      1013
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteWidgetsCaptureTest#calendar",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "fd29241b624163f49a940f2e0dc781fe7043808586ade9e26d8289ab2d4ef3ff"
+  },
+  {
+    "asset": "widget-discuss.png",
+    "original": "website-widget-discuss.png",
+    "size": [
+      810,
+      1013
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "external app files",
+    "test": "WebsiteWidgetsCaptureTest#discuss",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "a488defaf6682ce2f9e36e1034153bddd2441d49e323d4b6922040785dea1471"
+  },
+  {
+    "asset": "offline.png",
+    "original": "review-pendingOfflineTaskShowsItsSyncState.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "63px top / 126px bottom Android system bars",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "app-private files",
+    "test": "ActivityScreenSmokeTest#pendingOfflineTaskShowsItsSyncState",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "a60e3cbab656a015b0d3b3908a7503064faf11bde6b9ffdf6a1353100cf03ee9"
+  },
+  {
+    "asset": "discussion.png",
+    "original": "review-website-discussion.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "63px top / 126px bottom Android system bars",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "app-private files",
+    "test": "WebsiteDiscussionCaptureTest#fictionalConversationAndAttachmentReturnToChats",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "7dc61d980588297ac2f0be5e2e91899d920b2c64dd8a912038dc6764fd2db08d"
+  },
+  {
+    "asset": "discuss-list.png",
+    "original": "review-website-discuss-list.png",
+    "size": [
+      810,
+      1658
+    ],
+    "crop": "none",
+    "resize": "fit within 810x1800, preserve aspect ratio",
+    "source": "app-private files",
+    "test": "WebsiteDiscussionCaptureTest#fictionalConversationAndAttachmentReturnToChats",
+    "productionSourceCommit": "da8759695b960e9f090aca1d8c5405c68f6ab29e",
+    "theme": "Light",
+    "sha256": "ea659866dee7a7f43dcc4ca8b56461647f5f468d20ddc9a2bb433ae01c9fa1a4"
+  }
+]
