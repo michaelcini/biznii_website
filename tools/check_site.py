@@ -40,7 +40,14 @@ for name in PAGES:
 
 product = (ROOT / PAGES[0]).read_text(encoding='utf-8')
 terms = (ROOT / PAGES[-1]).read_text(encoding='utf-8')
-assert '72-hour free trial' in product and 'LIFETIME ACCESS' in product
+assert 'free, full-access 3-day trial' in product.lower() and '72 hours' in product and 'LIFETIME ACCESS' in product
+for name in ('odoo-mobile.html', 'odoo-mobile-support.html', 'odoo-mobile-privacy.html'):
+    copy = (ROOT / name).read_text(encoding='utf-8').lower()
+    assert all(term not in copy for term in ('coming soon', 'before launch', 'at launch', 'join our early access', 'production rollout', 'register for early access')), name
+    assert 'play.google.com/' not in copy, name  # Add only the official URL supplied by the owner.
+registration = (ROOT / 'odoo/early-access/index.html').read_text(encoding='utf-8')
+assert '<form' not in registration and '/odoo-mobile.html#trial' in registration
+assert 'enabled: false' in (ROOT / 'odoo/early-access/config.js').read_text(encoding='utf-8')
 for name in ['index.html', *PAGES]:
     public_copy = (ROOT / name).read_text(encoding='utf-8').lower()
     assert all(term not in public_copy for term in ('internal testing', 'prerelease', 'production availability', 'eligible tester', 'audited release', 'instrumented large-account', 'fully durable offline file composition remains deferred', 'data loss is not categorically excluded')), name

@@ -30,8 +30,10 @@ The app phone navigator uses current native Android workspace captures, call scr
 
 The Calendar widget uses the Android five/six-week month rules, task status and configured colours. Interactive sample notes, completion/reopening, conversation filters and replies stay in browser memory; Reset examples restores the original records. Phone imagery includes all five native calendar views and tap targets with Back navigation.
 
-## Early Access programme
+## Former Early Access programme
 
-The Odoo product page links to `/odoo/early-access/`. Registration is enabled using the owner’s Formspark Free endpoint. The owner confirmed spam filtering and the biznii.com allowed-domain restriction, and subsequently enabled administrator notifications received in Gmail. The programme notice names Biznii and sets a three-month registration retention deadline. See [setup, privacy decisions and private administration](docs/EARLY_ACCESS.md). No applicant data or secrets belong in this repository.
+Registration closed on 6 November 2026. The former registration route redirects to the full-access 3-day trial section, the website form has been removed, and the public form configuration is disabled. The existing registration privacy notice remains accessible and is excluded from indexing. Its retention commitments and privacy contacts still apply to existing submissions. See [historical setup, privacy decisions and private administration](docs/EARLY_ACCESS.md). No applicant data or secrets belong in this repository.
 
-Compatibility copy now covers Odoo 14–20, with Community testing and sign-in limits explained on the product, support and Early Access pages. See [promotional copy](docs/EARLY_ACCESS_PROMOTION.md) for transparent tester-recruitment posts.
+Compatibility copy covers Odoo 14–20, with Community compatibility and sign-in limits explained on product and support pages. Historical programme documents describe the previous registration process.
+
+The product and support pages describe a free, full-access 3-day trial (72 hours), with no automatic charge. Do not add launch timing, rollout announcements or store links until the owner supplies the official Play Store URL.
