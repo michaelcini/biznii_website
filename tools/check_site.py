@@ -40,11 +40,14 @@ for name in PAGES:
 
 product = (ROOT / PAGES[0]).read_text(encoding='utf-8')
 terms = (ROOT / PAGES[-1]).read_text(encoding='utf-8')
-assert 'free, full-access 3-day trial' in product.lower() and '72 hours' in product and 'LIFETIME ACCESS' in product
+assert 'free, full-access 3-day trial' in product.lower() and '72 hours' in product and 'one-time purchase for lifetime access' in product
+store_url = 'https://play.google.com/store/apps/details?id=com.biznii.bizniiforodoo'
+for name in ('index.html', 'odoo-mobile.html', 'odoo-mobile-support.html'):
+    store_links = [link for link in Page(ROOT / name).links if urlsplit(link).hostname == 'play.google.com']
+    assert store_links and all(link == store_url for link in store_links), name
 for name in ('odoo-mobile.html', 'odoo-mobile-support.html', 'odoo-mobile-privacy.html'):
     copy = (ROOT / name).read_text(encoding='utf-8').lower()
     assert all(term not in copy for term in ('coming soon', 'before launch', 'at launch', 'join our early access', 'production rollout', 'register for early access')), name
-    assert 'play.google.com/' not in copy, name  # Add only the official URL supplied by the owner.
 registration = (ROOT / 'odoo/early-access/index.html').read_text(encoding='utf-8')
 assert '<form' not in registration and '/odoo-mobile.html#trial' in registration
 assert 'enabled: false' in (ROOT / 'odoo/early-access/config.js').read_text(encoding='utf-8')

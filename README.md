@@ -36,4 +36,4 @@ Registration closed on 6 November 2026. The former registration route redirects 
 
 Compatibility copy covers Odoo 14–20, with Community compatibility and sign-in limits explained on product and support pages. Historical programme documents describe the previous registration process.
 
-The product and support pages describe a free, full-access 3-day trial (72 hours), with no automatic charge. Do not add launch timing, rollout announcements or store links until the owner supplies the official Play Store URL.
+The product and support pages describe a free, full-access 3-day trial (72 hours), with no automatic charge. The homepage, product page and support page link to the [official Google Play listing](https://play.google.com/store/apps/details?id=com.biznii.bizniiforodoo).
